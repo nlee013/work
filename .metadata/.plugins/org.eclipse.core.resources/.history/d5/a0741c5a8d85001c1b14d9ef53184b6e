@@ -1,0 +1,63 @@
+package com.conn;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+import com.db.DBConn;
+
+//statement 종류 3가지
+//Statement, PreparedStatement(제일 많이씀), CallableStatement
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		
+		Connection conn = DBConn.getConnection();
+		
+		//db 연결 방법
+		//1.DriverManager가 Connection생성
+		//2.Connection이 Statement를 생성(sql 구문을 실행하는 인터페이스)
+		//3.statement가 query를 실행
+		
+     if(conn == null) {
+    	 
+    	 System.out.println("데이터베이스 연결 실패!!");
+    	 System.exit(0);
+     }
+     
+     //외부와 연결하기 때문에 try로 예외처리하면 좋음
+     try {
+		
+    	 Statement stmt = conn.createStatement();
+    	 String sql;
+    	 
+    	 /*//insert
+    	 //어떤 column인지 구분하기 위해서 회사에선 써준다.
+    	 sql = "insert into score (hak, name, kor, eng, mat)";
+    	 //나중에 코딩이 길어짐을 대비에 따로 쓰기
+    	 sql += "values('222', '유인나', 40, 80, 70)";
+    	 
+    	 //sql squery를 준다
+    	 int result = stmt.executeUpdate(sql);
+    	 
+    	 if(result == 1) {
+    		 System.out.println("추가 성공!!");
+    	 }*/
+    	 
+    	 //update
+    	 sql = "update score set name = '한지민', kor = 100, eng = 100, mat = 100";
+    	 sql += "where hak = '111'";
+    	 
+    	 int result = stmt.executeUpdate(sql);
+    	 
+    	 if(result == 1) {
+    		 System.out.println("수정 성공!!");
+    	 }
+	} catch (Exception e) {
+		// TODO: handle exception
+	}
+     
+     DBConn.close();//db는 항상 사용했으면 닫아줘야됌
+	}
+
+}

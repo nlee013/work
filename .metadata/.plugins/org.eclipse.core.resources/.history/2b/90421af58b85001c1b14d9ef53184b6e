@@ -1,0 +1,24 @@
+package com.conn;
+
+import java.sql.Connection;
+
+import com.db.DBConn;
+
+//statement 종류 3가지
+//Statement, PreparedStatement(제일 많이씀), CallableStatement
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		
+		Connection conn = DBConn.getConnection();
+		
+		//db 연결 방법
+		//1.DriverManager가 Connection생성
+		//2.Connection이 Statement를 생성(sql 구문을 실행하는 인터페이스)
+		//3.statement가 query를 실행
+		
+
+	}
+
+}
