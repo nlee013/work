@@ -59,7 +59,7 @@ public class Test2 {
     	 sql = "delete score where hak = 222";
     	 
     	 //select는 executeQuery. insert, update, delete(dml)은 다 executeUpdate
-    	 int result = stmt.executeUpdate(sql);
+    	 int result = stmt.executeUpdate(sql);//실행 할 때 sql가져옴
     	 
     	 if(result == 1) {
     		 System.out.println("삭제 성공!!");

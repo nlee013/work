@@ -16,7 +16,8 @@ public class DBConn {
 			//type4 최소 정보로 직접 db 연결
 			//외부연결
 			try {
-				String url = "jdbc:oracle:thin:@192.168.16.20:1521:xe";
+				//String url = "jdbc:oracle:thin:@192.168.16.20:1521:xe";//학원 desktop
+				String url = "jdbc:oracle:thin:@192.168.0.18:1521:xe";//laptop
 				String user = "suzi";
 				String pwd = "a123";
 						
