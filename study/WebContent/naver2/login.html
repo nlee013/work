@@ -129,13 +129,48 @@
 
                 <!-- MOBILE -->
                 <div>
-                    <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
-                    <span class="box int_mobile">
-                        <input type="tel" id="mobile" class="int" maxlength="16" placeholder="전화번호 입력">
-                    </span>
+                	<div>
+                    	<h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
+                    
+                    	<span class="box mobile_code">
+                       	 	<select id="mobile" class="sel">
+                           	 	<option value="선택">선택</option>
+                            	<option value="대한민국">대한민국 +82</option>
+                            	<option value="영국">영국 +44</option>
+                            	<option value="캐나다">캐나다 +1</option>
+                        	</select>                            
+                    	</span>
+                    	
+                    	<div id = "bir_wrap">
+                    		<div>
+                    	<span class="box">
+                        <input type="tel" id="mobile" class="int_short" maxlength="16" placeholder="전화번호 입력">
+                   		</span>
+                   		</div>
+                
+                    </div>
+                    
+                    <!-- VERIFY BTN-->
+                    <div align="right" id = >
+                    <button type="button" id="vfy_btnJoin" class= vfy_btnJoin>
+                        <span>인증번호 받기</span>
+                    </button>
+                    </div>
+                    	
+                    </div>
+                    
+                    
                     <span class="error_next_box"></span>    
                 </div>
-
+					
+				
+                <div align="right" class="btn_area">
+                    
+                    
+                    <span class="box int_mobile">
+                        <input type="tel" id="mobile" class="int" maxlength="16" placeholder="인증번호 입력하세요">
+                    </span>
+                </div>
 
                 <!-- JOIN BTN-->
                 <div class="btn_area">
@@ -144,13 +179,11 @@
                     </button>
                 </div>
 
-                
-
             </div> 
             <!-- content-->
 
         </div> 
         <!-- wrapper -->
-    
+     <script src="main.js"></script>
 </body>
 </html>
