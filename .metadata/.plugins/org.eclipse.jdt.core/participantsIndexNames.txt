@@ -2,6 +2,9 @@ INDEX VERSION 1.131
 D:\java\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\604311430.index
 \study\src
 D:\java\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1950968944.index
+<<<<<<< Updated upstream
 \study\src
 D:\java\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4214673340.index
+=======
+>>>>>>> Stashed changes
 \study\src

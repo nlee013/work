@@ -13,6 +13,7 @@
 	
 	document.write(str + "<br/>");
 	
+<<<<<<< Updated upstream
 	document.write("-------------------<br/>")
 	
 	str = "문자열";
@@ -32,11 +33,36 @@
 		var hello = "hello 지역변수2"
 		global = "global 전역변수" //함수안에 var 안쓰면 전역변수
 		var local = "local 지역변수"
+=======
+	document.write("---------------<br/>");
+	
+	str = "문자열";
+	document.write(str + ":" + typeof(str) + "<br/>");
+	
+	str = 123;
+	document.write(str + ":" + typeof(str) + "<br/>");
+
+	str = true;
+	document.write(str + ":" + typeof(str) + "<br/>");
+
+	document.write("---------------<br/>");
+	
+	var hello = "hello 전역변수1"
+	
+	function thisfun(){
+		
+		var hello = "지역변수2";//함수 밖에 쓰면 전역변수가 됌
+		
+		global = "global 전역변수";
+		
+		var local = "local 지역변수";
+>>>>>>> Stashed changes
 		
 		document.write(hello + "<br/>");
 		document.write(global + "<br/>");
 		document.write(local + "<br/>");
 		document.write("<br/><br/>");
+<<<<<<< Updated upstream
 			
 	}
 	
@@ -91,6 +117,18 @@
 	
 </script>
 
+=======
+	}
+	
+	document.write(hello + "<br/>");
+	document.write(global + "<br/>");
+	document.write(local + "<br/>");
+	document.write("<br/><br/>");
+	
+</script>
+
+
+>>>>>>> Stashed changes
 </head>
 <body>
 
