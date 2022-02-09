@@ -1,4 +1,5 @@
 INDEX VERSION 1.131
+<<<<<<< HEAD
 D:\java\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\604311430.index
 \study\src
 D:\java\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1950968944.index
@@ -7,4 +8,7 @@ D:\java\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1950968944.in
 D:\java\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4214673340.index
 =======
 >>>>>>> Stashed changes
+=======
+D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1950968944.index
+>>>>>>> 874f909908f25405be77bdd40972d7f0b22ef1e5
 \study\src

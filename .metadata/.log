@@ -1451,6 +1451,7 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 
 !ENTRY org.eclipse.jface.text 2 0 2022-02-09 00:02:31.504
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+<<<<<<< HEAD
 
 <<<<<<< Updated upstream
 !ENTRY org.eclipse.core.jobs 4 2 2022-02-09 10:08:42.690
@@ -2197,3 +2198,5 @@ java.lang.IllegalArgumentException: Cannot set lower sequence number for root (p
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
 >>>>>>> Stashed changes
+=======
+>>>>>>> 874f909908f25405be77bdd40972d7f0b22ef1e5
