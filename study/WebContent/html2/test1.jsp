@@ -14,6 +14,7 @@
 	document.write(str + "<br/>");
 	
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	document.write("-------------------<br/>")
 	
 	str = "문자열";
@@ -34,6 +35,8 @@
 		global = "global 전역변수" //함수안에 var 안쓰면 전역변수
 		var local = "local 지역변수"
 =======
+=======
+>>>>>>> Stashed changes
 	document.write("---------------<br/>");
 	
 	str = "문자열";
@@ -56,12 +59,16 @@
 		global = "global 전역변수";
 		
 		var local = "local 지역변수";
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		
 		document.write(hello + "<br/>");
 		document.write(global + "<br/>");
 		document.write(local + "<br/>");
 		document.write("<br/><br/>");
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 			
 	}
@@ -118,6 +125,8 @@
 </script>
 
 =======
+=======
+>>>>>>> Stashed changes
 	}
 	
 	document.write(hello + "<br/>");
@@ -128,6 +137,9 @@
 </script>
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 </head>
 <body>
