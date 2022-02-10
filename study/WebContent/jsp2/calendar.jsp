@@ -208,7 +208,7 @@ td{
 		
 	<!-- 연도버튼 -->
 	<form action="" method="post" name="myForm">
-		<select name="year" onchange="ySelect">
+		<select name="year" onchange="ySelect()">
 			<%=yOptions %>
 		</select>년
 		<select name="month" onchange="mSelect()">
