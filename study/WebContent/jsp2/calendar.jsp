@@ -117,7 +117,7 @@
 		obj.submit();
 	}
 	
-	var cmbyear = document.getElementById("cmbyear");
+	/* var cmbyear = document.getElementById("cmbyear");
 	var cmbmonth = document.getElementById("cmbmonth");
 	  
 	  for (var i = 1970; i <= 2050; i++) {
@@ -152,7 +152,7 @@
 	   function getStartDay(year, month) {
 		   var date = new Date(year, month);
 		   return date.getDay();
-		 }
+		 } */
 </script>
 
 <style type="text/css">
@@ -233,7 +233,7 @@ td{
 		newLine++;
 	}
 
-for(int i=startDay;i<=endDay;i++){
+	for(int i=startDay;i<=endDay;i++){
 		
 		String fontColor = (newLine==0)?"red":(newLine==6)?"blue":"black";
 		String bgColor = (nowYear==year)&&
