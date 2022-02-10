@@ -1452,11 +1452,15 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 !ENTRY org.eclipse.jface.text 2 0 2022-02-09 00:02:31.504
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 
 <<<<<<< Updated upstream
 !ENTRY org.eclipse.core.jobs 4 2 2022-02-09 10:08:42.690
 =======
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
@@ -1468,6 +1472,9 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 
 !ENTRY org.eclipse.core.jobs 4 2 2022-02-09 09:55:52.340
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1482,6 +1489,7 @@ java.lang.IllegalArgumentException: Cannot set lower sequence number for root (p
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1145)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 !SESSION 2022-02-09 10:10:24.561 -----------------------------------------------
@@ -2191,6 +2199,8 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 !ENTRY org.eclipse.jface.text 2 0 2022-02-09 09:58:40.478
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
@@ -2207,6 +2217,7 @@ java.lang.IllegalArgumentException: Cannot set lower sequence number for root (p
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1145)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
@@ -2856,5 +2867,7 @@ org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementExc
 
 !ENTRY org.eclipse.jface.text 2 0 2022-02-10 15:48:30.609
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
