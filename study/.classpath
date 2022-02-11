@@ -7,6 +7,9 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry exported="true" kind="lib" path="D:/java_/apache-tomcat-8.5.75/lib/servlet-api.jar"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -18,8 +21,11 @@
 	<classpathentry kind="lib" path="D:/java/apache-tomcat-8.5.75/lib/servlet-api.jar"/>
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	<classpathentry kind="output" path="bin"/>
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 	<classpathentry kind="output" path="build/classes"/>

@@ -10,7 +10,11 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="start"/>
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcatalina.base=&quot;D:\java\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp1&quot; -Dcatalina.home=&quot;D:\java\apache-tomcat-8.5.75&quot; -Dwtp.deploy=&quot;D:\java\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps&quot; -Djava.endorsed.dirs=&quot;D:\java\apache-tomcat-8.5.75\endorsed&quot;"/>
+=======
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcatalina.base=&quot;D:\java\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0&quot; -Dcatalina.home=&quot;D:\java\apache-tomcat-8.5.75&quot; -Dwtp.deploy=&quot;D:\java\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps&quot; -Djava.endorsed.dirs=&quot;D:\java\apache-tomcat-8.5.75\endorsed&quot;"/>
+>>>>>>> Stashed changes
 =======
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcatalina.base=&quot;D:\java\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0&quot; -Dcatalina.home=&quot;D:\java\apache-tomcat-8.5.75&quot; -Dwtp.deploy=&quot;D:\java\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps&quot; -Djava.endorsed.dirs=&quot;D:\java\apache-tomcat-8.5.75\endorsed&quot;"/>
 >>>>>>> Stashed changes
