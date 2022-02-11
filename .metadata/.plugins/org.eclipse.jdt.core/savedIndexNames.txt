@@ -1,8 +1,11 @@
 INDEX VERSION 1.131+D:\java\work\.metadata\.plugins\org.eclipse.jdt.core
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 3939699067.index
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 3315312542.index
@@ -28,6 +31,9 @@ INDEX VERSION 1.131+D:\java\work\.metadata\.plugins\org.eclipse.jdt.core
 1673982077.index
 2504789469.index
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
