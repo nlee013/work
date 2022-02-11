@@ -3,12 +3,16 @@
 	request.setCharacterEncoding("UTF-8");
 
 	//data 받는 작업
+	/* 
+	1번 방식
 	String userName = (String)session.getAttribute("userName");
-	String userBirth = (String)session.getAttribute("userBirth");
+	String userBirth = (String)session.getAttribute("userBirth"); 
+	*/
 	
-	//String userName = request.getParameter("userName");
-	//String userBirth = request.getParameter("userBirth");
-
+	String userName = request.getParameter("userName");
+	String userBirth = request.getParameter("userBirth");
+	//불필요한 정보는 올려둘 필요가 없다.
+	
 	String userId = request.getParameter("userId");
 	String userPwd = request.getParameter("userPwd");
 	
