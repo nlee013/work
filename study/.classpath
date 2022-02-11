@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< Updated upstream
+=======
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="D:/java_/apache-tomcat-8.5.75/lib/servlet-api.jar"/>
+>>>>>>> Stashed changes
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/java/apache-tomcat-8.5.75/lib/servlet-api.jar"/>
+<<<<<<< Updated upstream
 	<classpathentry kind="output" path="bin"/>
+=======
+	<classpathentry kind="output" path="build/classes"/>
+>>>>>>> Stashed changes
 </classpath>
