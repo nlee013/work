@@ -119,7 +119,7 @@ td {
 <tr>
 	<td align="center">
 	
-	<a href="calendar.jsp?year=<%=nowYear%>&month=<%=nowMonth%>">
+	<a href="calendar2.jsp?year=<%=nowYear%>&month=<%=nowMonth%>">
 	<img src="./image/today.png" align="left" width="40">
 	</a>
 	
@@ -175,12 +175,7 @@ td {
 
 	out.print("</tr>");
 
-
 %>
-
-
-
-
 
 </table>
 </form>
