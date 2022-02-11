@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -87,6 +88,37 @@ body{
 			
 		}
 	}
+	
+	function sendIt() {
+		
+		var f = document.myForm;
+		
+		if(f.rightItem.length == 0){
+			
+			alert("쪽지를 보낼 사람을 선택하세요!");
+			f.leftItem.focus();
+			return;
+		}
+		
+		if(f.msg.value == 0){
+			
+			alert("메세지 내용을 입력하세요!");
+			f.msg.focus();
+			return;
+		}
+		
+		for(i = 0; i < f.rightItem.length; i++){
+			
+			f.rightItem[i].selected = true;
+			//
+		}
+		
+		f.submit();
+	}
+	
+	
+	
+	
 
 	//
 </script>
@@ -133,7 +165,7 @@ body{
 
 <tr>
 	<td colspan="3" align="center">
-		<input type="button" value="쪽지보내기" /><br/>
+		<input type="button" value="쪽지보내기" onclick="sendIt();"/><br/>
 	</td>
 </tr>	
 
