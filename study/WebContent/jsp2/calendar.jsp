@@ -16,9 +16,13 @@
 	String strYear = request.getParameter("year");
 	String strMonth = request.getParameter("month");
 	
-	int year = nowYear;//2022
-	int month = nowMonth;//2
+	/* int year = nowYear;//2022
+	int month = nowMonth;//2 */
 	
+	//페이지 요청시 현재 날짜 보이게 하기
+	int selectYear = nowYear;
+	int selectMonth = nowMonth;
+		
 	if(strYear != null){
 		
 		year = Integer.parseInt(strYear);
@@ -56,27 +60,17 @@
 	
 	int week = cal.get(Calendar.DAY_OF_WEEK);
 	
-	//페이지 요청시 현재 날짜 보이게 하기
-	int selectYear = nowYear;
-	int selectMonth = nowMonth;
-	
-	if(strYear != null || strMonth != null){
-		
-		selectYear = Integer.parseInt(strYear);
-		selectMonth = Integer.parseInt(strMonth);
-	}
-	
 	//selection box option
 	String yOptions = "";
 	
 	//selection option구성
-	for(int y = (selectYear - 10); y <= (selectYear + 10); y++){
+	for(int year = (selectYear - 10); year <= (selectYear + 10); year++){
 		//페이지 요청시 현재 연도와 선택한 연도가 같을 때 
 		
-		if(strYear == null && y == nowYear){
-			yOptions += "<option value =' " + y + "' selected = 'selected'>" + year + "</option>";
+		if(strYear == null && year == nowYear){
+			yOptions += "<option value =' " + year + "' selected = 'selected'>" + year + "</option>";
 		
-		}else if(strYear != null && Integer.parseInt(strYear) == y){
+		}else if(strYear != null && Integer.parseInt(strYear) == year){
 			yOptions += "<option value ='" + year + "'selected = 'selected'" + year + "</option>";
 		
 		}else{
@@ -88,13 +82,13 @@
 	String mOptions = "";
 	
 	//selection option구성
-	for(int m = 1; m <= 12; m++){
+	for(int month = 1; month <= 12; month++){
 		//페이지 요청시 현재 연도와 선택한 연도가 같을 때 
 		
-		if(strMonth == null && m == nowMonth){
-			mOptions += "<option value =' " + m + "' selected = 'selected'>" + month + "</option>";
+		if(strMonth == null && month == nowMonth){
+			mOptions += "<option value =' " + month + "' selected = 'selected'>" + month + "</option>";
 		
-		}else if(strMonth != null && Integer.parseInt(strMonth) == m){
+		}else if(strMonth != null && Integer.parseInt(strMonth) == month){
 			mOptions += "<option value ='" + month + "'selected = 'selected'" + month + "</option>";
 		
 		}else{
@@ -112,9 +106,34 @@
 <title>달력</title>
 <script type="text/javascript">
 
-	function submit(obj) {//obj = form 객체
+	/* function submit(obj) {//obj = form 객체
 		
 		obj.submit();
+	} */
+	
+	function ySelect(){
+		
+		for(i=0;i<12;i++){
+			f.selectYear[i] = new yOptions(i+1,i+1);
+		}	
+		
+		f.selectYear[<%=selectYear%>-1].selected = true;
+		
+	}
+	
+	function mSelect(){
+		
+		for(i = 0;i < 12;i++){
+			f.selectMonth[i] = new mOptions(i+1,i);
+		}	
+		
+		f.selectMonth[<%=selectMonth%>-1].selected = true;
+		
+	}
+	function mChange() {
+		var f = document.myForm;
+		
+		f.submit();
 	}
 	
 	/* var cmbyear = document.getElementById("cmbyear");
@@ -172,28 +191,29 @@ td{
 </style>
 
 </head>
-<body>
+<body onload="mSelect();">
 <br/><br/>
 
 <table align="center" width="210" cellpadding="2" cellspacing="1">
 <tr>
 	<td align="center">	
+	
 	<a href="calendar.jsp?year=<%=nowYear%>&month=<%=nowMonth%>">
 	<img src="./image/today.png" align="left" width="40">
 	</a>
 	
 	<!-- Left Button Location -->
 		<a href="calendar.jsp?year=<%=preYear %>&month=<%=preMonth %>">◀</a>
-		<%-- <b>&nbsp; <%=year %>년&nbsp;&nbsp;<%=month %>월</b> --%>
+		&nbsp; 
 		
 	<!-- 연도버튼 -->
-	<form action="" method="post">
-	<select id = "year" name="year" onchange="submit(this.form)">
-	<%=yOptions %>
-	</select>년
-	<select id = "month" name="month" onchange="submit(this.form)">
-	<%=mOptions %>
-	</select>월
+	<form action="" method="post" name="myForm">
+		<select name="year" onchange="ySelect()">
+			<%=yOptions %>
+		</select>년
+		<select name="month" onchange="mSelect()">
+			<%=mOptions %>
+		</select>월
 	</form>
 	
 	<!-- Right Button Location -->
