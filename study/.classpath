@@ -6,6 +6,9 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry exported="true" kind="lib" path="D:/java_/apache-tomcat-8.5.75/lib/servlet-api.jar"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
@@ -14,8 +17,11 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/java/apache-tomcat-8.5.75/lib/servlet-api.jar"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	<classpathentry kind="output" path="bin"/>
 =======
+=======
+>>>>>>> Stashed changes
 	<classpathentry kind="output" path="build/classes"/>
 >>>>>>> Stashed changes
 </classpath>

@@ -1,5 +1,6 @@
 INDEX VERSION 1.131+D:\java\work\.metadata\.plugins\org.eclipse.jdt.core
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 3869821576.index
 4190532526.index
 105010654.index
@@ -29,6 +30,16 @@ INDEX VERSION 1.131+D:\java\work\.metadata\.plugins\org.eclipse.jdt.core
 1253735332.index
 1644930635.index
 651360643.index
+=======
+3315312542.index
+292137680.index
+3869821576.index
+242561514.index
+782169307.index
+1253735332.index
+1644930635.index
+651360643.index
+>>>>>>> Stashed changes
 105010654.index
 39286232.index
 4190532526.index
@@ -43,4 +54,7 @@ INDEX VERSION 1.131+D:\java\work\.metadata\.plugins\org.eclipse.jdt.core
 479783716.index
 1673982077.index
 2504789469.index
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
