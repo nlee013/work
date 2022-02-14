@@ -1,14 +1,32 @@
+<%@page import="com.score.ScoreDTO"%>
+<%@page import="com.score.ScoreDAO"%>
+<%@page import="com.util.DBConn"%>
+<%@page import="java.sql.Connection"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
-	//ContextPath()
+	
+	String hak = request.getParameter("hak");
+	
+	Connection conn = DBConn.getConnection();
+	ScoreDAO dao = new ScoreDAO(conn);
+	
+	ScoreDTO dto = dao.getReadData(hak);
+	
+	DBConn.close();
+	
+	if(dto == null){
+		
+		response.sendRedirect("list.jsp");
+	}
 %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>write</title>
+<title>성적처리 수정</title>
 
 <script type="text/javascript">
 	
@@ -17,7 +35,7 @@
 		var f = document.myForm;
 		//f.action = "http://www.naver.com/study/score/write_ok.jsp";-도메인 있는 회사에서.
 		//f.action = "http://loacalhost:8080/study/score/write_ok.jsp";-우리가 쓸때.
-		f.action = "<%=cp%>/score/write_ok.jsp";
+		f.action = "<%=cp%>/score/update_ok.jsp";
 		f.submit();
 		
 	}
@@ -58,7 +76,7 @@ td{
 
 <tr height="50">
 	<td bgcolor="#ffffff" style="padding-left: 10px;">
-	<b>성적처리 입력화면</b>
+	<b>성적처리 수정 화면</b>
 	</td>
 </tr>
 </table>
@@ -78,7 +96,7 @@ td{
 <tr height="30">
 	<td align="center" width="100" bgcolor="#e6e6e6">학번</td>
 	<td style="padding-left: 5px;">
-	<input type="text" name="hak" size="10" maxlength="7" class="txtField"/>
+	<%=dto.getHak() %>
 	</td>
 </tr>
 
@@ -91,7 +109,7 @@ td{
 <tr height="30">
 	<td align="center" width="100" bgcolor="#e6e6e6">이름</td>
 	<td style="padding-left: 5px;">
-	<input type="text" name="name" size="20" maxlength="10" class="txtField"/>
+	<%=dto.getName() %>
 	</td>
 </tr>
 
@@ -104,7 +122,8 @@ td{
 <tr height="30">
 	<td align="center" width="100" bgcolor="#e6e6e6">국어</td>
 	<td style="padding-left: 5px;">
-	<input type="text" name="kor" size="20" maxlength="3" class="txtField"/>
+	<input type="text" name="kor" value="<%=dto.getKor() %>"
+	size="20" maxlength="3" class="txtField"/>
 	</td>
 </tr>
 
@@ -117,7 +136,8 @@ td{
 <tr height="30">
 	<td align="center" width="100" bgcolor="#e6e6e6">영어</td>
 	<td style="padding-left: 5px;">
-	<input type="text" name="eng" size="20" maxlength="3" class="txtField"/>
+	<input type="text" name="eng" value="<%=dto.getEng() %>"
+	size="20" maxlength="3" class="txtField"/>
 	</td>
 </tr>
 
@@ -130,7 +150,8 @@ td{
 <tr height="30">
 	<td align="center" width="100" bgcolor="#e6e6e6">수학</td>
 	<td style="padding-left: 5px;">
-	<input type="text" name="mat" size="20" maxlength="3" class="txtField"/>
+	<input type="text" name="mat" value="<%=dto.getMat() %>"
+	size="20" maxlength="3" class="txtField"/>
 	</td>
 </tr>
 
@@ -140,14 +161,16 @@ td{
 </tr>
 
 <tr height="35"> 
-	<td align="center" colspan="2">
-	<input type="button" class="btn" value="입력완료" onclick="sendIt();"/>
-	<input type="reset" class="btn" value="다시입력"
-	onclick="document.myForm.hak.focus();">
-	<!-- 여기 onclick에 위에 쓴 js를 써줘야됌 -->
-	<input type="button" class="btn" value="입력취소"
-	onclick="javascript:location.href='<%=cp%>/score/list.jsp';"/>
 	
+	<td align="center" colspan="2">
+	
+	<!-- 수정에서는 hidden이 반드시 쓰임 -->
+	<input type="hidden" name="hak" value="<%=dto.getHak()%>"/>
+	
+	<input type="button" class="btn" value="수정완료" onclick="sendIt();"/>
+	<!-- 여기 onclick에 위에 쓴 js를 써줘야됌 -->
+	<input type="button" class="btn" value="수정취소"
+	onclick="javascript:location.href='<%=cp%>/score/list.jsp';"/>
 	</td>
 </tr>
 
