@@ -9,7 +9,7 @@ public class DBConn {
 	
 	public static Connection getConnection() {
 		
-		String url = "jdbc:oracle:thin:@192.168.16.20:1521:xe";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "suzi";
 		String pwd = "a123";
 		
@@ -29,19 +29,21 @@ public class DBConn {
 	
 	public static void close() {
 		
-		if(conn == null) 
-			
+		if(conn == null) {
 			return;
-			
-			try {
-				
-				if(!conn.isClosed()) 
-					conn.close();
-				
-			} catch (Exception e) {
-				System.out.println(e.toString());
-			}
-			conn = null;
 		}
+		
+		try {
+			
+			if(!conn.isClosed()) 
+				conn.close();
+			
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		conn = null;
+		
 	}
+	
+}
 

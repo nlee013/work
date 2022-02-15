@@ -121,7 +121,7 @@ input::placeholder {
 <tr><td>
 	<table style="border: 1px solid;width: 450px;height: 40px;" background="#fff;">
 	<tr>
-	<td><input type="text" name="id" 
+	<td><input type="hidden" name="id" 
 	style="border: 0; width: 380px;height: 35px;"/></td>
 	<td style="background-color: #fff;font-size: 11px;
 	width: 30px;height: 35px;">@naver.com</td>
@@ -132,7 +132,7 @@ input::placeholder {
 	<td>비밀번호</td>
 </tr>
 <tr>
-	<td><input type="password" class="box" name="pwd" 
+	<td><input type="hidden" class="box" name="pwd" 
 	style="background: url('./image/비밀번호.png') no-repeat; background-position: 95%;
 	background-color: #fff;"/></td>
 </tr>

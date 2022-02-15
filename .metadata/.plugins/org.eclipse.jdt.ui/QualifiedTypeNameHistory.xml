@@ -8,11 +8,13 @@
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.score.ScoreDTO"/>
 <fullyQualifiedTypeName name="com.naver.NaverDAO"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.dtm.DTMDOMException"/>
+<fullyQualifiedTypeName name="com.naver.NaverDTO"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.board.BoardDAO"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="com.naver.NaverDTO"/>
+<fullyQualifiedTypeName name="com.board.BoardDTO"/>
 </qualifiedTypeNameHistroy>

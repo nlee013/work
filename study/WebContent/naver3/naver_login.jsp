@@ -62,7 +62,7 @@ function sendIt() {
 	
 	if(!f.mobile.value){
 		alert("전화번호 입력 하세요")
-		f.tel2.focus();
+		f.mobile.focus();
 		return;
 	}
 	
