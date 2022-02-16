@@ -7,16 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BoardDAO {
-
+	
 	private Connection conn;
 	
 	public BoardDAO(Connection conn) {
-		
-		this.conn = conn;//의존성 주의?
+		this.conn=conn;
 	}
-	
-	//insert에는 num의 최대값이 먼저 필요함
-	public int getMaxNume() {
+
+	//num의 최대값
+	public int getMaxNum() {
 		
 		int maxNum = 0;
 		
@@ -26,20 +25,17 @@ public class BoardDAO {
 		
 		try {
 			
-			sql = "select nvl(max(num), 0) from board";
-			//null++해줘야 다음으로 넘어감..(?)
+			sql = "select nvl(max(num),0) from board"; // null이 제일 클때 = 마지막 숫자
 			
 			pstmt = conn.prepareStatement(sql);
 			
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
+				maxNum = rs.getInt(1); //1번째 컬럼이고 파생컬럼이기때문에 "nvl(max(num),0)"는 못씀
 				
-				//"nvl(max(num)" 같은 파생컬럼을 쓰지 못함
-				//(실제 존재하지 못하니까)
-				//그럴 경우 숫자로 아래처럼 써주면 됌
-				maxNum = rs.getInt(1);
 			}
+			
 			rs.close();
 			pstmt.close();
 			
@@ -47,22 +43,22 @@ public class BoardDAO {
 			System.out.println(e.toString());
 		}
 		return maxNum;
+		
 	}
 	
-	//입력
+	// 입력
 	public int insertData(BoardDTO dto) {
 		
 		int result = 0;
-	
-		PreparedStatement pstmt = null;
 		
+		PreparedStatement pstmt = null;
 		String sql;
 		
 		try {
 			
-			sql = "insert into board(num, name, pwd, email, subject, ";
-			sql += "content, ipAddr, hitCount, created) ";
-			sql += "values (?, ? ,? ,? ,? ,? ,?, 0, sysdate)";
+			sql = "insert into board (num,name,pwd,email,subject, ";
+			sql += "content,ipAddr,hitCount,created) ";
+			sql	+= "values (?,?,?,?,?,?,?,0,sysdate)";
 			
 			pstmt = conn.prepareStatement(sql);
 			
@@ -81,38 +77,76 @@ public class BoardDAO {
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
-		
 		return result;
 	}
 	
-	//전체 데이터
-	public List<BoardDTO> getlists(){
+	// 전체 데이터 개수
+	public int getDataCount() {
 		
-		List<BoardDTO> lists = new ArrayList<BoardDTO>();
-		
+		int totalCount = 0;	
+	
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		
 		String sql;
 		
 		try {
 			
-			/*
-			select*from(
-			select rownum rnum, data.*from(
-			select num, name, subject from board order by num desc) data)
-			where rnum>=1 and rnum<=3;
-			*/
-			
-			sql = "select num, name, subject, hitCount, ";
-			sql += "to_char(created, 'YYY-MM-DD') created ";
-			sql += "from board order by num desc";
+			sql = "select nvl(count(*),0) from board";
 			
 			pstmt = conn.prepareStatement(sql);
 			
 			rs = pstmt.executeQuery();
 			
-			//데이터 몇개인지 모르니까 while문으로 돌리자
+			if(rs.next()) {
+				totalCount = rs.getInt(1);
+			}
+			
+			rs.close();
+			pstmt.close();
+			
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		
+		return totalCount;
+	}
+	
+	
+	
+	
+	
+	
+	// 전체데이터
+	public List<BoardDTO> getLists(int start, int end){
+		
+		List<BoardDTO> lists = new ArrayList<BoardDTO>();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql;
+		
+		try {
+			
+			/*
+			select * from (
+			select rownum rnum, data.* from (
+			select num,name,subject from board order by num desc) data)
+			where rnum>=1 and rnum<=3;
+			*/
+			
+			sql = "select * from ( ";
+			sql += "select rownum rnum, data.* from ( ";
+			sql += "select num,name,subject,hitCount, ";
+			sql += "to_char(created,'YYYY-MM-DD') created ";
+			sql += "from board order by num desc) data) ";
+			sql += "where rnum>=? and rnum<=? ";
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, end);
+			
+			rs = pstmt.executeQuery();
+			
 			while(rs.next()) {
 				
 				BoardDTO dto = new BoardDTO();
@@ -125,14 +159,162 @@ public class BoardDAO {
 				
 				lists.add(dto);
 			}
+			
 			rs.close();
 			pstmt.close();
-			
+		
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
+		
 		return lists;
 	}
 	
-	
+	// num으로 조회한 한개의 데이터
+		public BoardDTO getReadData(int num){
+			
+			BoardDTO dto = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			String sql;
+			
+			try {
+				
+				/*
+				select * from (
+				select rownum rnum, data.* from (
+				select num,name,subject from board order by num desc) data)
+				where rnum>=1 and rnum<=3;
+				*/
+				
+			
+				sql = "select num,name,pwd,email,subject,content,";
+				sql+= "ipAddr,hitCount,created ";
+				sql+= "from board where num=?";
+			
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setInt(1, num);
+				
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) { 
+				
+					dto = new BoardDTO();
+					
+					dto.setNum(rs.getInt("num"));
+					dto.setName(rs.getString("name"));
+					dto.setPwd(rs.getString("pwd"));
+					dto.setEmail(rs.getString("email"));
+					dto.setSubject(rs.getString("subject"));
+					dto.setContent(rs.getString("content"));
+					dto.setIpAddr(rs.getString("ipAddr"));
+					dto.setHitCount(rs.getInt("hitCount"));
+					dto.setCreated(rs.getString("created"));
+					
+
+				}
+				
+				rs.close();
+				pstmt.close();
+			
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+			
+			return dto;
+		}
+		
+		//조회수 증가
+		public int updateHitCount(int num) {
+			
+			int result = 0;
+			PreparedStatement pstmt = null;
+			String sql;
+			
+			try {
+				
+				sql = "update board set hitCount=hitCount+1 where num=?";
+				
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setInt(1, num);
+				
+				result = pstmt.executeUpdate();
+				
+				pstmt.close();
+				
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+			
+			return result;
+		}
+		
+		//수정
+		public int updateData(BoardDTO dto) {
+			
+			int result = 0;
+			
+			PreparedStatement pstmt = null;
+			String sql;
+			
+			try {
+				
+				
+				sql = "update board set name=?,pwd=?,email=?,subject=?,";
+				sql+= "content=? where num=?";
+				
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setString(1, dto.getName());
+				pstmt.setString(2, dto.getPwd());
+				pstmt.setString(3, dto.getEmail());
+				pstmt.setString(4, dto.getSubject());
+				pstmt.setString(5, dto.getContent());
+				pstmt.setInt(6, dto.getNum());
+				
+				result = pstmt.executeUpdate();
+				
+				pstmt.close();
+					
+				
+				
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+			
+			return result;
+		}
+		
+		//삭제
+		public int deleteData(int num) {
+			
+			int result = 0;
+			
+			PreparedStatement pstmt = null;
+			String sql;
+			
+			try {
+				
+				sql = "delete board where num=?";
+				
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setInt(1, num);
+				
+				result = pstmt.executeUpdate();
+				
+				pstmt.close();
+				
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+			
+			return result;
+			
+		}
+		
+		
+		
 }

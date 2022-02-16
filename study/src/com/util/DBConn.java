@@ -13,29 +13,27 @@ public class DBConn {
 		String user = "suzi";
 		String pwd = "a123";
 		
-		if(conn == null) {
-			
+		if(conn==null) {
 			try {
+				
 				Class.forName("oracle.jdbc.driver.OracleDriver");
 				
 				conn = DriverManager.getConnection(url, user, pwd);
+								
 				
 			} catch (Exception e) {
 				System.out.println(e.toString());
 			}
+			
 		}
 		return conn;
 	}
-	
 	public static void close() {
-		
-		if(conn == null) {
+		if(conn==null)
 			return;
-		}
-		
 		try {
 			
-			if(!conn.isClosed()) 
+			if(!conn.isClosed())
 				conn.close();
 			
 		} catch (Exception e) {
@@ -44,6 +42,4 @@ public class DBConn {
 		conn = null;
 		
 	}
-	
 }
-

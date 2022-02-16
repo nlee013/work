@@ -1,3 +1,4 @@
+<%@page import="com.util.MyUtil"%>
 <%@page import="com.board.BoardDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.board.BoardDAO"%>
@@ -14,10 +15,47 @@
 	Connection conn = DBConn.getConnection();
 	BoardDAO dao = new BoardDAO(conn);
 	
-	List<BoardDTO> lists = dao.getlists();
+	MyUtil myUtil = new MyUtil();
 	
+	//get방식으로 넘어온 페이지 번호(myUtil...)
+	String pageNum = request.getParameter("pageNum");
+	
+	//처음 실행시
+	int currentPage = 1;
+	
+	if(pageNum != null){
+		
+		//currentPage 덮어씌우기
+		currentPage = Integer.parseInt(pageNum);//변수명을 써야되므로 ""쓰면 안됌
+	}
+	
+	//전체 데이터 갯수 구하기
+	int dataCount = dao.getDataCount();//34
+		
+	//하나의 페이지에 출력될 데이터 갯수
+	int numPerPage = 3;
+		
+	//전체 페이지 갯수
+	int totalPage = myUtil.getPageCount(numPerPage, dataCount);
+		
+	//데이터 삭제시, 페이지가 줄어들 경우
+		/* if(currentPage > totalPage){
+			
+				currentPage = totalPage;
+		}
+		 */
+	//가져올 데이터의 시작과 끝
+	int start = (currentPage - 1)*numPerPage + 1;
+	int end = currentPage*numPerPage;
+		
+	List<BoardDTO> lists = dao.getLists(start, end);//데이터 3개 가져옴
+		
+	//페이징 처리
+	String listUrl = "list.jsp";
+		
+	String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
+		
 	DBConn.close();
-	
 	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -69,15 +107,22 @@
 		
 			<dl>
 				<dd class="num"><%=dto.getNum() %></dd>
-				<dd class="subject"><%=dto.getSubject() %></dd>
+				<dd class="subject">
+					<a href="<%=cp%>/board/article.jsp?num=<%=dto.getNum()%>&pageNum=<%=currentPage%>">
+					<%=dto.getSubject() %>
+					</a>
+				</dd>
 				<dd class="name"><%=dto.getName() %></dd>
 				<dd class="created"><%=dto.getCreated() %></dd>
-				<dd class="hitCount"><%=dto.getHitCount() %></dd>
+				<dd class="hitCount">
+					<a href="<%=cp%>/board/article.jsp?num=<%=dto.getHitCount()%>">
+					<%=dto.getHitCount() %></a>
+				</dd>
 			</dl>
 		<%} %>
 		</div>
 		<div id="footer">
-			1 2 3
+			<%=pageIndexList %>
 		</div>
 		
 	</div>
