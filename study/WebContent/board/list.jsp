@@ -1,10 +1,13 @@
+<%@page import="com.board.BoardDAO"%>
+<%@page import="java.net.URLDecoder"%>
+<%@page import="java.net.URLEncoder"%>
 <%@page import="com.util.MyUtil"%>
 <%@page import="com.board.BoardDTO"%>
 <%@page import="java.util.List"%>
-<%@page import="com.board.BoardDAO"%>
 <%@page import="com.util.DBConn"%>
 <%@page import="java.sql.Connection"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
@@ -29,8 +32,27 @@
 		currentPage = Integer.parseInt(pageNum);//변수명을 써야되므로 ""쓰면 안됌
 	}
 	
+	//검색----------------------------------------
+	
+	String searchKey = request.getParameter("searchKey");
+	String searchValue = request.getParameter("searchValue");
+	
+	if(searchValue != null){
+		
+		if(request.getMethod().equalsIgnoreCase("GET")){
+			
+			searchValue = URLDecoder.decode(searchValue, "UTF-8");
+		}
+		
+	}else{
+		searchKey = "subject";
+		searchValue = "";
+	}
+	
+	//검색----------------------------------------
+	
 	//전체 데이터 갯수 구하기
-	int dataCount = dao.getDataCount();//34
+	int dataCount = dao.getDataCount(searchKey, searchValue);//34
 		
 	//하나의 페이지에 출력될 데이터 갯수
 	int numPerPage = 3;
@@ -48,16 +70,40 @@
 	int start = (currentPage - 1)*numPerPage + 1;
 	int end = currentPage*numPerPage;
 		
-	List<BoardDTO> lists = dao.getLists(start, end);//데이터 3개 가져옴
+	List<BoardDTO> lists = dao.getLists(start, end, searchKey, searchValue);//데이터 3개 가져옴
+	
+	//검색----------------------------------------
+	String param = "";
+	
+	if(!searchValue.equals("")){
 		
+		param  = "?searchKey=" + searchKey;
+		param += "&searchValue=" + URLEncoder.encode(searchValue, "UTF-8");
+	}
+	//검색----------------------------------------
+	
 	//페이징 처리
-	String listUrl = "list.jsp";
-		
+	String listUrl = "list.jsp" + param;
+	
 	String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
+	
+	//글보기 주소
+	String articleUrl = cp + "/board/article.jsp";
+	
+	if(param.equals("")){
+		
+		articleUrl +="?pageNum=" + currentPage;
+		
+	}else{
+		articleUrl += param + "&pageNum=" + currentPage;
+		
+	}
+	
 		
 	DBConn.close();
 	
 %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -66,6 +112,20 @@
 
 <link rel="stylesheet" type="text/css" href="<%=cp%>/board/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="<%=cp%>/board/css/list.css"/>
+
+<script type="text/javascript">
+	
+	function sendIt() {
+		
+		var f = document.searchForm;
+		
+		f.action = "<%=cp%>/board/list.jsp";
+		f.submit();
+	}
+
+	
+	
+</script>
 
 </head>
 <body>
@@ -84,7 +144,7 @@
 				<option value="content">내용</option>
 			</select>
 			<input type="text" name="searchValue" class="textField"/>
-			<input type="button" value=" 검 색 " class="btn2" onclick=""/>		
+			<input type="button" value=" 검 색 " class="btn2" onclick="sendIt();"/>		
 		</form>				
 		</div>
 		<div id="rightHeader">
@@ -108,7 +168,7 @@
 			<dl>
 				<dd class="num"><%=dto.getNum() %></dd>
 				<dd class="subject">
-					<a href="<%=cp%>/board/article.jsp?num=<%=dto.getNum()%>&pageNum=<%=currentPage%>">
+					<a href="<%=articleUrl %>&num=<%=dto.getNum()%>">
 					<%=dto.getSubject() %>
 					</a>
 				</dd>

@@ -1,3 +1,5 @@
+gue<%@page import="java.net.URLEncoder"%>
+<%@page import="java.net.URLDecoder"%>
 <%@page import="com.board.BoardDTO"%>
 <%@page import="com.board.BoardDAO"%>
 <%@page import="com.util.DBConn"%>
@@ -10,6 +12,26 @@
 	
 	int num = Integer.parseInt(request.getParameter("num"));
 	String pageNum = request.getParameter("pageNum");
+	
+
+	//검색----------------------------------------
+	
+	String searchKey = request.getParameter("searchKey");
+	String searchValue = request.getParameter("searchValue");
+	
+	if(searchValue != null){
+		
+		if(request.getMethod().equalsIgnoreCase("GET")){
+			
+			searchValue = URLDecoder.decode(searchValue, "UTF-8");
+		}
+		
+	}else{
+		searchKey = "subject";
+		searchValue = "";
+	}
+	
+	//검색----------------------------------------
 	
 	Connection conn = DBConn.getConnection();
 	BoardDAO dao = new BoardDAO(conn);
@@ -29,6 +51,17 @@
 	
 	// 글 엔터를 <br/>로 변경
 	dto.setContent(dto.getContent().replaceAll("\n", "<br/>"));
+	
+	//검색----------------------------------------
+		String param = "";
+		
+		if(!searchValue.equals("")){
+			
+			param  = "&searchKey=" + searchKey;
+			param += "&searchValue=" + URLEncoder.encode(searchValue, "UTF-8");
+		}
+	//검색----------------------------------------
+		
 	
 	DBConn.close();
 	
@@ -88,13 +121,13 @@
 	<div id="bbsArticle_footer">
 		<div id="leftFooter">
 			<input type="button" value=" 수정 " class="btn2" 
-			onclick="javascript:location.href='<%=cp%>/board/updated.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>';"/>
+			onclick="javascript:location.href='<%=cp%>/board/updated.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%><%=param%>';"/>
 			<input type="button" value=" 삭제 " class="btn2" 
-			onclick="javascript:location.href='<%=cp%>/board/delete_ok.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%>';"/>
+			onclick="javascript:location.href='<%=cp%>/board/delete_ok.jsp?num=<%=dto.getNum()%>&pageNum=<%=pageNum%><%=param%>';"/>
 		</div>
 		<div id="rightFooter">
 			<input type="button" value=" 리스트 " class="btn2" 
-			onclick="javascript:location.href='<%=cp%>/board/list.jsp?pageNum=<%=pageNum%>'"/>
+			onclick="javascript:location.href='<%=cp%>/board/list.jsp?pageNum=<%=pageNum%><%=param%>'"/>
 		</div>
 	</div>
 </div>

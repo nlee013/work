@@ -80,8 +80,8 @@ public class BoardDAO {
 		return result;
 	}
 	
-	// 전체 데이터 개수
-	public int getDataCount() {
+	// 전체 데이터 개수 + 검색창
+	public int getDataCount(String searchKey, String searchValue) {
 		
 		int totalCount = 0;	
 	
@@ -91,9 +91,15 @@ public class BoardDAO {
 		
 		try {
 			
-			sql = "select nvl(count(*),0) from board";
+			searchValue = "%" + searchValue + "%";
+			
+			sql  = "select nvl(count(*),0) from board ";
+			sql += "where " + searchKey + " like ?";
+			//마지막 물음표 안에 searchValue가 들어감
 			
 			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, searchValue);
 			
 			rs = pstmt.executeQuery();
 			
@@ -111,13 +117,8 @@ public class BoardDAO {
 		return totalCount;
 	}
 	
-	
-	
-	
-	
-	
 	// 전체데이터
-	public List<BoardDTO> getLists(int start, int end){
+	public List<BoardDTO> getLists(int start, int end, String searchKey, String searchValue){
 		
 		List<BoardDTO> lists = new ArrayList<BoardDTO>();
 		PreparedStatement pstmt = null;
@@ -133,17 +134,21 @@ public class BoardDAO {
 			where rnum>=1 and rnum<=3;
 			*/
 			
+			searchValue = "%" + searchValue + "%";
+			
 			sql = "select * from ( ";
 			sql += "select rownum rnum, data.* from ( ";
 			sql += "select num,name,subject,hitCount, ";
 			sql += "to_char(created,'YYYY-MM-DD') created ";
-			sql += "from board order by num desc) data) ";
+			sql += "from board where " + searchKey + " like ? ";
+			sql += "order by num desc) data) ";
 			sql += "where rnum>=? and rnum<=? ";
 			
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setInt(1, start);
-			pstmt.setInt(2, end);
+			pstmt.setString(1, searchValue);
+			pstmt.setInt(2, start);
+			pstmt.setInt(3, end);
 			
 			rs = pstmt.executeQuery();
 			

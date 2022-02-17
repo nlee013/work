@@ -34,8 +34,9 @@ public class MyUtil {
 			return "";
 		}
 		
-		//list.jsp?pageNum=2
+		//전체 검색->list.jsp?pageNum=2
 		//물음표가 있으면 list.jsp?searchKey=subject&searchValue=aa&pageNum=2
+		
 		//값이 있으면~
 		if(listUrl.indexOf("?") != -1) {
 			listUrl = listUrl + "&";
