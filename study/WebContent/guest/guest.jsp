@@ -42,8 +42,10 @@
 		//가져올 데이터의 시작과 끝
 		int start = (currentPage - 1)*numPerPage + 1;
 		int end = currentPage*numPerPage;
+		
+		List<GuestDTO> lists = null;
 			
-		List<GuestDTO> lists = dao.getLists(start, end);//데이터 3개 가져옴
+		lists = dao.getLists(start, end);//데이터 3개 가져옴
 		
 		//페이징 처리
 		
@@ -64,6 +66,19 @@
 <link rel="stylesheet" href="<%=cp%>/guest/data/style.css"/>
 
 <script type="text/javascript" src="<%=cp%>/guest/data/guest.js"></script>
+<script type="text/javascript">
+	
+	function isDelete(num) {
+		
+		if(confirm("위 자료를 삭제하시겠습니까?")){
+			
+			location.href ="<%=cp%>/guest/delete.jsp?num=" + num;
+		}
+		
+	}
+
+
+</script>
 
 </head>
 <body>
@@ -162,7 +177,7 @@
 	<td align="right" style="padding-left: 5px;">
 	
 		<%if(!dto.getHompage().equals("")){ %>
-			<b>홈페이지 : <a href="<%=dto.getHompage() %>" target="_blank">
+			<b>홈페이지 : </b><a href="<%=dto.getHompage() %>" target="_blank">
 			<%=dto.getHompage() %></a>
 		<%}else{
 			out.print("&nbsp;");
@@ -170,27 +185,41 @@
 	</td>
 </tr>
 
-<tr>
-	<td width="50%" style="padding-left: 5px;">
-	<b>작성일 : </b><%=dto.getCreated() %>, <b>IP : </b><%=dto.getIpAddr() %></td>
+<tr height="20">
+	<td width="80%" style="padding-left: 5px;">
+	<b>작성일 : </b><%=dto.getCreated() %>, (<b>IP : </b><%=dto.getIpAddr() %>)</td>
 	<td align="right" style="padding-right: 5px;">
-	<a href="<%=cp%>/guest/delete.jsp?num=<%=dto.getNum()%>">삭제</a>
+	<a href="javascript:isDelete('<%=dto.getNum()%>');">삭제</a>
 	</td>
 </tr>
 
 <tr>
-	<td colspan="2" height="3" bgcolor="#dbdbdb" align="center"></td>
+	<td colspan="2" height="1" bgcolor="#dbdbdb" align="center"></td>
 </tr>
 
 <tr>
-	<td colspan="2" height="40" bgcolor="#ffffff" ><%=dto.getContent() %></td>
+	<td colspan="2" height="40" bgcolor="#ffffff" valign="top" style="padding: 5px;">
+	<%=dto.getContent().replaceAll("\r\n", "<br/>") %>
+	</td>
+</tr>
+<tr>
+	<td colspan="2" height="1" bgcolor="#dbdbdb" align="center"></td>
 </tr>
 
 </table>
 
 <%}%>
 
-<table width="560" border="0" cellpadding="0" cellspacing="0" style="margin: auto;">
+<%if(dataCount == 0){ %>
+<table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="#eeeeee" style="margin: auto;">
+<tr align="center" height="50">
+	<td>
+	<b>등록된 자료가 없습니다.</b>
+	</td>
+</tr>
+</table>	
+<%}else{ %>
+<table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="margin: auto;">
 <tr>
 	<td colspan="2" height="3" bgcolor="#dbdbdb" align="center"></td>
 </tr>
@@ -200,5 +229,6 @@
 </tr>
 </table>
 
+<%} %>
 </body>
 </html>

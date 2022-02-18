@@ -17,5 +17,6 @@
 	
 	DBConn.close();
 	
-	response.sendRedirect("guest.jsp?pageNum=" + pageNum);
+	//response.sendRedirect("guest.jsp?pageNum=" + pageNum);
+	response.sendRedirect(cp + "/guest/guest.jsp");
 %>
