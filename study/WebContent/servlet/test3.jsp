@@ -1,12 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
-
-	int dan = Integer.parseInt(request.getParameter("dan"));
-	
-	//2.ServletContext 인터페이스
-	ServletContext context = getServletContext();
-	String gender = context.getInitParameter("gender");
+	String cp = request.getContextPath();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,19 +11,11 @@
 </head>
 <body>
 
-<%
+<form action="<%=cp%>/ss1" method="post">
+이름: <input type="text" name="name"/><br/>
+나이: <input type="text" name="age"/><br/>
+<input type="submit" value="확인"/><br/>
+</form>
 
-for(int i=1;i<10;i++) {
-	
-	String str = String.format("%d*%d=%d<br/>", dan,i,dan*i);
-	out.print(str);
-}
-
-
-
-
-%>
-
-작성자: <%=gender %>
 </body>
 </html>

@@ -72,7 +72,7 @@
 		
 		if(confirm("위 자료를 삭제하시겠습니까?")){
 			
-			location.href ="<%=cp%>/guest/delete.jsp?num=" + num;
+			location.href ="<%=cp%>/guest/delete.jsp?num=" + num + "&pageNum=<%=currentPage%>";
 		}
 		
 	}
