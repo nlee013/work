@@ -57,4 +57,21 @@
   	<url-pattern>/ss1</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+  	<servlet-name>boardServlet</servlet-name>
+  	<servlet-class>com.board.BoardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>boardServlet</servlet-name>
+  	<url-pattern>/sboard/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>scoreServlet</servlet-name>
+  	<servlet-class>com.score.ScoreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>scoreServlet</servlet-name>
+  	<url-pattern>/jumsu/*</url-pattern>
+  </servlet-mapping>
 </web-app>

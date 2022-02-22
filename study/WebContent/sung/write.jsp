@@ -8,16 +8,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>write</title>
+<title>성적처리 Servlet</title>
 
 <script type="text/javascript">
 	
-	function sendIt() {
+	 function sendIt() {
 		
 		var f = document.myForm;
-		//f.action = "http://www.naver.com/study/score/write_ok.jsp";-도메인 있는 회사에서.
-		//f.action = "http://loacalhost:8080/study/score/write_ok.jsp";-우리가 쓸때.
-		f.action = "<%=cp%>/sung/write_ok.jsp";
+		
+		f.action = "<%=cp%>/jumsu/write_ok.do";
 		f.submit();
 		
 	}
@@ -146,7 +145,7 @@ td{
 	onclick="document.myForm.hak.focus();">
 	<!-- 여기 onclick에 위에 쓴 js를 써줘야됌 -->
 	<input type="button" class="btn" value="입력취소"
-	onclick="javascript:location.href='<%=cp%>/score/list.jsp';"/>
+	onclick="javascript:location.href='<%=cp%>/jumsu/list.do';"/>
 	
 	</td>
 </tr>
