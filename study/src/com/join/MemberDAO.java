@@ -56,7 +56,7 @@ public class MemberDAO {
 		
 		try {
 			
-			sql  = "select userId, userPwd, userName, userBirth, userTel ";
+			sql  = "select userId, userPwd, userName, to_char(userBirth, 'YYYY-MM-DD') userBirth, userTel ";
 			sql += "from member where userId=?";
 			
 			pstmt = conn.prepareStatement(sql);
@@ -84,4 +84,38 @@ public class MemberDAO {
 		}
 		return dto;
 	}
+	
+	//정보수정
+		public int updateData(MemberDTO dto) {
+			
+			int result = 0;
+			
+			PreparedStatement pstmt = null;
+			String sql;
+			
+			try {
+				
+				sql = "update member set userPwd=?,userBirth=?,userTel=? where userId=?";
+				
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setString(1, dto.getUserPwd());
+				pstmt.setString(2, dto.getUserBirth());
+				pstmt.setString(3, dto.getUserTel());
+				pstmt.setString(4, dto.getUserId());
+				
+				result = pstmt.executeUpdate();
+				
+				pstmt.close();
+				
+				
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+			
+			return result;
+		
+		}
+	
+	
 }

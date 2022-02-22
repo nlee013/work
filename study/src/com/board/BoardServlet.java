@@ -11,7 +11,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import com.join.CustomInfo;
 import com.util.DBConn;
 import com.util.MyUtil;
 
@@ -51,6 +53,18 @@ public class BoardServlet extends HttpServlet{
 		
 		if(uri.indexOf("created.do") != -1) {
 			
+			HttpSession session = req.getSession();
+			
+			//로그인 처리--------------------------------------------------------
+			CustomInfo info = (CustomInfo)session.getAttribute("customInfo");
+			
+			if(info == null) {
+				
+				url = "/member/login.jsp";
+				forward(req, resp, url);
+				return;
+			}
+			//-------------------------------------------------------------------
 			url = "/bbs/created.jsp";
 			forward(req, resp, url);
 			

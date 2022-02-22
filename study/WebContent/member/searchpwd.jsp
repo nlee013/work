@@ -1,40 +1,46 @@
+<%@page import="java.sql.Connection"%>
+<%@page import="com.join.MemberDTO"%>
+<%@page import="com.util.DBConn"%>
+<%@page import="com.join.MemberDAO"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
+	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>로그인</title>
+<title>비밀번호 찾기</title>
 
 <link rel="stylesheet" type="text/css" href="<%=cp%>/member/css/style.css"/>
 
 <script type="text/javascript">
 
-	function login() {
+	function search() {
 		
-		var f = document.myForm;
+	var f = document.myForm;
 		
 		if(!f.userId.value){
-			alert("아이디를 입력하세요.");
-		f.userId.focus();
-		return;
+			alert("아이디를 확인하세요")
+			f.userId.focus();
+			return;
 		}
 		
-		if(!f.userPwd.value){
-			alert("비밀번호를 입력하세요.");
-		f.userPwd.focus();
-		return;
+		if(!f.userTel.value){
+			alert("전화번호를 확인하세요")
+			f.userTel.focus();
+			return;
 		}
 		
-		f.action = "<%=cp%>/join/login_ok.do";
+		f.action = "<%=cp%>/join/searchpwd_ok.do";
 		f.submit();
 	}
 
 </script>
+
 </head>
 <body>
 
@@ -50,7 +56,7 @@
 
 <tr height="30">
 	<td colspan="2" align="center">
-		<b>로그인</b>
+		<b>비밀번호 찾기</b>
 	</td>
 </tr>
 
@@ -66,9 +72,9 @@
 </tr>
 
 <tr height="25">
-	<td width="80" bgcolor="#e6e4e6" align="center">비밀번호</td>
+	<td width="80" bgcolor="#e6e4e6" align="center">전화번호</td>
 	<td width="120" style="padding-left: 5px;">
-	<input type="text" name="userPwd" maxlength="10" size="15"/>
+	<input type="text" name="userTel" maxlength="10" size="15"/>
 	</td>
 </tr>
 
@@ -78,30 +84,20 @@
 
 <tr height="30">
 	<td colspan="2" align="center">
-	
-	<input type="button" value="로그인" class="btn2" onclick="login();"/>
-	
-	<input type="button" value="취  소" class="btn2"
-	onclick="javascript:location.href='<%=cp%>';"/>
-	
-	<input type="button" value="회원가입" class="btn2"
-	onclick="javascript:location.href='<%=cp%>/join/created.do';"/>
-	</td>	
-</tr>
-
-<tr height="2">
-	<td colspan="2" bgcolor="#cccccc"></td>
+		<input type="button" value="확  인" class="btn2" onclick="search();"/>
+		<input type="button" value="취  소" class="btn2"
+		onclick="javascript:location.href='<%=cp%>';"/>
+	</td>
 </tr>
 
 </table>
 </form>
 
-<br/>
-<font size="2" color="red"><b>${memo }</b></font>
-<br/><br/>
+<font size="2" color="red"><b>${msg }</b></font>
 
-<a href="<%=cp%>/join/searchpwd.do">${spwd }</a>
+<br/>
 
 </center>
+
 </body>
 </html>
