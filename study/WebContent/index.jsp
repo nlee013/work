@@ -19,5 +19,6 @@
 3) <a href="<%=cp%>/guest/guest.jsp">JSP 방명록</a><br/>
 4) <a href="<%=cp%>/sboard/list.do">Servlet 게시판</a><br/>
 5) <a href="<%=cp%>/jumsu/list.do">Servlet 성적처리</a><br/>
+6) <a href="<%=cp%>/join/created.do">Servlet 회원가입</a><br/>
 </body>
 </html>

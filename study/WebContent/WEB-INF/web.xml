@@ -74,4 +74,14 @@
   	<servlet-name>scoreServlet</servlet-name>
   	<url-pattern>/jumsu/*</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>memberServlet</servlet-name>
+  	<servlet-class>com.join.MemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>memberServlet</servlet-name>
+  	<url-pattern>/join/*</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
