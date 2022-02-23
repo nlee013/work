@@ -84,4 +84,15 @@
   	<url-pattern>/join/*</url-pattern>
   </servlet-mapping>
   
+  <!-- 서블릿 파일 업로드 -->
+   <servlet>
+  	<servlet-name>fileTestServlet</servlet-name>
+  	<servlet-class>com.fileTest.FileTestServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>fileTestServlet</servlet-name>
+  	<url-pattern>/file/*</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
