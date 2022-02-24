@@ -3,9 +3,7 @@ package com.fileTest;
 public class FileTestDTO {
 
 	private int num;
-	private String subject;
-	private String saveFileName;
-	private String originalFileName;
+	private String subject, saveFileName, originalFileName;
 	
 	public int getNum() {
 		return num;
@@ -31,7 +29,6 @@ public class FileTestDTO {
 	public void setOriginalFileName(String originalFileName) {
 		this.originalFileName = originalFileName;
 	}
-	
 	
 	
 	

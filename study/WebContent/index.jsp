@@ -56,6 +56,7 @@
 	</c:otherwise>
 </c:choose>
 
+<%-- ${name } 어디서든 창에 뜨게 된다 --%>
 <h6></h6>
 </body>
 </html>

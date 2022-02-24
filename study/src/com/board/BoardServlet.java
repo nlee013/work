@@ -39,7 +39,7 @@ public class BoardServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		req.setCharacterEncoding("UTF-8");
+		//req.setCharacterEncoding("UTF-8");
 		
 		Connection conn = DBConn.getConnection();
 		BoardDAO dao = new BoardDAO(conn);
