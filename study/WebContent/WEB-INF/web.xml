@@ -126,4 +126,15 @@
 <listener>
 	<listener-class>com.event.ContextListenerTest</listener-class>
 </listener>
+
+<!--서블릿 이미지 업로드 셋팅 -->
+<servlet>
+	<servlet-name>imageServlet</servlet-name>
+  	<servlet-class>com.imageTest.ImageTestServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  	<servlet-name>imageServlet</servlet-name>
+  	<url-pattern>/image/*</url-pattern>
+</servlet-mapping>
+
 </web-app>
