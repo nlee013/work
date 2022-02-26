@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.db.DBConn"/>
-<fullyQualifiedTypeName name="java.beans.Statement"/>
-<fullyQualifiedTypeName name="java.sql.Statement"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="com.naver.NaverDAO"/>
-<fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.dtm.DTMDOMException"/>
-<fullyQualifiedTypeName name="com.naver.NaverDTO"/>
-<fullyQualifiedTypeName name="co.guest.GuestDAO"/>
-<fullyQualifiedTypeName name="co.guest.GuestDTO"/>
-<fullyQualifiedTypeName name="com.guest.GuestDTO"/>
-<fullyQualifiedTypeName name="javax.servlet.GenericServlet"/>
-<fullyQualifiedTypeName name="javax.xml.ws.Response"/>
-<fullyQualifiedTypeName name="javax.xml.ws.RespectBinding"/>
-<fullyQualifiedTypeName name="javax.servlet.ServletConfig"/>
-<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.net.URLDecoder"/>
-<fullyQualifiedTypeName name="java.net.URLEncoder"/>
-<fullyQualifiedTypeName name="com.board.BoardDAO"/>
-<fullyQualifiedTypeName name="com.util.MyUtil"/>
 <fullyQualifiedTypeName name="com.board.BoardDTO"/>
 <fullyQualifiedTypeName name="com.score.ScoreDAO"/>
 <fullyQualifiedTypeName name="com.score.ScoreDTO"/>
@@ -27,9 +7,7 @@
 <fullyQualifiedTypeName name="com.join.MemberDAO"/>
 <fullyQualifiedTypeName name="com.join.MemberDTO"/>
 <fullyQualifiedTypeName name="com.join.CustomInfo"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="com.util.DBConn"/>
 <fullyQualifiedTypeName name="com.fileTest.fileTestDAO"/>
 <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
@@ -38,7 +16,6 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.fileTest.fileTestDTO"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.fileTest.FileTestDTO"/>
@@ -48,7 +25,6 @@
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
 <fullyQualifiedTypeName name="com.util.FileManager"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="javax.servlet.Filter"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
@@ -59,4 +35,29 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="javax.mail.Session"/>
+<fullyQualifiedTypeName name="javax.mail.internet.MimeMessage"/>
+<fullyQualifiedTypeName name="javax.mail.Message.RecipientType"/>
+<fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
+<fullyQualifiedTypeName name="javax.mail.Message"/>
+<fullyQualifiedTypeName name="javax.mail.internet.MimeBodyPart"/>
+<fullyQualifiedTypeName name="javax.activation.FileDataSource"/>
+<fullyQualifiedTypeName name="javax.activation.DataHandler"/>
+<fullyQualifiedTypeName name="javax.mail.internet.MimeUtility"/>
+<fullyQualifiedTypeName name="com.sun.mail.handlers.multipart_mixed"/>
+<fullyQualifiedTypeName name="javax.mail.Multipart"/>
+<fullyQualifiedTypeName name="javax.mail.internet.MimeMultipart"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="javax.mail.Transport"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="javax.mail.MessagingException"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="com.util.MyUtil"/>
+<fullyQualifiedTypeName name="com.imageTest.ImageTestDTO"/>
+<fullyQualifiedTypeName name="com.imageTest.ImageTestDAO"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.sool.soolDTO"/>
+<fullyQualifiedTypeName name="com.sool.soolDAO"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
 </qualifiedTypeNameHistroy>

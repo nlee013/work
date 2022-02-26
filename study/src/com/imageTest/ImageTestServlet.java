@@ -82,8 +82,18 @@ public class ImageTestServlet extends HttpServlet {
 				dto.setSubject(mr.getParameter("subject"));
 				dto.setSaveFileName(mr.getFilesystemName("upload"));
 				
+				
 				// 2) 파일 정보 DB에 저장
 				dao.insertData(dto);
+				
+			}else if(mr.getFile("upload") == null) {
+				
+				System.out.print("파일을 선택하세요!");
+				
+				url = cp + "/image/write.do";
+				resp.sendRedirect(url);
+				return;
+				
 			}
 			
 			url = cp + "/image/list.do";
@@ -98,15 +108,17 @@ public class ImageTestServlet extends HttpServlet {
 			String pageNum = req.getParameter("pageNum");
 			int currentPage = 1;
 			
-			if(pageNum != null)
-				currentPage = Integer.parseInt(pageNum);
-			
-			int numPerPage = 5;
+				if(pageNum != null) {
+					
+					currentPage = Integer.parseInt(pageNum);
+				}
+			int numPerPage = 6;
 			int totalPage = myUtil.getPageCount(numPerPage, dataCount);
 			
-			if(currentPage > totalPage) {
-				currentPage = totalPage;
-			}
+				if(currentPage > totalPage) {
+					
+					currentPage = totalPage;
+				}
 			
 			int start = (currentPage - 1) * numPerPage + 1;
 			int end = currentPage * numPerPage;
@@ -117,14 +129,14 @@ public class ImageTestServlet extends HttpServlet {
 			String listUrl = cp + "/image/list.do";
 			
 			String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
-			String downloadPath = cp + "/image/download.do";
 			String imagePath = cp + "/pds/imageFile";//이미지는 직접 주소로 들어감
 			
 			req.setAttribute("lists", lists);
 			req.setAttribute("deletePath", deletePath);
+			req.setAttribute("totalPage", totalPage);
+			req.setAttribute("pageNum", pageNum);
 			req.setAttribute("pageIndexList", pageIndexList);
 			req.setAttribute("dataCount", dataCount);
-			req.setAttribute("downloadPath", downloadPath);
 			req.setAttribute("imagePath", imagePath);
 			
 			

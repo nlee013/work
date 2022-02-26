@@ -137,4 +137,14 @@
   	<url-pattern>/image/*</url-pattern>
 </servlet-mapping>
 
+<!-- 3조 홈술닷컴 -->
+   <servlet>
+ 	<servlet-name>soolServlet</servlet-name>
+  	<servlet-class>com.sool.SoolServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>soolServlet</servlet-name>
+  	<url-pattern>/homesool/*</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

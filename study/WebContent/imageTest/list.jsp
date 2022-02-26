@@ -14,7 +14,6 @@
 <link rel="stylesheet" href="<%=cp%>/imageTest/data/style.css" type="text/css">
 
 </head>
-
 <body>
 
 <br/>&nbsp;<br/>
@@ -31,7 +30,7 @@
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
    <tr height="30">
       <td align="left" width="50%">
-        Total ${totalDataCount} articles, ${totalPage} pages / Now page is ${pageNum}
+        총 ${dataCount }개의 상품이 있습니다. Now page is ${pageNum }/${totalPage } pages
       </td>
       <td align="right">
         <input type="button" value=" 게시물 등록 " onclick="javascript:location.href='<%=cp%>/image/write.do'" class="btn1"/>
@@ -43,47 +42,51 @@
   <tr><td height="3" bgcolor="#DBDBDB" align="center"></td></tr>
 </table>
 
-<table width="600" border="0" cellspacing="1" cellpadding="3"
-   bgColor="#FFFFFF" align="center">
+<table width="600" border="0" cellspacing="1" cellpadding="3" bgColor="#FFFFFF" align="center">
 
-	<c:set var="n" value="0"/>
-	<c:forEach var="dto" items="${lists}">
-		<c:if test="${n==0}">
-			<tr bgcolor="#FFFFFF" >
-		</c:if>
-		<c:if test="${n!=0&&n%3==0 }">
-			</tr><tr bgcolor="#FFFFFF" >
-		</c:if>
-      <td width="200" align="center">
-      <a href="${imagePath}/${dto.saveFileName}">
-	    <img src="${imagePath}/${dto.saveFileName}" width="180" height="180" border="0" />
-	   </a>
+<c:set var="n" value="0"/>
+<c:forEach var="dto" items="${lists}">
+	
+	<c:if test="${n==0}">
+		<tr bgcolor="#FFFFFF" ></tr>
+	</c:if>
+	<c:if test="${n!=0&&n%3==0 }">
+		<tr bgcolor="#FFFFFF" >
+	</c:if>
+	
+	<td width="200" align="center">
+    	<a href="${imagePath}/${dto.saveFileName}">
+	    	<img src="${imagePath}/${dto.saveFileName}" width="180" height="180" 
+	    	style="border: 1px; border-radius: 2em;"/>
+	    </a>
 	    <br/>${dto.subject}&nbsp;<a href="<%=cp%>/image/delete.do?num=${dto.num}">삭제</a>
 	</td>
+	
 	<c:set var="n" value="${n+1}"/>
-	</c:forEach>
+</c:forEach>
 	
-	<c:if test="${n>0||n%3!=0 }">
-		<c:forEach var="i" begin="${n%3+1}" end="3" step="1">
+<c:if test="${n>0||n%3!=0 }">
+	<c:forEach var="i" begin="${n%3+1}" end="3" step="1">
 			<td>&nbsp;</td>
-		</c:forEach>
-	</c:if>
+	</c:forEach>
+</c:if>
+
+<c:if test="${n!=0 }">
+	</tr>
+</c:if>
 	
-	<c:if test="${n!=0 }">
-		</tr>
-	</c:if>
-	
-	<c:if test="${totalDataCount != 0}">
+<c:if test="${dataCount != 0}">
 	<tr bgcolor="#FFFFFF">
 	   <td align="center" height="30" colspan="3">${pageIndexList}</td>
     </tr>
-	</c:if>
+</c:if>
 	
-	<c:if test="${totalDataCount == 0}">
+<c:if test="${dataCount == 0}">
 	<tr bgcolor="#FFFFFF">
        <td align="center" colspan="3" height="30">등록된 자료가 없습니다.</td>
     </tr>
-	</c:if>
+</c:if>
+	
 </table>
 
 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center">

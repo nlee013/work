@@ -87,7 +87,7 @@ public class ImageTestDAO {
 		String sql;
 
 		try {
-			sql = "insert into imageTest (num, subject, saveFileName) values (?,?,?,?)";
+			sql = "insert into imageTest (num, subject, saveFileName) values (?,?,?)";
 
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, dto.getNum());
