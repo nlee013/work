@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.board.BoardDTO"/>
-<fullyQualifiedTypeName name="com.score.ScoreDAO"/>
-<fullyQualifiedTypeName name="com.score.ScoreDTO"/>
 <fullyQualifiedTypeName name="com.join.CustomIfo"/>
 <fullyQualifiedTypeName name="com.join.MemberDAO"/>
 <fullyQualifiedTypeName name="com.join.MemberDTO"/>
@@ -52,12 +49,15 @@
 <fullyQualifiedTypeName name="javax.mail.Transport"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="javax.mail.MessagingException"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-<fullyQualifiedTypeName name="com.util.MyUtil"/>
 <fullyQualifiedTypeName name="com.imageTest.ImageTestDTO"/>
 <fullyQualifiedTypeName name="com.imageTest.ImageTestDAO"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.sool.soolDTO"/>
 <fullyQualifiedTypeName name="com.sool.soolDAO"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="com.util.SJDBConn"/>
+<fullyQualifiedTypeName name="com.sool.SoolDAO"/>
+<fullyQualifiedTypeName name="com.util.MyUtil"/>
+<fullyQualifiedTypeName name="com.sool.SoolDTO"/>
 </qualifiedTypeNameHistroy>
