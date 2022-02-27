@@ -6,7 +6,7 @@
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
 
- Version: 1.6.0
+ Version: 1.8.0
   Author: Ken Wheeler
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick
@@ -1354,8 +1354,8 @@
 
         if ( _.options.pauseOnHover ) {
 
-            _.$list.find('.slick-slide img').on('mouseenter.slick', $.proxy(_.interrupt, _, true));
-            _.$list.find('.slick-slide img').on('mouseleave.slick', $.proxy(_.interrupt, _, false));
+            _.$list.on('mouseenter.slick', $.proxy(_.interrupt, _, true));
+            _.$list.on('mouseleave.slick', $.proxy(_.interrupt, _, false));
 
         }
 
@@ -1954,9 +1954,9 @@
         var _ = this,
             targetLeft;
 
-         _.$slides.each(function(index, element) { 
+        _.$slides.each(function(index, element) {
+            targetLeft = (_.slideWidth * index) * -1;
             if (_.options.rtl === true) {
-				targetLeft = (_.slideWidth * index) * -1;
                 $(element).css({
                     position: 'relative',
                     right: targetLeft,
@@ -1964,35 +1964,14 @@
                     zIndex: _.options.zIndex - 2,
                     opacity: 0
                 });
-
             } else {
-				if($(element).parents().parents().parents().parents('div').hasClass('main_visual')){
-					targetLeft = (_.$slideTrack.children('.slick-slide').width() * index) * -1;
-					 $(element).css({
-						position: 'relative',
-						left: targetLeft,
-						top: 0,
-						zIndex: _.options.zIndex - 2,
-						opacity: 0,
-						width: $(element).parents().parents().parents('.slider-wrap').width()
-					});
-					 $(element).find('img').css({
-						marginLeft: -$(element).parents().parents().parents('.slider-wrap').width(),
-						position:'relative',
-						left:'50%',
-						width:'auto'
-					});
-				}else{
-					targetLeft = (_.$slideTrack.children('.slick-slide').width() * index) * -1;
-						$(element).css({
-						position: 'relative',
-						left: targetLeft,
-						top: 0,
-						zIndex: _.options.zIndex - 2,
-						opacity: 0
-					});
-				}
-               
+                $(element).css({
+                    position: 'relative',
+                    left: targetLeft,
+                    top: 0,
+                    zIndex: _.options.zIndex - 2,
+                    opacity: 0
+                });
             }
         });
 

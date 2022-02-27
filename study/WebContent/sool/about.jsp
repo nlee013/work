@@ -20,6 +20,10 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
 	<link rel="stylesheet" type="text/css" href="inner-page-style.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	
+<link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
+<link rel="icon" href="image/favicon.ico" type="image/x-icon">
+
 </head>
 <body itemscope itemtype="http://schema.org/AboutPage">
 	<div id="page" class="site">
@@ -28,7 +32,7 @@
 				<div class="container">
 					<div class="top-header-left">
 						<div class="top-header-block">
-							<a href="mailto:info@educationpro.com"><i class="fas fa-envelope"></i> info@homesool.com</a>
+							<a href="mailto:info@homesool.com"><i class="fas fa-envelope"></i> info@homesool.com</a>
 						</div>
 						<div class="top-header-block">
 							<a href="tel:+9779813639131"><i class="fas fa-phone"></i> +977 9813639131</a>
