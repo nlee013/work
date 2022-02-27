@@ -24,7 +24,7 @@
 
 <!-- Additional CSS Files -->
     <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/templatemo-sixteen.css">
+    <link rel="stylesheet" href="css/soolMain.css">
     <link rel="stylesheet" href="css/owl.css">
     
 </head>
@@ -44,27 +44,31 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+        
+          <a class="navbar-brand" href="index.html"><h2>Home <em>sool</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+      		  <img src="image/homesool_logo.png" style="width: 10%;">
           <div class="collapse navbar-collapse" id="navbarResponsive">
+          
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
+                <a class="nav-link" href="index.html" style="color: #000000;">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Our Products</a>
+                <a class="nav-link" href="products.html">홈술 고르기</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="about.html">Best 홈술</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.html">홈술 가이드</a>
               </li>
             </ul>
+            
           </div>
         </div>
       </nav>
@@ -99,19 +103,22 @@
     <div class="latest-products">
       <div class="container">
         <div class="row">
+        
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Latest Products</h2>
+              <h2>Best 홈술 상품</h2>
               <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
+          
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="image/product_01.jpg" alt=""></a>
+              <div><a href="#"><img src="image/adver/광고1.png" alt=""></a></div>
               <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$25.75</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <a href="#"><h4>하얀 까마귀</h4></a>
+                <h6>10,000원</h6>
+                <p>쌀의 단맛과 발효로 인한 상큼한 향의 조화는 수제 요거트가 생각나는 술이예요.
+                생막걸리 특유의 발효의 미학이 고스란히 담겼어요.</p>
                 <ul class="stars">
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
@@ -119,17 +126,18 @@
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
                 </ul>
-                <span>Reviews (24)</span>
+                <span>View reviews</span>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="image/product_02.jpg" alt=""></a>
+              <a href="#"><img src="image/adver/광고7.jpg" alt=""></a>
               <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$30.25</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <a href="#"><h4>하얀 까마귀</h4></a>
+                <h6>10,000원</h6>
+                <p>쌀의 단맛과 발효로 인한 상큼한 향의 조화는 수제 요거트가 생각나는 술이예요.
+                생막걸리 특유의 발효의 미학이 고스란히 담겼어요.</p>
                 <ul class="stars">
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
@@ -143,11 +151,12 @@
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="image/product_03.jpg" alt=""></a>
+              <a href="#"><img src="image/adver/광고3.png" alt=""></a>
               <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$20.45</h6>
-                <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
+                <a href="#"><h4>하얀 까마귀</h4></a>
+                <h6>10,000원</h6>
+                <p>쌀의 단맛과 발효로 인한 상큼한 향의 조화는 수제 요거트가 생각나는 술이예요.
+                생막걸리 특유의 발효의 미학이 고스란히 담겼어요.</p>
                 <ul class="stars">
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
@@ -161,11 +170,12 @@
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="image/product_04.jpg" alt=""></a>
+              <a href="#"><img src="image/adver/광고4.png" alt=""></a>
               <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$15.25</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <a href="#"><h4>하얀 까마귀</h4></a>
+                <h6>10,000원</h6>
+                <p>쌀의 단맛과 발효로 인한 상큼한 향의 조화는 수제 요거트가 생각나는 술이예요.
+                생막걸리 특유의 발효의 미학이 고스란히 담겼어요.</p>
                 <ul class="stars">
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
@@ -179,11 +189,12 @@
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="image/product_05.jpg" alt=""></a>
+              <a href="#"><img src="image/adver/광고5.png" alt=""></a>
               <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$12.50</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <a href="#"><h4>하얀 까마귀</h4></a>
+                <h6>10,000원</h6>
+                <p>쌀의 단맛과 발효로 인한 상큼한 향의 조화는 수제 요거트가 생각나는 술이예요.
+                생막걸리 특유의 발효의 미학이 고스란히 담겼어요.</p>
                 <ul class="stars">
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
@@ -197,11 +208,12 @@
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="image/product_06.jpg" alt=""></a>
+              <a href="#"><img src="image/adver/광고6.jpg" alt=""></a>
               <div class="down-content">
-                <a href="#"><h4>Tittle goes here</h4></a>
-                <h6>$22.50</h6>
-                <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <a href="#"><h4>하얀 까마귀</h4></a>
+                <h6>10,000원</h6>
+                <p>쌀의 단맛과 발효로 인한 상큼한 향의 조화는 수제 요거트가 생각나는 술이예요.
+                생막걸리 특유의 발효의 미학이 고스란히 담겼어요.</p>
                 <ul class="stars">
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
@@ -222,26 +234,29 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>About Sixteen Clothing</h2>
+              <h2>홈술 닷컴이 드리는 혜택</h2>
             </div>
           </div>
           <div class="col-md-6">
             <div class="left-content">
-              <h4>Looking for the best products?</h4>
-              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This template</a> is free to use for your business websites. However, you have no permission to redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+              <h4>인기 상품을 찾으시나요?</h4>
+              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">
+             	 Homesool</a>은 쌀의 단맛과 발효로 인한 상큼한 향의 조화는 수제 요거트가 생각나는 술이예요.
+                생막걸리 특유의 발효의 미학이 고스란히 담겼어요.
+                <a rel="nofollow" href="https://templatemo.com/contact">문의사항은</a>여기를 클릭해주세요.</p>
               <ul class="featured-list">
-                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                <li><a href="#">Consectetur an adipisicing elit</a></li>
-                <li><a href="#">It aquecorporis nulla aspernatur</a></li>
-                <li><a href="#">Corporis, omnis doloremque</a></li>
-                <li><a href="#">Non cum id reprehenderit</a></li>
+                <li><a href="#">하얀 까마귀</a></li>
+                <li><a href="#">해창 막걸리</a></li>
+                <li><a href="#">녹두전</a></li>
+                <li><a href="#">김치전</a></li>
+                <li><a href="#">힘들어잉</a></li>
               </ul>
               <a href="about.html" class="filled-button">Read More</a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="image/feature-image.jpg" alt="">
+              <img src="image/11_main_061.jpg" alt="">
             </div>
           </div>
         </div>
@@ -256,11 +271,12 @@
             <div class="inner-content">
               <div class="row">
                 <div class="col-md-8">
-                  <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                  <h4>Fresh &amp; Perfect <em>Homesool</em> Products</h4>
+                  <p>쌀의 단맛과 발효로 인한 상큼한 향의 조화는 수제 요거트가 생각나는 술이예요.
+                생막걸리 특유의 발효의 미학이 고스란히 담겼어요.</p>
                 </div>
                 <div class="col-md-4">
-                  <a href="#" class="filled-button">Purchase Now</a>
+                  <a href="#" class="filled-button">신제품 보러가기</a>
                 </div>
               </div>
             </div>
@@ -275,9 +291,9 @@
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
+              <p>Copyright &copy; 2022 Homesool 3조 Co., Ltd.
             
-            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">3조</a></p>
             </div>
           </div>
         </div>
