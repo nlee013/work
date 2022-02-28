@@ -72,19 +72,11 @@
     </header>
 
     <!-- Page Content -->
-    <div class="page-heading products-heading header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="text-content">
-              <h4>new arrivals</h4>
-              <h2>sixteen products</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+<table>
+	<tr align="left">
+		<td colspan="3">	
+	</tr>
+</table>
     
     <div class="products">
       <div class="container">
@@ -101,8 +93,15 @@
                  
               </ul>
             </div>
+            
+             <div>
+              <a href="<%=cp %>/main.com"><img src="image/home_icon.png" style="width: 20px;">
+			Home</a>>홈술 고르기>전체 상품</div>
           </div>
-          
+              
+                
+<div class="flex-sb-m w-full p-t-3 p-b-24" align="center"></div>
+
           <div class="col-md-12">
             <div class="filters-content">
                 <div class="row grid">

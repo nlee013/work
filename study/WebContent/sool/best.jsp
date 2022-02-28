@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-<title>홈술 고르기</title>
+<title>Best 홈술</title>
 
 <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
 <link rel="icon" href="image/favicon.ico" type="image/x-icon">
@@ -64,7 +64,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">홈술 가이드</a>
+                 <a class="nav-link" href="product.jsp">홈술 가이드
+                  <span class="sr-only">(current)</span>
+                </a>
               </li>
             </ul>
             
@@ -74,18 +76,11 @@
     </header>
 
     <!-- Page Content -->
-    <div class="page-heading products-heading header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="text-content">
-              <h4>new arrivals</h4>
-              <h2>sixteen products</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<table>
+	<tr align="left">
+		<td colspan="3">	
+	</tr>
+</table>
 
     
     <div class="products">
@@ -95,16 +90,19 @@
             <div class="filters">
               <ul>
                   <li class="active" data-filter="*">전체 상품</li>
-                  <li data-filter=".gra">막걸리</li>
-                  <li data-filter=".des">와인/과실주</li>
-                   <li data-filter=".gra">증류주/소주/리큐르</li>
-                    <li data-filter=".gra">약주/청주</li>
-                  <li data-filter=".dev">홈닷푸드</li>
-                 
+                  <li data-filter=".gra">Best 상품</li>
+                  <li data-filter=".des">추천 홈술</li>
               </ul>
-            </div>
           </div>
           
+		    <div>
+              <a href="<%=cp %>/main.com"><img src="image/home_icon.png" style="width: 20px;">
+			Home</a>>Best 홈술>Best 상품</div>
+            </div>
+            
+            
+<div class="flex-sb-m w-full p-t-3 p-b-24" align="center"></div>
+
           <div class="col-md-12">
             <div class="filters-content">
                 <div class="row grid">
