@@ -24,13 +24,13 @@ String[] price = {"1,500", "1,500", "1,700", "1,300", "1,350", "1,400", "500", "
 function fnCart(name, price) {
 	//alert("Name : " + name + "\nPrice : " + price);
 	if(confirm("장바구니에 담으시겠습니까?")) {
-		location.href = "contents/pro/CartPro.jsp?name=" + name + "&price=" + price;
+		location.href = "CartPro.jsp?name=" + name + "&price=" + price;
 	}
 }
 
 function fnView() {
 	if(confirm("장바구니를 보시겠습니까?")){
-		location.href = "contents/view/CartView.jsp";
+		location.href = "CartView.jsp";
 	}
 }
 </script>

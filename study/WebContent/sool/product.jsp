@@ -51,18 +51,18 @@
           
             <ul class="navbar-nav ml-auto">
               <li class="nav-item ">
-                <a class="nav-link" href="about.html">Home</a>
+                <a class="nav-link" href="main.jsp">Home</a>
               </li> 
               <li class="nav-item active">
-                 <a class="nav-link" href="index.html" style="color: #000000;">홈술 고르기
+                 <a class="nav-link" href="product.jsp" style="color: #000000;">홈술 고르기
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">Best 홈술</a>
+                <a class="nav-link" href="best.jsp">Best 홈술</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">홈술 가이드</a>
+                <a class="nav-link" href="guide2.jsp">홈술 가이드</a>
               </li>
             </ul>
             

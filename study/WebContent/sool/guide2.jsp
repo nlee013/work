@@ -72,12 +72,12 @@
                 </a>
               </li>
               <li class="nav-item">
-                 <a class="nav-link" href="index.html">Best 홈술
+                 <a class="nav-link" href="best.jsp">Best 홈술
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item active">
-                 <a class="nav-link" href="index.html" style="color: #000000;">홈술 가이드
+                 <a class="nav-link" href="guide2.jsp" style="color: #000000;">홈술 가이드
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
@@ -143,7 +143,7 @@
 			<thead>
 				<tr>   
 					<th></th>	
-					<th><i><img src="image/close.png" alt=""></i>다이아몬드</th> 
+					<th><i><img src="image/membership_icn01.png" alt=""></i>다이아몬드</th> 
 					<th><i><img src="image/membership_icn02.png" alt=""></i>플래티넘</th>
 					<th><i><img src="image/membership_icn03.png" alt=""></i>골드</th> 
 					<th><i><img src="image/membership_icn04.png" alt=""></i>실버</th> 

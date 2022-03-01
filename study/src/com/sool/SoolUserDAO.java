@@ -3,6 +3,8 @@ package com.sool;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.board.BoardDTO;
 import com.join.MemberDTO;
@@ -168,7 +170,56 @@ public class SoolUserDAO {
 		return dto;
 		
 	}
-	
+		// 전체데이터
+		public List<SoolUserDTO> getLists(){
+			
+			List<SoolUserDTO> lists = new ArrayList<SoolUserDTO>();
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			String sql;
+			
+			try {
+				
+				
+				
+				sql = "select * from users";
+			
+				
+				pstmt = conn.prepareStatement(sql);
+				
+				
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					
+					SoolUserDTO dto = new SoolUserDTO();
+					dto.setUser_id(rs.getString("user_id"));
+					dto.setUser_pwd(rs.getString("user_pwd"));
+					dto.setUser_nick(rs.getString("user_nick"));
+					dto.setUser_name(rs.getString("user_name"));
+					dto.setUser_tel(rs.getString("user_tel"));
+					dto.setUser_email(rs.getString("user_email"));
+					dto.setUser_addr1(rs.getString("user_addr1"));
+					dto.setUser_addr2(rs.getString("user_addr2"));
+					dto.setUser_gender(rs.getString("user_gender"));
+					dto.setUser_bir1(rs.getInt("user_bir1"));
+					dto.setUser_bir2(rs.getInt("user_bir2"));
+					dto.setUser_bir3(rs.getInt("user_bir3"));
+					dto.setUser_rid(rs.getString("user_rid"));
+					dto.setUser_date(rs.getString("user_date"));
+					
+					lists.add(dto);
+				}
+				
+				rs.close();
+				pstmt.close();
+			
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+			
+			return lists;
+		}
 	
 	
 	

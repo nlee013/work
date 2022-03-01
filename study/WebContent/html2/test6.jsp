@@ -16,7 +16,7 @@
 
 </head>
 <body>
-
+<center>
 <img src="../html1/image/13798939b.jpg" width="300" height="300" name="img1"/><br/>
 
 <img src="../html1/image/13798939b.jpg" width="80" height="80" 
@@ -27,7 +27,7 @@ onmouseover="fimg('../html1/image/13798939c.jpg')"/>
 onmouseover="fimg('../html1/image/13798939e.jpg')"/>
 <img src="../html1/image/13798939f.jpg" width="80" height="80" 
 onmouseover="fimg(this.src)"/>
-
+</center>
 
 </body>
 </html>
