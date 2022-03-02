@@ -249,8 +249,7 @@ public class SoolServlet extends HttpServlet {
 					String encType = "UTF-8";
 					int maxSize = 10*1024*1024;
 					
-					MultipartRequest mr = new MultipartRequest(req, path, maxSize, encType, new DefaultFileRenamePolicy());
-					
+					MultipartRequest mr = new MultipartRequest(req, path, maxSize, encType, new DefaultFileRenamePolicy());					
 					
 					
 					if(mr.getFile("upload") != null) {
@@ -272,9 +271,108 @@ public class SoolServlet extends HttpServlet {
 					url = cp + "/homesool/list_p.com";
 					resp.sendRedirect(url);
 					
+				}/*else if(uri.indexOf("id.com")!=-1) {
+				
+					url = "/sool/f_id.jsp";
+					forward(req, resp, url);
+					
+					
+				}else if(uri.indexOf("id_ok.com")!=-1) {
+					
+					//String user_id = req.getParameter("user_id");
+					String user_name = req.getParameter("user_name");
+					String user_tel = req.getParameter("user_tel");
+															
+					SoolUserDTO dto = dao.getReadData(user_name);
+					
+					List<SoolUserDTO> lists = dao.getLists();
+					
+					Iterator<SoolUserDTO> it = lists.iterator();
+					
+					while (it.hasNext()) {
+						
+						dto = it.next();
+						
+						 if(dto == null || !dto.getUser_name().contains(user_name)) {
+								
+								req.setAttribute("message2", "회원 정보를 찾을 수 없습니다.");
+																		
+								url = "/homesool/id.com";
+								forward(req, resp, url);
+								
+								return;
+								
+						 }else{
+						 	
+							req.setAttribute("ovName", "회원님의 아이디는" + dto.getUser_id() + "입니다.");
+							
+							url = "/homesool/id.com";
+							forward(req, resp, url);
+							
+							
+						}		
+				
+					}
+					
+				}*/else if(uri.indexOf("pwd.com")!=-1) {
+				
+					url = "/sool/f_pwd.jsp";
+					forward(req, resp, url);
+					
+				}else if(uri.indexOf("pwd_ok.com")!=-1) {
+					
+					String user_id = req.getParameter("user_id");					
+					String user_tel = req.getParameter("user_tel");
+															
+					SoolUserDTO dto = dao.getReadData(user_id);
+					
+					List<SoolUserDTO> lists = dao.getLists();
+					
+					Iterator<SoolUserDTO> it = lists.iterator();
+											
+					while (it.hasNext()) {
+													
+						dto = it.next();
+						
+						if(dto.getUser_id().equals(user_id) && dto.getUser_tel().equals(user_tel)) {
+						 	
+							req.setAttribute("ovName", "회원님의 비밀번호는" + dto.getUser_pwd() + "입니다.");
+					
+							url = "/homesool/pwd.com";
+							forward(req, resp, url);
+							return;
+							
+						}else if(dto == null || !dto.getUser_id().equals(user_id) || !dto.getUser_tel().equals(user_tel)) {
+						
+							req.setAttribute("message2", "회원 정보를 찾을 수 없습니다.");
+																	
+
+							url = "/homesool/pwd.com";
+							forward(req, resp, url);
+							
+							return;
+							
+						}
+									
 				}
-		
-}
+					
+		}else if(uri.indexOf("csCenter.com")!=-1) {	
+
+			url = "/sool/csCenter.jsp";
+			forward(req, resp, url);
+
+		}else if(uri.indexOf("logout.com")!=-1) {
+
+			HttpSession session = req.getSession();
+
+			session.removeAttribute("customInfos");
+			session.invalidate();
+
+			url = cp + "/homesool/main.com";
+			resp.sendRedirect(url);
+
+		}
+	}
 }	
 				
 		

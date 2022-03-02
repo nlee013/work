@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
@@ -141,7 +142,7 @@
     <div class="header_top">
         <div class="header_top_cont">
 			
-			<div class="h1_logo"><!--——--><a href="https://www.homesool.com/main/index.php"><img src="<%=cp %>/sool/main_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
+			<div class="h1_logo"><!--——--><a href="<%=cp %>/homesool/main.com"><img src="<%=cp %>/sool/main_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
 			
 			<!-- 햄버거 넣는 부분 ^^ -->
 			<a href="#;" class="n_btn_all_menu_open">
@@ -202,14 +203,26 @@
 				<ul class="top_member_box">
 				
 				<!-- 로그인 회원가입 고객센터 링크 연결 ^^ --> 
-            	        <li><a href="<%=cp%>/sool/login.jsp">Login</a></li>
-            	    <li><a href="<%=cp%>/sool/join.jsp">Join</a>
+				
+				<c:choose>
+	<c:when test="${empty sessionScope.customInfos.user_id }">
+		<li><a href="<%=cp%>/homesool/login.com">Login</a></li>
+        <li><a href="<%=cp%>/homesool/create1.com">Join</a></li>
+	</c:when>
+	<c:otherwise>
+		  
+		<li><a href="<%=cp%>/homesool/logout.com">Logout</a></li>
+	</c:otherwise>
+</c:choose>
+				
+				
+            	     
             	        <!--<span class="accent">
             	            <span><strong>2,000 P</strong></span>
             	        </span>-->
             	    </li>
             	    
-            	    <li><a href="<%=cp%>/sool/csCenter.jsp">CS Center</a></li>
+            	    <li><a href="<%=cp%>/homesool/csCenter.com">CS Center</a></li>
             	</ul>
 				<!-- 검색 폼 -->
 				<div class="top_search_btn">

@@ -221,9 +221,79 @@ public class SoolUserDAO {
 			return lists;
 		}
 	
+	//비밀번호 찾기
+		public String findPwd(SoolUserDTO dto) throws Exception {
+			
+		
+			String user_id = null;
+			
+			dto = new SoolUserDTO();
+			
+			PreparedStatement pstmt = null;
+			String sql;
+			ResultSet rs = null;
+			
+			try {
+				
+				sql = "select user_id from users where user_name=? and user_tel=? ";
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setString(1, dto.getUser_name());
+				pstmt.setString(2, dto.getUser_tel());
+				
+				rs = pstmt.executeQuery();
+											
+				if(rs.next()) {
+					
+					user_id = rs.getString("user_id");
+					
+				}
+				rs.close();
+				pstmt.close();
+				
+			} catch (Exception e) {
+				
+				System.out.println(e.toString());
+			}
+			return user_id;
+		}
 	
-	
-	
+		//아이디 찾기
+				public String findId(SoolUserDTO dto) throws Exception {
+					
+				
+					String user_name = null;
+					
+					dto = new SoolUserDTO();
+					
+					PreparedStatement pstmt = null;
+					String sql;
+					ResultSet rs = null;
+					
+					try {
+						
+						sql = "select user_name from users where user_id=? and user_tel=? ";
+						pstmt = conn.prepareStatement(sql);
+						
+						pstmt.setString(1, dto.getUser_id());
+						pstmt.setString(2, dto.getUser_tel());
+						
+						rs = pstmt.executeQuery();
+													
+						if(rs.next()) {
+							
+							user_name = rs.getString("user_name");
+							
+						}
+						rs.close();
+						pstmt.close();
+						
+					} catch (Exception e) {
+						
+						System.out.println(e.toString());
+					}
+					return user_name;
+				}
 	
 	
 	

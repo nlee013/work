@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.join.CustomIfo"/>
-<fullyQualifiedTypeName name="com.join.MemberDAO"/>
 <fullyQualifiedTypeName name="com.join.MemberDTO"/>
 <fullyQualifiedTypeName name="com.join.CustomInfo"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
@@ -20,14 +18,12 @@
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.lang.Byte"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
-<fullyQualifiedTypeName name="com.util.FileManager"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="javax.servlet.Filter"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="javax.servlet.FilterConfig"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSessionListener"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="com.event.CountManager"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="com.sool.SoolDAO"/>
 <fullyQualifiedTypeName name="com.util.MyUtil"/>
 <fullyQualifiedTypeName name="com.sool.SoolDTO"/>
+<fullyQualifiedTypeName name="com.sool.CustomInfos"/>
+<fullyQualifiedTypeName name="com.util.FileManager"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.sool.SoolUserDTO"/>
 </qualifiedTypeNameHistroy>

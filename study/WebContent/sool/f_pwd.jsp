@@ -1,53 +1,14 @@
-<%@page import="java.util.GregorianCalendar"%>
-<%@page import="com.sool.SoolUserDTO"%>
-<%@page import="java.util.Calendar"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
 	
-	Calendar cal = Calendar.getInstance();
-	
-	//오늘날짜
-	int nowYear = cal.get(Calendar.YEAR);//2022
-	int nowMonth = cal.get(Calendar.MONTH)+1;//2
-	int nowDay = cal.get(Calendar.DAY_OF_MONTH);//26
-	
-	//클라이언트가 넘겨준 데이터
-	String strYear = request.getParameter("user_bir1");
-	String strMonth = request.getParameter("user_bir2");
-	String strDay = request.getParameter("user_bir3");
-	
-	int user_bir1 = nowYear; //2022
-	int user_bir2 = nowMonth;//2
-	int user_bir3 = nowDay; //26
-	
-	if(strYear!=null){
-		user_bir1 = Integer.parseInt(strYear);
-	}
-	
-	if(strMonth!=null){
-		user_bir2 = Integer.parseInt(strMonth);
-	}
-	
-	if(strDay!=null){
-		user_bir3 = Integer.parseInt(strDay);
-	}
-	
-	SoolUserDTO dto = new SoolUserDTO();
-	
-	cal.set(user_bir1, user_bir2-1, user_bir3);
-
-	//getActualMaximum 사용하여 월에따른 날짜 구하기
-	int max = cal.getMaximum(Calendar.DAY_OF_MONTH);
-	
-	
-	
-	
 	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -69,198 +30,54 @@
 <link rel="icon" href="image/favicon.ico" type="image/x-icon">
 
 <link rel="stylesheet" type="text/css" href="css/btnOnly.css">
-
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script>
-    function sample6_execDaumPostcode() {
-        new daum.Postcode({
-            oncomplete: function(data) {
-          
-                var addr = ''; // 주소 변수
-                var extraAddr = ''; // 참고항목 변수
-
-             
-                if (data.userSelectedType === 'R') { //도로명 주소
-                    addr = data.roadAddress;
-                } else { // 지번 주소
-                    addr = data.jibunAddress;
-                }
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>회원가입 완료</title>
 
 
-                if(data.userSelectedType === 'R'){
-                   
-                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-                        extraAddr += data.bname;
-                    }
-                   
-                    if(data.buildingName !== '' && data.apartment === 'Y'){
-                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                    }
-                   
-                    if(extraAddr !== ''){
-                        extraAddr = ' (' + extraAddr + ')';
-                    }
-                    
-                    document.getElementById("sample6_extraAddress").value = extraAddr;
-                
-                } else {
-                    document.getElementById("sample6_extraAddress").value = '';
-                }
-
-              
-                document.getElementById('sample6_postcode').value = data.zonecode;
-                document.getElementById("addr1").value = addr;
-                
-                document.getElementById("addr2").focus();
-            }
-        }).open();
-    }
-    
-    
-    function selectedEmail(frm) {
-    	
-   	 frm.textValue.value = frm.selectBox.options[frm.selectBox.selectedIndex].text;  	
-     frm.user_email.value = frm.selectBox.options[frm.selectBox.selectedIndex].value;
-     
-    }
-    
-   
-</script>
 <script type="text/javascript">
 
-function info(){
-	
-	var f = document.myForm;
-	
-	var sy =<%=nowYear%>-80;
-	
-	
-var fy =<%=user_bir1%> -80;
-	
-	for(i=0;i<81;i++){
-		
-		f.user_bir1[i] = new Option(fy,fy);
-		
-		if(f.user_bir1[i].value==<%=user_bir1%>){
-			f.user_bir1[i].selected = true;
-			
-		}
-		fy++;
-	}
-	
-	for(j=0;j<12;j++){
-		f.user_bir2[j] = new Option(j+1,j+1);
-		
-		
-	}
-	f.user_bir2[<%=user_bir2%>-1].selected = true;
-	
-	
-	
-	
-	for(k=0;k<<%=max%>;k++){
-		f.user_bir3[k] = new Option(k+1,k+1);
-	}
-	
-	f.user_bir3[<%=user_bir3%>].selected = true;
 
-}
+	function goLogin() {
+	
+		var f = document.myForm;
+		
+		f.action = "<%=cp%>/homesool/login.com";
+		f.submit();
+		
+	}
 
-function signUp() {
+	function goCreate() {
+		
+		var f = document.myForm
+		
+		f.action = "<%=cp%>/homesool/create1.com";
+		f.submit;
+	}
 	
-	var f = document.myForm;
-	
-	if(!f.user_id.value){
-		alert("아이디를 입력하세요")
-		f.user_id.focus();
-		return;
+	function findId() {
+		
+		var f = document.myForm
+		
+		f.action = "<%=cp%>/homesool/id.com";
+		f.submit;
 		
 	}
 	
-	//아이디 중복검사
-
-	
-	if(!f.user_pwd.value){
-		alert("비밀번호를 입력하세요")
-		f.user_pwd.focus();
-		return;
-	}
-	
-	if(!f.user_pwdck.value){
-		alert("비밀번호 확인을 입력하세요")
-		f.user_pwdck.focus();
-		return;
-	}
-	
-	if(f.user_pwd.value!=f.user_pwdck.value){
-		alert("비밀번호와 비밀번호 확인이 일치하지 않습니다")
+	function findPwd() {
 		
-		return;
+		var f = document.myForm
+		
+		f.action = "<%=cp%>/homesool/pwd_ok.com";
+		f.submit;
+		
 	}
 	
-	if(!f.user_nick.value){
-		alert("닉네임을 입력하세요")
-		f.user_nick.focus();
-		return;
-	}
-	
-	//닉네임중복검사
-
-	if(!f.user_name.value){
-		alert("이름를 입력하세요")
-		f.user_name.focus();
-		return;
-	}
-	
-	if(!f.user_email.value){
-		alert("이메일을 입력하세요")
-		f.user_email.focus();
-		return;
-	}
-	
-	//이메일중복검사
-	
-	if(!f.user_tel.value){
-		alert("전화번호를 입력하세요")
-		f.user_tel.focus();
-		return;
-	}
-	
-	if(!f.user_addr1.value){
-		alert("우편번호 찾기를 누르세요")	
-		return;
-	}
-	
-	if(!f.user_addr2.value){
-		alert("상세주소를 입력하세요")
-		f.user_addr2.focus();
-		return;
-	}
-	
-	if(!f.user_gender.value){
-		alert("성별을 선택하세요")
-		return;
-	}
-	
-	
-	f.action = "<%=cp%>/homesool/create2_ok.com";
-	f.submit();
-
-}
-
-function cancel() {
-	
-	var f = document.myForm;
-	
-	f.action = "<%=cp%>/homesool/main.com";
-	f.submit();
-	
-}
-
 </script>
-<title>회원가입 정보입력</title>
 
-   	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+</head>
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     	
 		<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 		
@@ -664,181 +481,94 @@ function cancel() {
     </div>
     <!-- //header_warp -->
 
-    <div id="container">
-        <div id="contents">
-</head>
-<body>
-<form action="" method="post" name="myForm">
+
 <center>
 <table width="1260">
 <tr align="left">
-	<td colspan="3"><img src="<%=cp %>/sool/main_files/houseLogo.png" ><a href="<%=cp %>/homesool/main.com">Home</a>>회원가입>약관동의</td>
+	<td colspan="3"><img src="<%=cp %>/sool/main_files/houseLogo.png" ><a href="<%=cp %>/homesool/main.com">Home</a>>회원가입>약관동의>가입완료</td>
 </tr>	
 <tr>
-	<td height="100" align="center" colspan="3" style="font-size: 35px">회원가입</td>
+	<td height="100" align="center" style="font-size: 35px">비밀번호 찾기</td>
 </tr>
 
 <tr>
-	<td height="100" colspan="3">홈술닷컴의 회원이 되셔서 회원등급할인/할인쿠폰/적립금 등 다양한 서비스를 받으세요.</td>
+	<td height="100" colspan="3" align="center">회원 가입한 경우만 등록한 정보를 찾을 수 있습니다.</td>
 </tr>
 
-<tr>
-	<td align="center" style="width :150px; height :65px; color : #000000; background-color: #ededed; ">STEP 1 약관동의</td>
-	<td align="center" style="width :150px; height :65px; color : #fff; background-color: #eda71a; ">STEP 2 정보입력</td>
-	<td align="center" style="width :150px; height :65px; color : #000000; background-color: #ededed; ">STEP 3 가입완료</td>
-</tr>
 <tr><td height="20" bgcolor="#fff" align="center"></td></tr>
+</table>
+</center>
 
+<form action="" name="myForm" method="post">
+<div class="limiter" align="center">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+				<form class="login100-form validate-form flex-sb flex-w">
+					<center>
+					<div class="wrap-input100 validate-input m-b-16" align="center">
+						<input class="input100" type="text" name="user_id" placeholder="등록 아이디"
+						style="width :480px; height :65px; background-color: #ededed; border: 0">
+						<span class="focus-input100"></span>
+					</div>
+					<br/>
+					
+					<div class="wrap-input100 validate-input m-b-16" align="center">
+						<input class="input100" type="text" name="user_tel" placeholder="등록 휴대폰번호"
+						style="width :480px; height :65px; background-color: #ededed; border: 0">
+						<span class="focus-input100"></span>
+					</div>
+					</center>
+				<br/>
+					
+					<br/>
+					
+					<div class="container-login100-form-btn m-t-17" align="center">
+					
+						<button onclick="findPwd();" class="login100-form-btn" style="width :480px; height :65px; color : #fff; background-color: #eda71a; border: 0">
+						비밀번호 찾기
+						</button>
+					</div>
+					<br/>
+					<div align="center" style="color: blue">${ovName }</div>
+					<div align="center" style="color: red">${message2 }</div>
+					<div align="center" style="color: red">${message3 }</div>
+					<br/>
+					<div class="container-login100-form-btn m-t-17" align="center">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											
+						<button onclick="findId();">
+							아이디 찾기
+						</button>
+						
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button onclick="goLogin()">
+							로그인 하기
+						</button>
+					</div>
+					
+			
+				</form>
+				<br/><br/><br/>
+			</div>
+		</div>
+	</div>
+</form>	
 
-<form action="" method="post" name="myForm">
-<!-- 기본정보 -->
-<table width="1260" height="400" align="center">
-<tr>
-	<td colspan="3" style="font-size: 30px"><b>기본정보</b>></td>
-	<td align="right">*표시는 반드시 입력하셔야 하는 항목입니다</td>
+<div class="flex-sb-m w-full p-t-3 p-b-24"></div>
+
+<div id="dropDownSelect1"></div>
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="js/main.js"></script>
 	
-</tr>
-
- <tr><td colspan="4" height="3" bgcolor="#eda71a" align="center"></td></tr>
- 
- <tr>
- 	<td>아이디(*)</td>
- 	<td colspan="2"><input type="text" name="user_id"></td>
- </tr>
-
- <tr>
- 	<td>${ovId }</td>
- </tr>
- 
- <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
- 
- <tr>
- 	<td>비밀번호(*)</td>
- 	<td colspan="2"><input type="password" name="user_pwd"></td>
- </tr>
- 
- <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
- 
- <tr>
- 	<td>비밀번호 확인(*)</td>
- 	<td colspan="2"><input type="password" name="user_pwdck"></td>
- </tr>
- 
-  <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
- 
- <tr>
- 	<td>닉네임(*)</td>
- 	<td colspan="2"><input type="text" name="user_nick"></td>
- </tr>
-
- <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
- 
- <tr>
- 	<td>이름(*)</td>
- 	<td colspan="2"><input type="text" name="user_name"></td>
- </tr>
- 
- <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
- 
- <tr>
- 	<td>이메일(*)</td>
- 	
- 	<td><input type="text" name="user_email">
- 	<select name="selectBox" onchange="selectedEmail(this.form);">
- 		<option value="@">직접입력</option>
- 		<option value="@naver.com">naver.com</option>
- 		<option value="@hanmail.net">hanmail.net</option>
- 		<option value="@daum.net">daum.net</option>
- 		<option value="@nate.com">nate.com</option>
- 		<option value="@hotmail.com">hotmail.com</option>
- 		<option value="@gmail.com">gmail.com</option>
- 		<option value="@icloud.com">icloud.com</option>
- 	</select></td>
- </tr>
-
- <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
- 
- <tr>
- 	<td>휴대폰번호(*)</td>
- 	<td colspan="2"><input type="text" name="user_tel"  placeholder="- 없이입력하세요."></td>
- </tr>
- 
- <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
- 
- <tr>
- 	<td rowspan="3">주소(*)</td>
- 	<td><input type="text" id="sample6_postcode">
- 	<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"></td>
- </tr>
- 
- <tr>
- 	<td colspan="4" width="800"><input type="text" name="user_addr1" id="addr1" width="800"></td>
- </tr>
- <tr>	
- 	<td colspan="4"><input type="text" name="user_addr2" id="addr2" width="800"></td>
- 	<td><input type="hidden" id="sample6_extraAddress" ></td>
- </tr>
- </table>
- 
- 
- <!-- 부가정보  -->
- <table width="1260" height="100" align="center">
- <td colspan="3" style="font-size: 30px"><b>부가정보</b>></td>
- <tr><td colspan="4" height="3" bgcolor="#eda71a" align="center"></td></tr>
- 
- <tr>
- 	<td>성별(*)</td>
- 	<td><input type="radio" name="user_gender" value="male">남자
- 	<input type="radio" name="user_gender" value="female">여자</td>
- </tr>
- 
-  <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
-  
- <tr>
- 	<td width="130">생일(*)</td>
- 	<td><select name="user_bir1" onchange="change();">
- 	</select>
- 	<select name="user_bir2" onchange="change();">
- 	</select>
- 	<select name="user_bir3" onchange="change();">
- 	</select></td>
- </tr>
- 
-  <tr><td colspan="4" height="1" bgcolor="#cccccc" align="center"></td></tr>
-  
- <tr>
- 	<td>추천인아이디</td>
- 	<td colspan="2"><input type="text" name="user_rid"></td>
- </tr>
- <tr><td colspan="4" height="3" bgcolor="#eda71a" align="center"></td></tr>
- 
-
-
-</table>
-<input type="hidden" name="user_date">
-<input type="hidden" name="textValue">
-</form>
-<table width="1260">
-<tr>
-
-
-</tr>
-<tr>
-		<td align="center">
-			<button onclick="cancel();" class="login100-form-btn" style="width :420px; height :65px; color : #000000; background-color: #ededed;">
-				취소					
-			</button>
-			
-			
-		
-			<button onclick="signUp();" class="login100-form-btn" style="width :420px; height :65px; color : #fff; background-color: #eda71a;;">
-				회원가입
-			</button>
-		
-		
-		</td>
-</tr>
-</table>
+<br/><br/>
  <div id="footer_wrap">
 <div class="ft_notice">
 	<div class="ft_notice_inner">
@@ -934,5 +664,7 @@ function cancel() {
     </div>
     <!-- //foot_certify -->
 </div>
+
+
 </body>
 </html>
