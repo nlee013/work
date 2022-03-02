@@ -8,7 +8,7 @@
 
 <!-- saved from url=(0059)https://www.homesool.com/goods/goods_list.php?cateCd=001006 -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>로그인</title>
+    <title>증류주/소주/리큐르</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="author" content="">
@@ -425,11 +425,6 @@
         <div id="contents">
         <!-- 본문 시작 -->
 
-            <div class="location_wrap">
-                <div class="location_cont">
-                    <em><a href="https://www.homesool.com/service/delivery_type.php#" class="local_home">HOME</a> &gt; 홈술가이드 &gt; 배송유형별 안내</em>
-                </div>
-            </div>
             <!-- //location_wrap -->
 
 	
@@ -441,161 +436,168 @@
             <div class="sub_content">
 
                 <!-- //side_cont -->
-
-<style>
-	.sub_content{width:100%;}
-	#contents{padding:0;}
-
-	#tab_two, #tab_three{display:none;}
-</style>
 <div class="content">
-    <div class="cs_menu_box">
-		<h2>홈술가이드</h2>
-		<ul class="sub_menu">
-			<li><a href="https://www.homesool.com/service/membership_lounge.php">홈술 멤버십</a></li>
-			
-			<li><a href="https://www.homesool.com/service/delivery_type.php" class="active">배송유형별 안내</a></li>
-		</ul>
-	</div>
-	<!-- //sub_menu_box -->
-	<div class="guide_tit guide_tit02">
-		<dt>배송유형별 안내</dt>
-		<dd>홈술닷컴의 주요 홈술 배송서비스 안내입니다.</dd>
-	</div>
-
-<div class="deliveryty_area01">
-	<div class="w860">   
-		<ul class="tab_group">
-			<li class="tab_li">
-				<a class="active" href="https://www.homesool.com/service/delivery_type.php#/tab_one"> 오늘홈술</a>
-			</li> 
-			<li class="tab_li ">
-				<a href="https://www.homesool.com/service/delivery_type.php#/tab_two"> 일반홈술</a>
-			</li> 
-			
-		</ul>
-		<div id="tab_panels">
-			<div id="tab_one" class="tab_div"> 
-				<h4><img src="./홈술닷컴_files/icon_delivery_img_L01.png" alt=""> <em>오늘홈술</em> <span>홈술이 갑자기 생각날 때, 당일배송 서비스</span></h4>  
-				<div class="list_box">
-					<dl>
-						<dt>
-							<em>가능지역</em>
-							<span>서울전지역 / 경기일부</span>
-						</dt>
-						<dd>서울은 전지역 가능! 경기지역은 일부만 가능하오니<br> 꼭 배송 가능지역을 확인해주세요. <a href="https://www.homesool.com/service/delivery_type.php#;" class="icon_location">배송가능지역 조회</a></dd>
-					</dl> 
-					<dl>
-						<dt>
-							<em>주문 가능시간</em>
-							<span>월~토  2시 주문, 9시 도착</span>
-						</dt>
-						<dd>월요일부터 토요일까지 오후2시까지 주문하면 라이더분들이<br>	안전하게 배송을 시작합니다. (법정공휴일 제외)</dd>
-					</dl>
-					<dl>
-						<dt>
-							<em>안심 보상제도</em>
-							<span>배송지연 보상제</span>
-						</dt>
-						<dd>
-							저희가 약속한 9시보다 늦게 도착할 경우,<br>홈술닷컴 적립금으로 보상해드립니다. 
-							 
-						</dd>
-					</dl>
-				</div>
-			</div>
-			<div id="tab_two" class="tab_div">  
-				<h4><img src="./홈술닷컴_files/icon_delivery_img_L02.png" alt=""> <em>일반홈술</em> <span>전국 어디서나 방방곡곡 홈술이 필요한 순간 CJ대한통운 일반택배 서비스</span></h4> 
-				<div class="list_box"> 
-					<dl>
-						<dt>
-							<em>가능지역</em>
-							<span>전국지역 배송가능</span>
-						</dt>
-						<dd>CJ대한통운 택배사를 이용하기 때문에 전국지역 배송이 가능합니다.</dd>
-					</dl> 
-					<dl>
-						<dt>
-							<em>주문 가능시간</em>
-							<span>월~금  1시 주문, 당일 출고</span>
-						</dt>
-						<dd>평일기준 오후1시까지 주문하시면 당일 출고!  출고일 기준 2일내에 받으실 수 있습니다. (도서산간지역 제외)</dd>
-					</dl>
-					<dl>
-						<dt>
-							<em>안심 보상제도</em>
-							<span>배송 파손 시 우선 조치</span>
-						</dt>
-						<dd>배송 중 충격/분실/누수 등으로 배송과정상 문제가 생길 경우, <br>먼저 새로운 제품으로 선출고 후 반품/교환/분실제품 처리를 합니다.</dd>
-					</dl>
-				</div>
-			</div>
-			
-		</div>
+    <div class="location_wrap">
+        <div class="location_cont">
+            <em>
+				<a href="<%=cp%>/homesool/main.com" class="local_home">HOME</a> 
   
-	</div>	
-</div>	
-<div class="deliveryty_area02">
-	<div class="w860"> 
-		<h4>배송서비스 한눈에 보기</h4>
-		<div class="table_bx mt30">
-			<table>
-				<thead>
-					<tr>
-						<th>오늘홈술</th>	
-						<th>일반홈술</th>
-						
-					</tr>
-				</thead>
-				<tbody>
-					<tr>		  
-						<td>서울 / 경기일부</td>
-						<td>전국</td>
-						
-					</tr>  
-					<tr>		  
-						<td>퀵 라이더</td>
-						<td>CJ대한통운</td>
-						
-					</tr>   
-					<tr>		  
-						<td>
-							<span>월-토, 오후 2시 주문<br>오후 9시 도착</span>
-						</td>
-						<td>
-							<span>평일 오후 1시 주문  당일출고 <br>출고일 기준	2일내 도착</span>
-						</td>
-						
-					</tr>
-				</tbody>
-			</table>
-		</div> 
-	</div> 
-</div>
+				&gt; 홈술카테고리
+				&gt; 증류주/소주/리큐르
+  
+			
+			</em>
+			  
+        </div>
+    </div>
+    <!-- //location_wrap -->
 
-	<div class="hs_guide03">
-		<ul class="w860"> 
-			<li>오늘홈술 서비스의 경우 일요일과 법정공휴일의 경우 서비스가 제공되지 않습니다. </li> 
-			<li>오늘홈술 서비스의 경우 기상악화로 인해 라이더분들의 안전을 위해 서비스가 지연되거나 일시적으로 중단될 수 있습니다.</li>  
-			<li>일반홈술은 택배사정에 따라서 배송이 안내드린 일정외로 추가 지연될 수 있습니다. </li>
-		</ul> 
-	</div>
-</div>
-<!-- //content_box -->
+    <div class="goods_list_item">
+
+        <div class="goods_list_item_tit">
+            <h2 class="tit_38 center">홈술카테고리</h2>
+        </div>
+        
+        <div class="list_item_category mt40">
+            <ul>
+                <li class="">
+                    <a href="<%=cp%>/homesool/mak.com"><span>막걸리</span></a>
+                </li>
+                <li class="">
+                    <a href="<%=cp%>/homesool/soju.com"><span>증류주/소주/리큐르</span></a>
+                </li>
+                <li class="on">
+                    <a href="<%=cp%>/homesool/chung.com"><span>약주/청주</span></a>
+                </li>
+                <li class="">
+                    <a href="<%=cp%>/homesool/wine.com"><span>와인/과실주</span></a>
+                </li>
+                <li class="">
+                    <a href="<%=cp%>/homesool/food.com"><span>홈닷푸드</span></a>
+                </li>
+            </ul>
+        </div>
+
+<center> 
+
+<table width="600" border="0" cellspacing="1" cellpadding="3" bgColor="#FFFFFF" align="center">
+
+<c:set var="n" value="0"/>
+<c:forEach var="dto" items="${lists}">
+	
+	<c:if test="${n==0}">
+		<tr bgcolor="#FFFFFF" ></tr>
+	</c:if>
+	<c:if test="${n!=0&&n%4==0 }">
+		<tr bgcolor="#FFFFFF" >
+	</c:if>
+	
+	<td width="200" align="center">
+    	<a href="${imagePath}/${dto.prod_sImg}">
+	    	<img src="${imagePath}/${dto.prod_sImg}" width="200" height="330" 
+	    	style="border: 1px; border-radius: 1em;"/>
+	    </a>
+	    <br/><br/>${dto.prod_name}&nbsp;<br/>
+	    <b>${dto.prod_price }원</b>&nbsp;
+	   
+	    <div style=" width:20x; border: 2px; color:#fff; background-color: #f2a03d;
+	    border-radius: 0.3em;">
+	    <a href="">
+	    구매하기
+	    </a></div>
+	    <br/>
+	    <%--  <a href="<%=cp%>/homesool/delete.com?prod_no=${dto.prod_no }">삭제</a> --%>
+	     <br/>
+	</td>
+	
+	<c:set var="n" value="${n+1}"/>
+</c:forEach>
+	
+<c:if test="${n>0||n%4!=0 }">
+	<c:forEach var="i" begin="${n%4+1}" end="4" step="1">
+			<td>&nbsp;</td>
+	</c:forEach>
+</c:if>
+
+<c:if test="${n!=0 }">
+	</tr>
+</c:if>
+
+	
+<c:if test="${dataCount != 0}">
+	<tr bgcolor="#FFFFFF">
+	   <td align="center" height="30" colspan="3">${pageIndexList}</td>
+    </tr>
+</c:if>
+	
+<c:if test="${dataCount == 0}">
+	<tr bgcolor="#FFFFFF">
+       <td align="center" colspan="3" height="30">등록된 자료가 없습니다.</td>
+    </tr>
+</c:if>
+	
+</table>
+</center>
+        <!-- 설문조사 배너 --><!-- 설문조사 배너 -->
+
 
 <script>
-var tabs =  $(".tab_li a");
+	$('.filter').click(function(){
+		$('.layer_filter').toggleClass('dn');	
+	});	  
+	$('.layer_filter .layer_close').click(function(){
+		$('.layer_filter').addClass('dn');	
+	});
 
-tabs.click(function() {
-	var panels = this.hash.replace('/','');
-	tabs.removeClass("active");
-	$(this).addClass("active");
-	$("#tab_panels").find('.tab_div').hide();
-	$(panels).fadeIn(300);
-});
+	$(document).ready(function(){
+		
+		$('#btnFilterSelectSearch').on('click', function(){
+			$('form[name=frmList]').get(0).submit();
+		});
 
-
+	});
 </script>
+
+            </form>
+        </div>
+        <!-- //goods_pick_list -->
+
+        <div class="goods_list mt50">
+            <div class="goods_list_cont">
+                <!-- 상품 리스트 -->
+
+
+        <div class=" ">
+            <div class="pagination"><ul><li class="on"><span>1</span></li></ul></div>
+        </div>
+
+    </div>
+    <!-- //goods_list_item -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$('form[name=frmList] select[name=pageNum]').change(function() {
+				$('form[name=frmList]').get(0).submit();
+			});
+			
+			// 정렬 순서 change 이벤트로 변경 2021-08-10
+			$('form[name=frmList] select[name=sort]').change(function() {
+				$('form[name=frmList]').get(0).submit();
+			});
+
+			/* 원본
+			$('form[name=frmList] input[name=sort]').click(function() {
+				$('form[name=frmList]').get(0).submit();
+			});
+
+			$(':radio[name="sort"][value=""]').prop("checked","checked")
+			$(':radio[name="sort"][value=""]').next().addClass('on');
+			*/
+
+		});
+	</script>
+</div>
+<!-- //content -->
 
             </div>
             <!-- //sub_content -->
@@ -603,6 +605,7 @@ tabs.click(function() {
         <!-- //본문 끝 contents -->
     </div>
     <!-- //container -->
+
 
     <div id="footer_wrap">
 <div class="ft_notice">
@@ -646,7 +649,7 @@ tabs.click(function() {
 				</div> 
 				<div>
 					<span>사업자등록번호 :  882-85-01179 </span>
-					<span>통신판매업신고번호 : 제 2020-경기포천-0287 호 <a href="https://www.homesool.com/service/delivery_type.php#" class="btn_licensee_info" onclick="gd_popup_bizInfo(&#39;8828501179&#39;); return false;">[사업자정보확인] </a></span> 
+					<span>통신판매업신고번호 : 제 2020-경기포천-0287 호 <a href="https://www.homesool.com/goods/goods_list.php?cateCd=001006#" class="btn_licensee_info" onclick="gd_popup_bizInfo(&#39;8828501179&#39;); return false;">[사업자정보확인] </a></span> 
 				</div> 
 				<div>
 					<span> 주소 :  11123 경기도 포천시 화현면 화동로432번길 25 배상면주가 3층</span> 
@@ -666,7 +669,7 @@ tabs.click(function() {
 				</div>	 
 				<div>
 					<span>사업자등록번호 :  776-85-01398 </span>
-					<span>통신판매업신고번호 : 제 2020-서울서초-2839 호 <a href="https://www.homesool.com/service/delivery_type.php#" class="btn_licensee_info" onclick="gd_popup_bizInfo(&#39;7768501398&#39;); return false;">[사업자번호조회]</a></span>
+					<span>통신판매업신고번호 : 제 2020-서울서초-2839 호 <a href="https://www.homesool.com/goods/goods_list.php?cateCd=001006#" class="btn_licensee_info" onclick="gd_popup_bizInfo(&#39;7768501398&#39;); return false;">[사업자번호조회]</a></span>
 				</div>
 				<div>
 					<span> 주소 :  06752 서울특별시 서초구 강남대로27길 7-9, 1층</span>
@@ -693,8 +696,8 @@ tabs.click(function() {
     </div>
     <!-- //foot_cont -->
     <div class="foot_certify">
-        <span><img src="./홈술닷컴_files/logo_comodo.png" alt="보안서버 적용 확인"></span>
-        <span><img src="./홈술닷컴_files/escrow_banner_kcp.png" alt="에스크로 서비스 확인" title="에스크로 서비스 확인" class="hand" onclick="javascript:window.open(&#39;https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=GKPI1&#39;, &#39;escrowBanner&#39;, &#39;scrollbars=no, resizable=no, width=500, height=450&#39;);"></span>
+        <span><img src=".<%=cp %>/sool/product_files/logo_comodo.png" alt="보안서버 적용 확인"></span>
+        <span><img src="<%=cp %>/sool/product_files/escrow_banner_kcp.png" alt="에스크로 서비스 확인" title="에스크로 서비스 확인" class="hand" onclick="javascript:window.open(&#39;https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=GKPI1&#39;, &#39;escrowBanner&#39;, &#39;scrollbars=no, resizable=no, width=500, height=450&#39;);"></span>
         <span></span>
     </div>
     <!-- //foot_certify -->
@@ -707,20 +710,20 @@ tabs.click(function() {
     <div class="scroll_wrap">
 
         <!-- 우측 스크롤 배너 -->
-        <div id="scroll_right" class="">
+        <div id="scroll_right" class="ban_fixed">
 <div class="right_banner" style="display:none;">
-<a href="https://www.homesool.com/goods/brand.php"><img src="./홈술닷컴_files/scroll-banner-right01.jpg" alt="스크롤 우측 배너" title="스크롤 우측 배너"></a></div>
+<a href="https://www.homesool.com/goods/brand.php"><img src="<%=cp %>/sool/product_files/scroll-banner-right01.jpg" alt="스크롤 우측 배너" title="스크롤 우측 배너"></a></div>
 <div class="scroll_right_cont" style="display: none;">
     <h4>TODAY VIEW</h4>
 
     <div class="scr_paging" style="display: none;">
-        <button type="button" class="bnt_scroll_prev" title="최근본 이전 상품"><img src="./홈술닷컴_files/btn_scroll_prev.png" alt="최근본 이전 상품"></button>
+        <button type="button" class="bnt_scroll_prev" title="최근본 이전 상품"><img src="<%=cp %>/sool/product_files/btn_scroll_prev.png" alt="최근본 이전 상품"></button>
         <span><strong class="js_current">0</strong>/<span class="js_total" style="float:none;width:auto;">0</span></span>
-        <button type="button" class="bnt_scroll_next" title="최근본 다음 상품"><img src="./홈술닷컴_files/btn_scroll_next.png" alt="최근본 다음 상품"></button>
+        <button type="button" class="bnt_scroll_next" title="최근본 다음 상품"><img src="<%=cp %>/sool/product_files/btn_scroll_next.png" alt="최근본 다음 상품"></button>
     </div>
     <!-- //scr_paging -->
 </div>
-<span class="btn_scroll_top"><a href="https://www.homesool.com/service/delivery_type.php#TOP"><img src="./홈술닷컴_files/btn_scroll_top.png" alt="상단으로 이동"></a></span>
+<span class="btn_scroll_top"><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001006#TOP"><img src="<%=cp %>/sool/product_files/btn_scroll_top.png" alt="상단으로 이동"></a></span>
 
 <script type="text/javascript">
     // DOM 로드
@@ -817,7 +820,7 @@ tabs.click(function() {
 
 <!-- 절대! 지우지마세요 : Start -->
 <div id="layerDim" class="dn">&nbsp;</div>
-<iframe name="ifrmProcess" src="./홈술닷컴_files/blank.html" style="display:none" width="100%" height="0" bgcolor="#000"></iframe>
+<iframe name="ifrmProcess" src="<%=cp %>/sool/main_files/blank.html" style="display:none" width="100%" height="0" bgcolor="#000"></iframe>
 <!-- 절대! 지우지마세요 : End -->
 
 <!-- 외부 스크립트 -->

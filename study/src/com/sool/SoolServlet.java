@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import com.sool.CustomInfos;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.sool.SoolProdDTO;
 import com.util.FileManager;
 import com.util.MyUtil;
 import com.util.SJDBConn;
@@ -361,6 +362,321 @@ public class SoolServlet extends HttpServlet {
 			url = "/sool/csCenter.jsp";
 			forward(req, resp, url);
 
+	//추가------------------------------------------------
+		}else if(uri.indexOf("list_bp.com")!=-1) {	
+
+			url = "/sool/list_bp.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("new.com")!=-1) {	
+
+			url = "/sool/new.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("best.com")!=-1) {	
+
+			url = "/sool/best2.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("recommend.com")!=-1) {	
+
+			url = "/sool/recommend.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("guide.com")!=-1) {	
+
+			url = "/sool/guide3.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("delivery.com")!=-1) {	
+
+			url = "/sool/delivery_t.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("membership.com")!=-1) {	
+
+			url = "/sool/member.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("benefit.com")!=-1) {	
+
+			url = "/sool/benefit.jsp";
+			forward(req, resp, url);
+			
+	//막걸리 상세 페이지--------------------------------------------------
+		}else if(uri.indexOf("p_mak_1.com")!=-1) {	//검색어(지우지말것)
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("p_mak_2.com")!=-1) {	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_mak_3.com")!=-1) {//검색어(지우지말것)	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+
+			url = "/sool/detail_p_mak_1.jsp";
+			forward(req, resp, url);
+			
+	//--------------------------------------------------
+		}else if(uri.indexOf("p_wine_29.com")!=-1) {	
+
+			url = "/sool/list_bp.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("p_wine_29.com")!=-1) {	
+
+			url = "/sool/new.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_wine_30.com")!=-1) {	
+
+			url = "/sool/best2.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_wine_31.com")!=-1) {	
+
+			url = "/sool/recommend.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_wine_32.com")!=-1) {	
+
+			url = "/sool/guide3.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_wine_33.com")!=-1) {	
+
+			url = "/sool/delivery_t.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_wine_34.com")!=-1) {//검색어(지우지말것)	
+
+			url = "/sool/member.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
+
+			url = "/sool/benefit.jsp";
+			forward(req, resp, url);
+	
+		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
+
+			url = "/sool/list_bp.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
+
+			url = "/sool/new.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
+
+			url = "/sool/best2.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
+
+			url = "/sool/recommend.jsp";
+			forward(req, resp, url);
+		//----------------------------------------
+		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+
+			url = "/sool/guide3.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+
+			url = "/sool/delivery_t.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+
+			url = "/sool/member.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+
+			url = "/sool/benefit.jsp";
+			forward(req, resp, url);
+	
+		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+
+			url = "/sool/list_bp.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+
+			url = "/sool/new.jsp";
+			forward(req, resp, url);
+		//------------------------------------------
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/best2.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/recommend.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/guide3.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/delivery_t.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/member.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/benefit.jsp";
+			forward(req, resp, url);
+	
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/list_bp.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {//검색어(지우지말것)	
+
+			url = "/sool/new.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/best2.jsp";
+			forward(req, resp, url);
+		//--------------------------------------------
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/recommend.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/guide3.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/delivery_t.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/member.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/benefit.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/list_bp.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/new.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/best2.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
+
+			url = "/sool/recommend.jsp";
+			forward(req, resp, url);
+			
+	//--------------------------------------------------
+		}else if(uri.indexOf("list_bp.com")!=-1) {	
+
+			url = "/sool/list_bp.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("new.com")!=-1) {	
+
+			url = "/sool/new.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("best.com")!=-1) {	
+
+			url = "/sool/best2.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("recommend.com")!=-1) {	
+
+			url = "/sool/recommend.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("guide.com")!=-1) {	
+
+			url = "/sool/guide3.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("delivery.com")!=-1) {	
+
+			url = "/sool/delivery_t.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("membership.com")!=-1) {	
+
+			url = "/sool/member.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("benefit.com")!=-1) {	
+
+			url = "/sool/benefit.jsp";
+			forward(req, resp, url);
+			
+	//--------------------------------------------------
 		}else if(uri.indexOf("logout.com")!=-1) {
 
 			HttpSession session = req.getSession();
@@ -370,8 +686,271 @@ public class SoolServlet extends HttpServlet {
 
 			url = cp + "/homesool/main.com";
 			resp.sendRedirect(url);
-
+		
+			
+		//막걸리
+		//추가--------------------------------------------------
+		}else if(uri.indexOf("mak.com")!=-1) {
+			
+			int dataCount = dao1.getDataCount();
+			String pageNum = req.getParameter("pageNum");
+			int currentPage = 1;
+			
+			if(pageNum != null)
+				currentPage = Integer.parseInt(pageNum);
+			
+			int numPerPage = 8;
+			int totalPage = myUtil.getPageCount(numPerPage, dataCount);
+			
+			if(currentPage > totalPage) {
+				currentPage = totalPage;
+			}
+			
+			int start = (currentPage - 1) * numPerPage + 1;
+			int end = currentPage * numPerPage;
+			
+			String prod_cate = "p_mak";
+			
+			List<SoolProdDTO> lists = dao1.getCateLists(prod_cate, start, end);
+			
+			String listUrl = cp + "/homesool/mak.com";
+					
+			String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
+			
+			String imagePath = cp + "/hs/prod_if";
+			
+			req.setAttribute("lists", lists);
+			req.setAttribute("totalPage", totalPage);
+			req.setAttribute("pageNum", pageNum);
+			req.setAttribute("pageIndexList", pageIndexList);
+			req.setAttribute("dataCount", dataCount);
+			req.setAttribute("imagePath", imagePath);
+			
+			//String p_mak = req.getParameter("prod_cate");					
+						
+			Iterator<SoolProdDTO> it = lists.iterator();
+			
+			//SoolProdDTO dto2 = new SoolProdDTO();
+			
+			while (it.hasNext()) {
+									
+				//dto2 = it.next();
+				SoolProdDTO dto = it.next();			
+			}
+			
+			url = "/sool/list_p_mak.jsp";
+			forward(req, resp, url);
+		
+		//소주
+		}else if(uri.indexOf("soju.com")!=-1) {
+			
+			int dataCount = dao1.getDataCount();
+			String pageNum = req.getParameter("pageNum");
+			int currentPage = 1;
+			
+			if(pageNum != null)
+				currentPage = Integer.parseInt(pageNum);
+			
+			int numPerPage = 8;
+			int totalPage = myUtil.getPageCount(numPerPage, dataCount);
+			
+			if(currentPage > totalPage) {
+				currentPage = totalPage;
+			}
+			
+			int start = (currentPage - 1) * numPerPage + 1;
+			int end = currentPage * numPerPage;
+			
+			String prod_cate = "p_soju";
+			
+			List<SoolProdDTO> lists = dao1.getCateLists(prod_cate, start, end);
+			
+			String listUrl = cp + "/homesool/soju.com";
+					
+			String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
+			
+			String imagePath = cp + "/hs/prod_if";
+			
+			req.setAttribute("lists", lists);
+			req.setAttribute("totalPage", totalPage);
+			req.setAttribute("pageNum", pageNum);
+			req.setAttribute("pageIndexList", pageIndexList);
+			req.setAttribute("dataCount", dataCount);
+			req.setAttribute("imagePath", imagePath);
+			
+			//String p_mak = req.getParameter("prod_cate");					
+						
+			Iterator<SoolProdDTO> it = lists.iterator();
+			
+			//SoolProdDTO dto2 = new SoolProdDTO();
+			
+			while (it.hasNext()) {
+									
+				//dto2 = it.next();
+				SoolProdDTO dto = it.next();			
+			}
+			
+			url = "/sool/list_p_soju.jsp";
+			forward(req, resp, url);
+			
+		//와인
+		}else if(uri.indexOf("wine.com")!=-1) {
+			
+			int dataCount = dao1.getDataCount();
+			String pageNum = req.getParameter("pageNum");
+			int currentPage = 1;
+			
+			if(pageNum != null)
+				currentPage = Integer.parseInt(pageNum);
+			
+			int numPerPage = 8;
+			int totalPage = myUtil.getPageCount(numPerPage, dataCount);
+			
+			if(currentPage > totalPage) {
+				currentPage = totalPage;
+			}
+			
+			int start = (currentPage - 1) * numPerPage + 1;
+			int end = currentPage * numPerPage;
+			
+			String prod_cate = "p_wine";
+			
+			List<SoolProdDTO> lists = dao1.getCateLists(prod_cate, start, end);
+			
+			String listUrl = cp + "/homesool/wine.com";
+					
+			String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
+			
+			String imagePath = cp + "/hs/prod_if";
+			
+			req.setAttribute("lists", lists);
+			req.setAttribute("totalPage", totalPage);
+			req.setAttribute("pageNum", pageNum);
+			req.setAttribute("pageIndexList", pageIndexList);
+			req.setAttribute("dataCount", dataCount);
+			req.setAttribute("imagePath", imagePath);
+			
+			//String p_mak = req.getParameter("prod_cate");					
+						
+			Iterator<SoolProdDTO> it = lists.iterator();
+			
+			//SoolProdDTO dto2 = new SoolProdDTO();
+			
+			while (it.hasNext()) {
+									
+				//dto2 = it.next();
+				SoolProdDTO dto = it.next();			
+			}
+			
+			url = "/sool/list_p_wine.jsp";
+			forward(req, resp, url);
+			
+		//청주
+		}else if(uri.indexOf("chung.com")!=-1) {
+			
+			int dataCount = dao1.getDataCount();
+			String pageNum = req.getParameter("pageNum");
+			int currentPage = 1;
+			
+			if(pageNum != null)
+				currentPage = Integer.parseInt(pageNum);
+			
+			int numPerPage = 8;
+			int totalPage = myUtil.getPageCount(numPerPage, dataCount);
+			
+			if(currentPage > totalPage) {
+				currentPage = totalPage;
+			}
+			
+			int start = (currentPage - 1) * numPerPage + 1;
+			int end = currentPage * numPerPage;
+			
+			String prod_cate = "p_chung";
+			
+			List<SoolProdDTO> lists = dao1.getCateLists(prod_cate, start, end);
+			
+			String listUrl = cp + "/homesool/chung.com";
+					
+			String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
+			
+			String imagePath = cp + "/hs/prod_if";
+			
+			req.setAttribute("lists", lists);
+			req.setAttribute("totalPage", totalPage);
+			req.setAttribute("pageNum", pageNum);
+			req.setAttribute("pageIndexList", pageIndexList);
+			req.setAttribute("dataCount", dataCount);
+			req.setAttribute("imagePath", imagePath);
+			
+			//String p_mak = req.getParameter("prod_cate");					
+						
+			Iterator<SoolProdDTO> it = lists.iterator();
+			
+			//SoolProdDTO dto2 = new SoolProdDTO();
+			
+			while (it.hasNext()) {
+									
+				//dto2 = it.next();
+				SoolProdDTO dto = it.next();			
+			}
+			
+			url = "/sool/list_p_chung.jsp";
+			forward(req, resp, url);
+			
+		//안주
+		}else if(uri.indexOf("food.com")!=-1) {
+			
+			int dataCount = dao1.getDataCount();
+			String pageNum = req.getParameter("pageNum");
+			int currentPage = 1;
+			
+			if(pageNum != null)
+				currentPage = Integer.parseInt(pageNum);
+			
+			int numPerPage = 8;
+			int totalPage = myUtil.getPageCount(numPerPage, dataCount);
+			
+			if(currentPage > totalPage) {
+				currentPage = totalPage;
+			}
+			
+			int start = (currentPage - 1) * numPerPage + 1;
+			int end = currentPage * numPerPage;
+			
+			String prod_cate = "p_food";
+			
+			List<SoolProdDTO> lists = dao1.getCateLists(prod_cate, start, end);
+			
+			String listUrl = cp + "/homesool/food.com";
+					
+			String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
+			
+			String imagePath = cp + "/hs/prod_if";
+			
+			req.setAttribute("lists", lists);
+			req.setAttribute("totalPage", totalPage);
+			req.setAttribute("pageNum", pageNum);
+			req.setAttribute("pageIndexList", pageIndexList);
+			req.setAttribute("dataCount", dataCount);
+			req.setAttribute("imagePath", imagePath);
+			
+			//String p_mak = req.getParameter("prod_cate");					
+						
+			Iterator<SoolProdDTO> it = lists.iterator();
+			
+			//SoolProdDTO dto2 = new SoolProdDTO();
+			
+			while (it.hasNext()) {
+									
+				//dto2 = it.next();
+				SoolProdDTO dto = it.next();			
+			}
+			
+			url = "/sool/list_p_food.jsp";
+			forward(req, resp, url);
+		
 		}
+	//--------------------------------------------------
 	}
 }	
 				

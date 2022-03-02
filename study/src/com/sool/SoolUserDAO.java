@@ -6,8 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.board.BoardDTO;
-import com.join.MemberDTO;
+import com.sool.SoolUserDTO;
 
 public class SoolUserDAO {
 	

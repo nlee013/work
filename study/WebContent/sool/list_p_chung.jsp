@@ -3,102 +3,23 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
-	
-	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="icon" type="image/png" href="image/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" type="text/css" href="css/login_util.css">
-	<link rel="stylesheet" type="text/css" href="css/login_main.css">
-
-<link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
-<link rel="icon" href="image/favicon.ico" type="image/x-icon">
-
-<link rel="stylesheet" type="text/css" href="css/btnOnly.css">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>회원가입 완료</title>
-
-
-<script type="text/javascript">
-
-	
-	function login() {
-		
-		var f = document.myForm
-		
-		f.action = "<%=cp%>/homesool/login_ok.com";
-		f.submit;
-		
-	}
-	
-	function goCreate() {
-		
-		var f = document.myForm
-		
-		f.action = "<%=cp%>/homesool/create1.com";
-		f.submit;
-	}
-	
-	function findId() {
-		
-		var f = document.myForm
-		
-		f.action = "<%=cp%>/homesool/id.com";
-		f.submit;
-	}
-	
-	function findPwd() {
-		
-		var f = document.myForm
-		
-		f.action = "<%=cp%>/homesool/pwd.com";
-		f.submit;
-		
-	}
-
-
-</script>
-
-
-
-</head>
-<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    	
-		<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-		
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		
-		<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-		
-
-
-    
+<!-- saved from url=(0059)https://www.homesool.com/goods/goods_list.php?cateCd=001006 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>약주/청주</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="csrf-token" content="MTY0NjAyMDQ3Mzg2NDI0MDg5NjI4MTEwNjgzODg0NTM1NzE2NDc2MDk1">
+    <meta name="csrf-token" content="MTY0NjAyODU0MjQxMzk0NjYyNjgyNTQ1MTg0MTQ1MjU3NjA3NDc3Njg1">
 
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="홈술닷컴">
-    <meta property="og:url" content="https://www.homesool.com/main/index.php">
+    <meta property="og:url" content="https://www.homesool.com/goods/goods_list.php?cateCd=001006">
     <meta property="og:description" content="홈술닷컴">
     <meta property="og:locale" content="ko_KR">
     <meta name="twitter:card" content="summary">
@@ -120,7 +41,6 @@
     <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/chosen.css">	
 	<link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/swiper-bundle.min.css">
     <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/custom.css">
-    
 
 
     <script src="<%=cp %>/sool/main_files/AceCounter_AW.js.다운로드"></script>
@@ -128,9 +48,9 @@
         var json_locale_data = {"domain":"messages","locale_data":{"messages":{"":{"lang":"ATF","plural-forms":"nplurals=1; plural=0"}}}}
     </script>
     <script type="text/javascript" src="<%=cp %>/sool/main_files/gd_gettext.js.다운로드"></script>
-<%--     <script type="text/javascript" src="<%=cp %>/sool/main_files/jquery.min.js.다운로드"></script> --%>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/jquery.min.js.다운로드"></script>
     <script type="text/javascript" src="<%=cp %>/sool/main_files/underscore-min.js.다운로드"></script>
-   <%--  <script type="text/javascript" src="<%=cp %>/sool/main_files/jquery.validate.min.js.다운로드"></script> --%>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/jquery.validate.min.js.다운로드"></script>
     <script type="text/javascript" src="<%=cp %>/sool/main_files/additional-methods.min.js.다운로드"></script>
     <script type="text/javascript" src="<%=cp %>/sool/main_files/numeral.min.js.다운로드"></script>
     <script type="text/javascript" src="<%=cp %>/sool/main_files/accounting.min.js.다운로드"></script>
@@ -140,16 +60,40 @@
     <!--[if gt IE 8]-->
     <script type="text/javascript" src="<%=cp %>/sool//main_files/clipboard.min.js.다운로드"></script>
     <!--[endif]-->
- <%--    <script type="text/javascript" src="<%=cp %>/sool//main_files/jquery.vticker.js.다운로드"></script> --%>
+    <script type="text/javascript" src="<%=cp %>/sool//main_files/jquery.vticker.js.다운로드"></script>
     <script type="text/javascript" src=".<%=cp %>/sool/main_files/gd_ui.js.다운로드"></script>
 
-    
+    <script type="text/javascript">
+        // 고도몰5 통화정책
+        var gdCurrencyDecimal = 0;
+        var gdCurrencyDecimalFormat = '0';
+        var gdCurrencyCode = 'KRW';
+        var gdCurrencyAddDecimal = 0;
+        var gdCurrencyAddDecimalFormat = '';
+        var gdCurrencyAddCode = '';
+        var gdLocale = 'ko';
+        var gdCurrencySymbol = '';
+        var gdCurrencyString = '원';
 
-    <script type="text/javascript" src="<%=cp %>/sool/main_files/gd_common.js.다운로드"></script>
+        // 환율변환 정책
+        fx.base = "KRW";
+        fx.settings = {
+            from : "KRW",
+            to : gdCurrencyCode
+        };
+        fx.rates = {
+            "KRW" : 1,
+            "USD" : 0,
+            "CNY" : 0,
+            "JPY" : 0,
+            "EUR" : 0,
+        }
+    </script>
+
+    <script type="text/javascript" src="<%=cp%>/sool/product_files/gd_common.js.다운로드"></script>
 
     <!-- Add script : start -->
-    <script type="text/javascript" src="<%=cp %>/sool/main_files/jquery.cookie.js.다운로드"></script>
-<%--     <script type="text/javascript" src="<%=cp %>/sool/main_files/gd_popup.js.다운로드"></script> --%>
+    <script type="text/javascript" src="<%=cp%>/sool/product_files/jquery.cookie.js.다운로드"></script>
     <!-- Add script : end -->
 
     
@@ -171,9 +115,9 @@
         }
     </style>
 
+
     <script type="text/javascript" src="<%=cp %>/sool/main_files/wcslog.js.다운로드"></script>
 <script type="text/javascript" src="<%=cp %>/sool/main_files/naverCommonInflowScript.js.다운로드" id="naver-common-inflow-script"></script>
-
 <!-- Facebook Pixel Code -->
         <script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -198,12 +142,9 @@
         </script>
         <!-- AceCounter Log Gathering Script End -->
 
+</head>
 
-<body onload="info();">
-
-
-
-<body class="body-main body-index pc">
+<body class="body-goods body-goods-list pc">
 <div class="top_area"></div>
 <div id="wrap">
 
@@ -213,7 +154,7 @@
     <div class="header_top">
         <div class="header_top_cont">
 			
-			<div class="h1_logo"><!--——--><a href="<%=cp %>/homesool/main.com"><img src="<%=cp %>/sool/main_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
+			<div class="h1_logo"><!--——--><a href="<%=cp%>/homesool/main.com"><img src="<%=cp %>/sool/main_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
 			
 			<!-- 햄버거 넣는 부분 ^^ -->
 			<a href="#;" class="n_btn_all_menu_open">
@@ -224,37 +165,36 @@
 			<div class="n_gnb_allmenu_wrap dn">
 				<div class="menu_wrap">
 					<div class="menu01">
-						<p><a href="https://www.homesool.com/mypage/index.php"><img src="<%=cp %>/sool/main_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
-						<p><a href="https://www.homesool.com/mypage/shipping.php"><img src="<%=cp %>/sool/main_files/allmenu_addr.png" alt="">배송지관리</a></p>
-						<p><a href="https://www.homesool.com/service/index.php"><img src="<%=cp %>/sool/main_files/allmenu_cscenter.png" alt="">고객센터</a></p>
+						<p><a href="<%=cp%>/homesool/list_p.com"><img src="<%=cp %>/sool/main_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
+						<p><a href="<%=cp%>/homesool/list_p.com"><img src="<%=cp %>/sool/main_files/allmenu_addr.png" alt="">배송지관리</a></p>
+						<p><a href="<%=cp%>/homesool/csCenter.com"><img src="<%=cp %>/sool/main_files/allmenu_cscenter.png" alt="">고객센터</a></p>
 					</div>
-						<div class="menu02">
+					<div class="menu02">
 						<dl>
-							<dt><a href="">홈술고르기</a></dt>
-							<dd><a href="">막걸리</a></dd>  
-							<dd><a href="">증류주/소주/리큐르</a></dd> 
-							<dd><a href="">약주/청주</a></dd> 
-							<dd><a href="">와인/과실주</a></dd>
-							<dd><a href="">홈닷푸드</a></dd>
+							<dt><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></dt>
+							<dd><a href="<%=cp%>/homesool/mak.com">막걸리</a></dd>  
+							<dd><a href="<%=cp%>/homesool/soju.com">증류주/소주/리큐르</a></dd> 
+							<dd><a href="<%=cp%>/homesool/chung.com">약주/청주</a></dd> 
+							<dd><a href="<%=cp%>/homesool/wine.com">와인/과실주</a></dd>
+							<dd><a href="<%=cp%>/homesool/food.com">홈닷푸드</a></dd>
 						</dl>
 							<dl>
-								<dt><a href="">Best홈술</a></dt>
-								<dd><a href="">신제품</a></dd>
-								<dd><a href="">베스트</a></dd>
-								<dd><a href="">추천홈술</a></dd>
-								<dd><a href="">이달의 혜택</a></dd>
+								<dt><a href="<%=cp%>/homesool/list_bp.com">Best홈술</a></dt>
+								<dd><a href="<%=cp%>/homesool/new.com">신제품</a></dd>
+								<dd><a href="<%=cp%>/homesool/best.com">베스트</a></dd>
+								<dd><a href="<%=cp%>/homesool/recommend.com">추천홈술</a></dd>
+								<dd><a href="<%=cp%>/homesool/benefit.com">이달의 혜택</a></dd>
 							</dl> 
 						<dl>
-							<dt><a href="">홈술가이드</a></dt>
-							<dd><a href="">홈술 멤버십</a></dd>
-							<dd><a href="">구독 홈술 가이드</a></dd>
-							<dd><a href="">배송유형별 안내</a></dd>
+							<dt><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></dt>
+							<dd><a href="<%=cp%>/homesool/membership.com">홈술 멤버십</a></dd>						
+							<dd><a href="<%=cp%>/homesool/delivery.com">배송유형별 안내</a></dd>
 						</dl> 
 						<dl>
-							<dt><a href="">고객센터</a></dt>
-							<dd><a href="">공지사항</a></dd>
-							<dd><a href="">1:1문의하기</a></dd>
-							<dd><a href="">FAQ</a></dd>
+							<dt><a href="<%=cp%>/homesool/csCenter.com">고객센터</a></dt>
+							<dd><a href="<%=cp%>/homesool/main.com">공지사항</a></dd>
+							<dd><a href="<%=cp%>/homesool/main.com">1:1문의하기</a></dd>
+							<dd><a href="<%=cp%>/homesool/main.com">FAQ</a></dd>
 						</dl>  
 					</div>
 				</div>
@@ -263,30 +203,25 @@
 			    
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
-				<li><a href="">홈술고르기</a></li>
-				<li><a href="">Best홈술</a></li>
-				<li><a href="">홈술가이드</a></li>
-				<li><a href="">고객센터 </a></li>				 
+				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
+				<li><a href="<%=cp%>/homesool/new.com">Best홈술</a></li>
+				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
+				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
 			</ul>
 			 
-            <div class="hd_right">
+           <div class="hd_right">
 				<ul class="top_member_box">
 				
 				<!-- 로그인 회원가입 고객센터 링크 연결 ^^ --> 
-            	      
-				<c:choose>
-	<c:when test="${empty sessionScope.customInfos.user_id }">
-		<li><a href="<%=cp%>/homesool/login.com">Login</a></li>
-        <li><a href="<%=cp%>/homesool/create1.com">Join</a></li>
-	</c:when>
-	<c:otherwise>
-		  
-		<li><a href="<%=cp%>/homesool/logout.com">Logout</a></li>
-	</c:otherwise>
-</c:choose>
+            	        <li><a href="<%=cp%>/homesool/login.com">Login</a></li>
+            	    <li><a href="<%=cp%>/homesool/create1.com">Join</a>
+            	        <!--<span class="accent">
+            	            <span><strong>2,000 P</strong></span>
+            	        </span>-->
+            	    </li>
             	    
-            	    <li><a href="<%=cp%>/sool/csCenter.jsp">CS Center</a></li>
+            	    <li><a href="<%=cp%>/homesool/csCenter.com">CS Center</a></li>
             	</ul>
 				<!-- 검색 폼 -->
 				<div class="top_search_btn">
@@ -295,7 +230,7 @@
                 </div>
                 <!-- //top_text_cont -->
                 
-<!-- 애매 -->
+
 				<div class="top_search" style="display:none;">
     <form name="frmSearchTop" id="frmSearchTop" action="https://www.homesool.com/goods/goods_search.php" method="get" novalidate="novalidate">
         <fieldset>
@@ -304,7 +239,7 @@
 				<div class="top_search_tit">궁금하신 내용을 검색해주세요.</div>
                 <div class="top_text_cont">
                     <input type="text" id="search_form" name="keyword" class="top_srarch_text" title="오늘 드시고 싶은 술은 무엇인가요" placeholder="오늘 드시고 싶은 술은 무엇인가요" autocomplete="off">
-                    <input type="image" src="<%=cp %>/sool/main_files/btn_search35.png" id="btnSearchTop" class="btn_top_srarch" title="검색" value="검색" alt="검색">
+                      <input type="image" src="<%=cp %>/sool/main_files/btn_search35.png" id="btnSearchTop" class="btn_top_srarch" title="검색" value="검색" alt="검색">
                 </div>
                 <!-- //top_text_cont -->
                 <div class="search_cont">
@@ -317,15 +252,15 @@
                     	    <dl class="js_recent_area">
                     	        <dt>최근검색어</dt>
                     	        <dd>
-                    	            <ul class="js_recent_list">
+                    	        	<ul class="js_recent_list">
                     	                <li>
-                    	                    <a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%8A%90%EB%A6%B0%EB%A7%88%EC%9D%84%EB%A7%89%EA%B1%B8%EB%A6%AC">느린마을막걸리</a>
-                    	                    <span><button type="button" class="btn_top_search_del" data-recent-keyword="느린마을막걸리">
+                    	                    <a href="<%=cp%>/homesool/p_mak_1.com">느린마을 옹기막걸리</a>
+                    	                    <span><button type="button" class="btn_top_search_del" data-recent-keyword="느린마을 옹기막걸리">
                     	                        <img src="<%=cp %>/sool/main_files/btn_top_search_del.png" alt="삭제"></button>
                     	                    </span>
                     	                </li>
                     	                <li>
-                    	                    <a href="https://www.homesool.com/goods/goods_search.php?keyword=%EC%A6%9D%EB%A5%98%EC%A3%BC">증류주</a>
+                    	                    <a href="<%=cp%>/homesool/soju.com">증류주</a>
                     	                    <span><button type="button" class="btn_top_search_del" data-recent-keyword="증류주">
                     	                        <img src="<%=cp %>/sool/main_files/btn_top_search_del.png" alt="삭제"></button>
                     	                    </span>
@@ -336,7 +271,7 @@
                     	</div>
                     	<!-- //recent_box -->
                     	<div class="seach_top_all">
-						<button type="button" class="btn_top_search_all_del"><strong>전체삭제</strong></button>                    	    <!-- <button type="button" class="btn_top_search_close"><strong>닫기</strong></button> -->
+                    	    <!-- <button type="button" class="btn_top_search_close"><strong>닫기</strong></button> -->
                     	</div>
                     	<!-- //seach_top_all -->
 					</div>
@@ -348,12 +283,12 @@
                     	        <dt>인기검색어</dt> 
                     	        <dd>
                     	            <ul class="js_recent_list"> 
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%8A%90%EB%A6%B0%EB%A7%88%EC%9D%84%EB%A7%89%EA%B1%B8%EB%A6%AC"># 느린마을막걸리</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EC%8B%AC%EC%88%A0"># 심술</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%AC%B4%EC%95%84%EC%8A%A4%ED%8C%8C%ED%83%90"># 무아스파탐</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%B9%99%ED%83%84%EB%B3%B5"># 빙탄복</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EC%A6%9D%EB%A5%98%EC%A3%BC"># 증류주</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%ED%95%B4%EC%B0%BD%EB%A7%89%EA%B1%B8%EB%A6%AC"># 해창막걸리</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_mak_1.com"># 느린마을막걸리</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_soju_23.com"># 심술</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_wine_34.com"># 나영의 눈물 화이트 스위트 375</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_chung_27.com"># 삼양춘 청주</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/soju.com"># 증류주</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_mak_7.com"># 팔팔막걸리</a></li> 	
                     	            </ul>
                     	        </dd> 
                     	    </dl>
@@ -366,11 +301,10 @@
             <!-- //top_search_cont -->
         </fieldset>
     </form>
-	<div class=""><a href="https://www.homesool.com/main/index.php#;" class="close"><img src="<%=cp %>/sool/main_files/btn_close38.png" alt="닫기"></a></div>
+	<div class=""><a href="<%=cp%>/homesool/main.com" class="close"><img src="<%=cp %>/sool/main_files/btn_close38.png" alt="닫기"></a></div>
 </div>
 <!-- //top_search -->
-<!-- 마이페이지 장바구니 부분 ^^ -->
-
+<!-- 마이페이지 장바구니 부분 -->
 				<!-- 검색 폼 -->
             	<ul class="icon_util">	   
             		<li>
@@ -394,6 +328,7 @@
     </div>
     <!-- //header_top --> 
 </div>
+<!-- //header -->
 
 
 <!-- 튜닝 : 당일 배송 지역 검색 2021-08-11 -->
@@ -486,105 +421,193 @@
     </div>
     <!-- //header_warp -->
 
+    <div id="container">
+        <div id="contents">
+        <!-- 본문 시작 -->
 
-<center>
-<table width="1260">
-<tr align="left">
-	<td colspan="3"><img src="<%=cp %>/sool/main_files/houseLogo.png" ><a href="<%=cp %>/homesool/main.com">Home</a>>회원가입>약관동의>가입완료</td>
-</tr>	
-<tr>
-	<td height="100" align="center" colspan="3" style="font-size: 35px">로그인</td>
-</tr>
+            <!-- //location_wrap -->
 
-<tr>
-	<td height="100" colspan="3" align="center">홈술닷컴의 회원이 되셔서 회원등급할인/할인쿠폰/적립금 등 다양한 서비스를 받으세요.</td>
-</tr>
+	
+	 
+  	 
+    	 
+ 	 
 
-<tr><td height="20" bgcolor="#fff" align="center"></td></tr>
+            <div class="sub_content">
+
+                <!-- //side_cont -->
+<div class="content">
+    <div class="location_wrap">
+        <div class="location_cont">
+            <em>
+				<a href="<%=cp%>/homesool/main.com" class="local_home">HOME</a> 
+  
+				&gt; 홈술카테고리
+				&gt; 약주/청주
+  
+			
+			</em>
+			  
+        </div>
+    </div>
+    <!-- //location_wrap -->
+
+    <div class="goods_list_item">
+
+        <div class="goods_list_item_tit">
+            <h2 class="tit_38 center">홈술카테고리</h2>
+        </div>
+        
+        <div class="list_item_category mt40">
+            <ul>
+                <li class="">
+                    <a href="<%=cp%>/homesool/mak.com"><span>막걸리</span></a>
+                </li>
+                <li class="">
+                    <a href="<%=cp%>/homesool/soju.com"><span>증류주/소주/리큐르</span></a>
+                </li>
+                <li class="on">
+                    <a href="<%=cp%>/homesool/chung.com"><span>약주/청주</span></a>
+                </li>
+                <li class="">
+                    <a href="<%=cp%>/homesool/wine.com"><span>와인/과실주</span></a>
+                </li>
+                <li class="">
+                    <a href="<%=cp%>/homesool/food.com"><span>홈닷푸드</span></a>
+                </li>
+            </ul>
+        </div>
+
+<center> 
+
+<table width="600" border="0" cellspacing="1" cellpadding="3" bgColor="#FFFFFF" align="center">
+
+<c:set var="n" value="0"/>
+<c:forEach var="dto" items="${lists}">
+	
+	<c:if test="${n==0}">
+		<tr bgcolor="#FFFFFF" ></tr>
+	</c:if>
+	<c:if test="${n!=0&&n%4==0 }">
+		<tr bgcolor="#FFFFFF" >
+	</c:if>
+	
+	<td width="200" align="center">
+    	<a href="${imagePath}/${dto.prod_sImg}">
+	    	<img src="${imagePath}/${dto.prod_sImg}" width="200" height="330" 
+	    	style="border: 1px; border-radius: 1em;"/>
+	    </a>
+	    <br/><br/>${dto.prod_name}&nbsp;<br/>
+	    <b>${dto.prod_price }원</b>&nbsp;
+	   
+	    <div style=" width:20x; border: 2px; color:#fff; background-color: #f2a03d;
+	    border-radius: 0.3em;">
+	    <a href="">
+	    구매하기
+	    </a></div>
+	    <br/>
+	    <%--  <a href="<%=cp%>/homesool/delete.com?prod_no=${dto.prod_no }">삭제</a> --%>
+	     <br/>
+	</td>
+	
+	<c:set var="n" value="${n+1}"/>
+</c:forEach>
+	
+<c:if test="${n>0||n%4!=0 }">
+	<c:forEach var="i" begin="${n%4+1}" end="4" step="1">
+			<td>&nbsp;</td>
+	</c:forEach>
+</c:if>
+
+<c:if test="${n!=0 }">
+	</tr>
+</c:if>
+
+	
+<c:if test="${dataCount != 0}">
+	<tr bgcolor="#FFFFFF">
+	   <td align="center" height="30" colspan="3">${pageIndexList}</td>
+    </tr>
+</c:if>
+	
+<c:if test="${dataCount == 0}">
+	<tr bgcolor="#FFFFFF">
+       <td align="center" colspan="3" height="30">등록된 자료가 없습니다.</td>
+    </tr>
+</c:if>
+	
 </table>
 </center>
-<form action="" name="myForm" method="post">
-<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-t-50 p-b-90">
-				<form class="login100-form validate-form flex-sb flex-w">
-					
-					<div class="wrap-input100 validate-input m-b-16" align="center">
-						<input class="input100" type="text" name="user_id" placeholder="아이디"
-						style="width :480px; height :65px; background-color: #ededed; border: 0">
-						<span class="focus-input100"></span>
-					</div>
-					<br/>
-					
-					<div class="wrap-input100 validate-input m-b-16" align="center">
-						<input class="input100" type="password" name="user_pwd" placeholder="비밀번호"
-						style="width :480px; height :65px; background-color: #ededed; border: 0">
-						<span class="focus-input100"></span>
-					</div>
-				<br/>
-					<div class="flex-sb-m w-full p-t-3 p-b-24" align="center">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								아이디 저장
-							</label>
-						</div>
-					</div>
-					<br/>
-					
-					<div class="container-login100-form-btn m-t-17" align="center">
-					
-						<button onclick="login();" class="login100-form-btn" style="width :480px; height :65px; color : #fff; background-color: #eda71a; border: 0">
-						로그인하기
-						</button>
-					</div>
-					<br/>
-					<div align="center" style="color: red">${message }</div>
-					<br/>
-					<div class="container-login100-form-btn m-t-17" align="center">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						
-						<button onclick="goCreate();">
-							회원가입
-						</button>
-				
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				
-						<button onclick="findId();">
-							아이디 찾기
-						</button>
-						
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<button onclick="findPwd();">
-							비밀번호 찾기
-						</button>
-						
-					</div>
-					
+        <!-- 설문조사 배너 --><!-- 설문조사 배너 -->
+
+
+<script>
+	$('.filter').click(function(){
+		$('.layer_filter').toggleClass('dn');	
+	});	  
+	$('.layer_filter .layer_close').click(function(){
+		$('.layer_filter').addClass('dn');	
+	});
+
+	$(document).ready(function(){
+		
+		$('#btnFilterSelectSearch').on('click', function(){
+			$('form[name=frmList]').get(0).submit();
+		});
+
+	});
+</script>
+
+            </form>
+        </div>
+        <!-- //goods_pick_list -->
+
+        <div class="goods_list mt50">
+            <div class="goods_list_cont">
+                <!-- 상품 리스트 -->
+
+
+        <div class=" ">
+            <div class="pagination"><ul><li class="on"><span>1</span></li></ul></div>
+        </div>
+
+    </div>
+    <!-- //goods_list_item -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$('form[name=frmList] select[name=pageNum]').change(function() {
+				$('form[name=frmList]').get(0).submit();
+			});
 			
-				</form>
-				<br/><br/><br/>
-			</div>
-		</div>
-	</div>
-</form>	
+			// 정렬 순서 change 이벤트로 변경 2021-08-10
+			$('form[name=frmList] select[name=sort]').change(function() {
+				$('form[name=frmList]').get(0).submit();
+			});
 
-<div class="flex-sb-m w-full p-t-3 p-b-24"></div>
+			/* 원본
+			$('form[name=frmList] input[name=sort]').click(function() {
+				$('form[name=frmList]').get(0).submit();
+			});
 
-<div id="dropDownSelect1"></div>
+			$(':radio[name="sort"][value=""]').prop("checked","checked")
+			$(':radio[name="sort"][value=""]').next().addClass('on');
+			*/
 
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js"></script>
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<script src="js/main.js"></script>
-	
-<br/><br/>
- <div id="footer_wrap">
+		});
+	</script>
+</div>
+<!-- //content -->
+
+            </div>
+            <!-- //sub_content -->
+        </div>
+        <!-- //본문 끝 contents -->
+    </div>
+    <!-- //container -->
+
+
+    <div id="footer_wrap">
 <div class="ft_notice">
 	<div class="ft_notice_inner">
 		<div class="tit">NOTICE</div>
@@ -626,7 +649,7 @@
 				</div> 
 				<div>
 					<span>사업자등록번호 :  882-85-01179 </span>
-					<span>통신판매업신고번호 : 제 2020-경기포천-0287 호 <a href="https://www.homesool.com/main/index.php#" class="btn_licensee_info" onclick="gd_popup_bizInfo(&#39;8828501179&#39;); return false;">[사업자정보확인] </a></span> 
+					<span>통신판매업신고번호 : 제 2020-경기포천-0287 호 <a href="https://www.homesool.com/goods/goods_list.php?cateCd=001006#" class="btn_licensee_info" onclick="gd_popup_bizInfo(&#39;8828501179&#39;); return false;">[사업자정보확인] </a></span> 
 				</div> 
 				<div>
 					<span> 주소 :  11123 경기도 포천시 화현면 화동로432번길 25 배상면주가 3층</span> 
@@ -646,7 +669,7 @@
 				</div>	 
 				<div>
 					<span>사업자등록번호 :  776-85-01398 </span>
-					<span>통신판매업신고번호 : 제 2020-서울서초-2839 호 <a href="https://www.homesool.com/main/index.php#" class="btn_licensee_info" onclick="gd_popup_bizInfo(&#39;7768501398&#39;); return false;">[사업자번호조회]</a></span>
+					<span>통신판매업신고번호 : 제 2020-서울서초-2839 호 <a href="https://www.homesool.com/goods/goods_list.php?cateCd=001006#" class="btn_licensee_info" onclick="gd_popup_bizInfo(&#39;7768501398&#39;); return false;">[사업자번호조회]</a></span>
 				</div>
 				<div>
 					<span> 주소 :  06752 서울특별시 서초구 강남대로27길 7-9, 1층</span>
@@ -673,13 +696,135 @@
     </div>
     <!-- //foot_cont -->
     <div class="foot_certify">
-        <span><img src="<%=cp %>/sool/main_files/logo_comodo.png" alt="보안서버 적용 확인"></span>
-        <span><img src="<%=cp %>/sool/main_files/escrow_banner_kcp.png" alt="에스크로 서비스 확인" title="에스크로 서비스 확인" class="hand" onclick="javascript:window.open(&#39;https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=GKPI1&#39;, &#39;escrowBanner&#39;, &#39;scrollbars=no, resizable=no, width=500, height=450&#39;);"></span>
+        <span><img src=".<%=cp %>/sool/product_files/logo_comodo.png" alt="보안서버 적용 확인"></span>
+        <span><img src="<%=cp %>/sool/product_files/escrow_banner_kcp.png" alt="에스크로 서비스 확인" title="에스크로 서비스 확인" class="hand" onclick="javascript:window.open(&#39;https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=GKPI1&#39;, &#39;escrowBanner&#39;, &#39;scrollbars=no, resizable=no, width=500, height=450&#39;);"></span>
         <span></span>
     </div>
     <!-- //foot_certify -->
 </div>
+<!-- //footer -->
+    </div>
+    <!-- //footer_wrap -->
+
+	
+    <div class="scroll_wrap">
+
+        <!-- 우측 스크롤 배너 -->
+        <div id="scroll_right" class="ban_fixed">
+<div class="right_banner" style="display:none;">
+<a href="https://www.homesool.com/goods/brand.php"><img src="<%=cp %>/sool/product_files/scroll-banner-right01.jpg" alt="스크롤 우측 배너" title="스크롤 우측 배너"></a></div>
+<div class="scroll_right_cont" style="display: none;">
+    <h4>TODAY VIEW</h4>
+
+    <div class="scr_paging" style="display: none;">
+        <button type="button" class="bnt_scroll_prev" title="최근본 이전 상품"><img src="<%=cp %>/sool/product_files/btn_scroll_prev.png" alt="최근본 이전 상품"></button>
+        <span><strong class="js_current">0</strong>/<span class="js_total" style="float:none;width:auto;">0</span></span>
+        <button type="button" class="bnt_scroll_next" title="최근본 다음 상품"><img src="<%=cp %>/sool/product_files/btn_scroll_next.png" alt="최근본 다음 상품"></button>
+    </div>
+    <!-- //scr_paging -->
+</div>
+<span class="btn_scroll_top"><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001006#TOP"><img src="<%=cp %>/sool/product_files/btn_scroll_top.png" alt="상단으로 이동"></a></span>
+
+<script type="text/javascript">
+    // DOM 로드
+    $(function () {
+        $('.scroll_right_cont').todayGoods();
+    });
+
+    // 최근본상품 리스트 페이징 처리 플러그인
+    $.fn.todayGoods = function () {
+        // 기본값 세팅
+        var self = $(this);
+        var setting = {
+            page: 1,
+            total: 0,
+            rowno: 5
+        };
+        var element = {
+            goodsList: self.find('ul > li'),
+            closeButton: self.find('ul > li > button'),
+            prev: self.find('.scr_paging > .bnt_scroll_prev'),
+            next: self.find('.scr_paging > .bnt_scroll_next'),
+            paging: self.find('.scr_paging')
+        };
+
+        // 페이지 갯수 설정
+        setting.total = Math.ceil(element.goodsList.length / setting.rowno);
+
+        // 화면 초기화 및 갱신 (페이지 및 갯수 표기)
+        var init = function () {
+            if (setting.total == 0) {
+                setting.page = 0;
+                element.paging.hide();
+            }
+            self.find('ul').hide().eq(setting.page - 1).show();
+            self.find('.scr_paging .js_current').text(setting.page);
+            self.find('.scr_paging .js_total').text(setting.total);
+        }
+
+        // 삭제버튼 클릭
+        element.closeButton.click(function(e){
+            $.post('../goods/goods_ps.php', {
+                'mode': 'delete_today_goods',
+                'goodsNo': $(this).data('goods-no')
+            }, function (data, status) {
+                // 값이 없는 경우 성공
+                if (status == 'success' && data == '') {
+                    location.reload(true);
+                }
+                else {
+                    console.log('request fail. ajax status (' + status + ')');
+                }
+            });
+        });
+
+        // 이전버튼 클릭
+        element.prev.click(function (e) {
+            setting.page = 1 == setting.page ? setting.total : setting.page - 1;
+            init();
+        });
+
+        // 다음버튼 클릭
+        element.next.click(function (e) {
+            setting.page = setting.total == setting.page ? 1 : setting.page + 1;
+            init();
+        });
+
+        // 화면 초기화
+        init();
+    };
+</script>
+        </div>
+        <!-- //scroll_right -->
+        <!-- //우측 스크롤 배너 -->
 
 
-</body>
-</html>
+    </div>
+    <!-- //scroll_wrap --> 
+	
+
+
+    <!-- 퀵 검색 폼 -->
+    <!-- 퀵 검색 폼 -->
+
+</div>
+<!-- //wrap -->
+
+<!-- 쇼핑 카트 탭 -->
+
+<!-- //쇼핑 카트 탭 -->
+
+<!-- 회원가입 유도 푸시 -->
+
+<!-- //회원가입 유도 푸시 -->
+
+<!-- 절대! 지우지마세요 : Start -->
+<div id="layerDim" class="dn">&nbsp;</div>
+<iframe name="ifrmProcess" src="<%=cp %>/sool/main_files/blank.html" style="display:none" width="100%" height="0" bgcolor="#000"></iframe>
+<!-- 절대! 지우지마세요 : End -->
+
+<!-- 외부 스크립트 -->
+
+
+
+</body></html>

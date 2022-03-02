@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fileTest.FileTestDTO;
+import com.sool.SoolProdDTO;
 
 public class SoolProdDAO {
 
@@ -131,7 +131,57 @@ public class SoolProdDAO {
 
 			return lists;
 		}
+		
+		//상품 카테고리 리스트에 가져오기
+				public List<SoolProdDTO> getCateLists(String prod_cate, int start, int end) {
 
+					List<SoolProdDTO> lists = new ArrayList<SoolProdDTO>();
+
+					PreparedStatement pstmt = null;
+					ResultSet rs = null;
+					String sql;
+
+					try {
+
+						
+						sql = "select * from ("
+							+ "select rownum rnum, data.* from ("
+							+ "select * from product where prod_cate=? order by prod_no desc) data) "
+							+ "where rnum >=? and rnum <=?";
+
+						pstmt = conn.prepareStatement(sql);
+						pstmt.setString(1, prod_cate);
+						pstmt.setInt(2, start);
+						pstmt.setInt(3, end);
+						
+						rs = pstmt.executeQuery();
+
+						while(rs.next()) {
+
+							SoolProdDTO dto = new SoolProdDTO();
+							
+							dto.setProd_no(rs.getInt("prod_no"));
+							dto.setProd_name(rs.getString("prod_name"));
+							dto.setProd_price(rs.getInt("prod_price"));
+							dto.setProd_quan(rs.getInt("prod_quan"));
+							dto.setProd_oImg(rs.getString("prod_oImg"));
+							dto.setProd_sImg(rs.getString("prod_sImg"));
+							dto.setProd_cate(rs.getString("prod_cate"));
+
+							lists.add(dto);
+						}
+
+						rs.close();
+						pstmt.close();
+
+
+					} catch (Exception e) {
+						System.out.println(e.toString());
+					}
+
+					return lists;
+				}
+					
 		//번호로 데이터 불러오기
 		public SoolProdDTO getReadData(int prod_no) {
 
@@ -199,6 +249,8 @@ public class SoolProdDAO {
 
 			return result;
 		}
-	
+
+		
+		
 }
 

@@ -153,37 +153,36 @@
 			<div class="n_gnb_allmenu_wrap dn">
 				<div class="menu_wrap">
 					<div class="menu01">
-						<p><a href="https://www.homesool.com/mypage/index.php"><img src="<%=cp %>/sool/main_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
-						<p><a href="https://www.homesool.com/mypage/shipping.php"><img src="<%=cp %>/sool/main_files/allmenu_addr.png" alt="">배송지관리</a></p>
-						<p><a href="https://www.homesool.com/service/index.php"><img src="<%=cp %>/sool/main_files/allmenu_cscenter.png" alt="">고객센터</a></p>
+						<p><a href="<%=cp%>/homesool/list_p.com"><img src="<%=cp %>/sool/main_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
+						<p><a href="<%=cp%>/homesool/list_p.com"><img src="<%=cp %>/sool/main_files/allmenu_addr.png" alt="">배송지관리</a></p>
+						<p><a href="<%=cp%>/homesool/csCenter.com"><img src="<%=cp %>/sool/main_files/allmenu_cscenter.png" alt="">고객센터</a></p>
 					</div>
 						<div class="menu02">
 						<dl>
-							<dt><a href="">홈술고르기</a></dt>
-							<dd><a href="">막걸리</a></dd>  
-							<dd><a href="">증류주/소주/리큐르</a></dd> 
-							<dd><a href="">약주/청주</a></dd> 
-							<dd><a href="">와인/과실주</a></dd>
-							<dd><a href="">홈닷푸드</a></dd>
+							<dt><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></dt>
+							<dd><a href="<%=cp%>/homesool/mak.com">막걸리</a></dd>  
+							<dd><a href="<%=cp%>/homesool/soju.com">증류주/소주/리큐르</a></dd> 
+							<dd><a href="<%=cp%>/homesool/chung.com">약주/청주</a></dd> 
+							<dd><a href="<%=cp%>/homesool/wine.com">와인/과실주</a></dd>
+							<dd><a href="<%=cp%>/homesool/food.com">홈닷푸드</a></dd>
 						</dl>
 							<dl>
-								<dt><a href="">Best홈술</a></dt>
-								<dd><a href="">신제품</a></dd>
-								<dd><a href="">베스트</a></dd>
-								<dd><a href="">추천홈술</a></dd>
-								<dd><a href="">이달의 혜택</a></dd>
+								<dt><a href="<%=cp%>/homesool/list_bp.com">Best홈술</a></dt>
+								<dd><a href="<%=cp%>/homesool/new.com">신제품</a></dd>
+								<dd><a href="<%=cp%>/homesool/best.com">베스트</a></dd>
+								<dd><a href="<%=cp%>/homesool/recommend.com">추천홈술</a></dd>
+								<dd><a href="<%=cp%>/homesool/benefit.com">이달의 혜택</a></dd>
 							</dl> 
 						<dl>
-							<dt><a href="">홈술가이드</a></dt>
-							<dd><a href="">홈술 멤버십</a></dd>
-							<dd><a href="">구독 홈술 가이드</a></dd>
-							<dd><a href="">배송유형별 안내</a></dd>
+							<dt><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></dt>
+							<dd><a href="<%=cp%>/homesool/membership.com">홈술 멤버십</a></dd>						
+							<dd><a href="<%=cp%>/homesool/delivery.com">배송유형별 안내</a></dd>
 						</dl> 
 						<dl>
-							<dt><a href="">고객센터</a></dt>
-							<dd><a href="">공지사항</a></dd>
-							<dd><a href="">1:1문의하기</a></dd>
-							<dd><a href="">FAQ</a></dd>
+							<dt><a href="<%=cp%>/homesool/csCenter.com">고객센터</a></dt>
+							<dd><a href="<%=cp%>/homesool/main.com">공지사항</a></dd>
+							<dd><a href="<%=cp%>/homesool/main.com">1:1문의하기</a></dd>
+							<dd><a href="<%=cp%>/homesool/main.com">FAQ</a></dd>
 						</dl>  
 					</div>
 				</div>
@@ -192,10 +191,10 @@
 			    
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
-				<li><a href="">홈술고르기</a></li>
-				<li><a href="">Best홈술</a></li>
-				<li><a href="">홈술가이드</a></li>
-				<li><a href="">고객센터 </a></li>				 
+				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
+				<li><a href="<%=cp%>/homesool/new.com">Best홈술</a></li>
+				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
+				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
 			</ul>
 			 
@@ -255,13 +254,13 @@
                     	        <dd>
                     	            <ul class="js_recent_list">
                     	                <li>
-                    	                    <a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%8A%90%EB%A6%B0%EB%A7%88%EC%9D%84%EB%A7%89%EA%B1%B8%EB%A6%AC">느린마을막걸리</a>
-                    	                    <span><button type="button" class="btn_top_search_del" data-recent-keyword="느린마을막걸리">
+                    	                    <a href="<%=cp%>/homesool/p_mak_1.com">느린마을 옹기막걸리</a>
+                    	                    <span><button type="button" class="btn_top_search_del" data-recent-keyword="느린마을 옹기막걸리">
                     	                        <img src="<%=cp %>/sool/main_files/btn_top_search_del.png" alt="삭제"></button>
                     	                    </span>
                     	                </li>
                     	                <li>
-                    	                    <a href="https://www.homesool.com/goods/goods_search.php?keyword=%EC%A6%9D%EB%A5%98%EC%A3%BC">증류주</a>
+                    	                    <a href="<%=cp%>/homesool/soju.com">증류주</a>
                     	                    <span><button type="button" class="btn_top_search_del" data-recent-keyword="증류주">
                     	                        <img src="<%=cp %>/sool/main_files/btn_top_search_del.png" alt="삭제"></button>
                     	                    </span>
@@ -284,12 +283,12 @@
                     	        <dt>인기검색어</dt> 
                     	        <dd>
                     	            <ul class="js_recent_list"> 
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%8A%90%EB%A6%B0%EB%A7%88%EC%9D%84%EB%A7%89%EA%B1%B8%EB%A6%AC"># 느린마을막걸리</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EC%8B%AC%EC%88%A0"># 심술</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%AC%B4%EC%95%84%EC%8A%A4%ED%8C%8C%ED%83%90"># 무아스파탐</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%B9%99%ED%83%84%EB%B3%B5"># 빙탄복</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%EC%A6%9D%EB%A5%98%EC%A3%BC"># 증류주</a></li> 	
-                    	                <li><a href="https://www.homesool.com/goods/goods_search.php?keyword=%ED%95%B4%EC%B0%BD%EB%A7%89%EA%B1%B8%EB%A6%AC"># 해창막걸리</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_mak_1.com"># 느린마을막걸리</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_soju_23.com"># 심술</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_wine_34.com"># 나영의 눈물 화이트 스위트 375</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_chung_27.com"># 삼양춘 청주</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/soju.com"># 증류주</a></li> 	
+                    	                <li><a href="<%=cp%>/homesool/p_mak_7.com"># 팔팔막걸리</a></li> 	
                     	            </ul>
                     	        </dd> 
                     	    </dl>
@@ -302,7 +301,7 @@
             <!-- //top_search_cont -->
         </fieldset>
     </form>
-	<div class=""><a href="https://www.homesool.com/main/index.php#;" class="close"><img src="<%=cp %>/sool/main_files/btn_close38.png" alt="닫기"></a></div>
+	<div class=""><a href="<%=cp%>/homesool/main.com" class="close"><img src="<%=cp %>/sool/main_files/btn_close38.png" alt="닫기"></a></div>
 </div>
 <!-- //top_search -->
 <!-- 마이페이지 장바구니 부분 ^^ -->
