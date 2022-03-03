@@ -486,7 +486,7 @@
                 	<img src="./detail_files/p_chung/1000000157_wlist_025.jpg" 
                 				width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./detail_files/p_chung/1000000115_wlist_058.jpg')">
+                       			onmouseover="fimg('./detail_files/p_chung/1000000157_wlist_025.jpg')">
                        		
                        		<img src="./detail_files/하얀까마귀1.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"

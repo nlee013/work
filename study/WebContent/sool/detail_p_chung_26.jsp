@@ -474,7 +474,7 @@
               		 <div class="item_photo_big">
 						<span class="img_photo_big">
 							<img src="./detail_files/p_chung/1000000059_wlist_033.jpg" width="380" name="img1"
-								alt="하얀까마귀" title="하얀까마귀" class="middle"
+								alt="동혁의 눈물 500" title="동혁의 눈물 500" class="middle"
 								style="border: 1px; border-radius: 1em;">
 							
 						</span>
@@ -488,17 +488,17 @@
                        			style="border: 1px; border-radius: 0.5em;"
                        			onmouseover="fimg('./detail_files/p_chung/1000000059_wlist_033.jpg')">
                        		
-                       		<img src="./detail_files/하얀까마귀1.png" width="100"
+                       		<img src="./detail_files/donghyeok_1.jpg" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./product_files/하얀까마귀1.png')">
+                       			onmouseover="fimg('./product_files/donghyeok_1.jpg')">
                        				
-							<img src="./detail_files/하얀까마귀2.png" width="100"
+							<img src="./detail_files/donghyeok_2.jpg" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./product_files/하얀까마귀2.png')">
+                       			onmouseover="fimg('./product_files/donghyeok_2.jpg')">
                        			
-                       		<img src="./detail_files/하얀까마귀3.png" width="100"
+                       		<img src="./detail_files/donghyeok_3.jpg" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./product_files/하얀까마귀3.png')">
+                       			onmouseover="fimg('./product_files/donghyeok_3.jpg')">
                     </div>
                     
                 <!-- //item_photo_view -->

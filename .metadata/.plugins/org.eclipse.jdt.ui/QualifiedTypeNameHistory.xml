@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="com.util.DBConn"/>
 <fullyQualifiedTypeName name="com.fileTest.fileTestDAO"/>
 <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="com.sool.SoolUserDTO"/>
 <fullyQualifiedTypeName name="com.sool.SoolProdDAO"/>
 <fullyQualifiedTypeName name="com.sool.SoolProdDTO"/>
+<fullyQualifiedTypeName name="com.sool.SoolBorderDTO"/>
 </qualifiedTypeNameHistroy>

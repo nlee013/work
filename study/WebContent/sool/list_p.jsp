@@ -515,7 +515,7 @@
 	    
 	    <div style=" width:20x; border: 2px; color:#fff; background-color: #f2a03d;
 	    border-radius: 0.3em;">
-	    <a href="">
+	    <a href="<%=cp%>/homesool/">
 	    구매하기
 	    </a></div>
 	    <%--  <a href="<%=cp%>/homesool/delete.com?prod_no=${dto.prod_no }">삭제</a> --%>

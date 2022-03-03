@@ -30,38 +30,38 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="https://www.homesool.com/data/commonimg/defaultShopIcon144.png">
 	<link rel="apple-touch-icon" href="https://www.homesool.com/data/commonimg/defaultShopIcon72.png">
 
-    <link type="text/css" rel="stylesheet" href="./csCenter_files/reset.css">
-    <link type="text/css" rel="stylesheet" href="./csCenter_files/common.css">
-    <link type="text/css" rel="stylesheet" href="./csCenter_files/layer.css">
-    <link type="text/css" rel="stylesheet" href="./csCenter_files/layout.css">
-    <link type="text/css" rel="stylesheet" href="./csCenter_files/list.css">
-	<link type="text/css" rel="stylesheet" href="./csCenter_files/button.css">
-    <link type="text/css" rel="stylesheet" href="./csCenter_files/service.css">
-    <link type="text/css" rel="stylesheet" href="./csCenter_files/chosen.css">	
-	<link type="text/css" rel="stylesheet" href="./csCenter_files/swiper-bundle.min.css">
-    <link type="text/css" rel="stylesheet" href="./csCenter_files/custom.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/reset.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/common.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/layer.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/layout.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/list.css">
+	<link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/button.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/service.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/chosen.css">	
+	<link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/swiper-bundle.min.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/custom.css">
 
 
-    <script src="./csCenter_files/AceCounter_AW.js.다운로드"></script><script src="./csCenter_files/1135465033646646" async=""></script><script src="./csCenter_files/identity.js.다운로드" async=""></script><script async="" src="./csCenter_files/fbevents.js.다운로드"></script><script type="text/javascript">
+    <script src="<%=cp%>/sool/csCenter_files/AceCounter_AW.js.다운로드"></script><script src="<%=cp%>/sool/csCenter_files/1135465033646646" async=""></script><script src="<%=cp%>/sool/csCenter_files/identity.js.다운로드" async=""></script><script async="" src="<%=cp%>/sool/csCenter_files/fbevents.js.다운로드"></script><script type="text/javascript">
         var json_locale_data = {"domain":"messages","locale_data":{"messages":{"":{"lang":"ATF","plural-forms":"nplurals=1; plural=0"}}}}
     </script>
-    <script type="text/javascript" src="./csCenter_files/gd_gettext.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/jquery.min.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/underscore-min.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/jquery.validate.min.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/additional-methods.min.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/numeral.min.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/accounting.min.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/money.min.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/chosen.jquery.min.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/placeholders.jquery.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/gd_gettext.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/jquery.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/underscore-min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/jquery.validate.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/additional-methods.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/numeral.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/accounting.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/money.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/chosen.jquery.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/placeholders.jquery.min.js.다운로드"></script>
     <!--[if gt IE 8]-->
-    <script type="text/javascript" src="./csCenter_files/clipboard.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/clipboard.min.js.다운로드"></script>
     <!--[endif]-->
-    <script type="text/javascript" src="./csCenter_files/jquery.vticker.js.다운로드"></script>
-    <script type="text/javascript" src="./csCenter_files/gd_ui.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/jquery.vticker.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/gd_ui.js.다운로드"></script>
 
-    <script type="text/javascript" src="./csCenter_files/gd_common.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/gd_common.js.다운로드"></script>
 
 
     
@@ -83,8 +83,8 @@
         }
     </style>
 
-    <script type="text/javascript" src="./csCenter_files/wcslog.js.다운로드"></script>
-<script type="text/javascript" src="./csCenter_files/naverCommonInflowScript.js.다운로드" id="naver-common-inflow-script"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/wcslog.js.다운로드"></script>
+<script type="text/javascript" src="<%=cp%>/sool/csCenter_files/naverCommonInflowScript.js.다운로드" id="naver-common-inflow-script"></script>
 <!-- Facebook Pixel Code -->
         <script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -97,7 +97,7 @@
         </script>
         <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1135465033646646&ev=PageView&noscript=1"/></noscript>
         <!-- DO NOT MODIFY -->
-        <!-- End Facebook Pixel Code --><script type="text/javascript" charset="UTF-8" src="./csCenter_files/kp.js.다운로드"></script>
+        <!-- End Facebook Pixel Code --><script type="text/javascript" charset="UTF-8" src="<%=cp%>/sool/csCenter_files/kp.js.다운로드"></script>
         <script type="text/javascript">
             kakaoPixel('8600996210486851034').pageView();
         </script>
@@ -121,14 +121,14 @@
     <div class="header_top">
         <div class="header_top_cont">
 			
-			<div class="h1_logo"><!--——--><a href="https://www.homesool.com/main/index.php"><img src="./csCenter_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
+			<div class="h1_logo"><!--——--><a href="https://www.homesool.com/main/index.php"><img src="<%=cp%>/sool/csCenter_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
 			<a href="https://www.homesool.com/service/index.php#;" class="n_btn_all_menu_open">전체카테고리</a>
 			<div class="n_gnb_allmenu_wrap dn">
 				<div class="menu_wrap">
 					<div class="menu01">
-						<p><a href="https://www.homesool.com/mypage/index.php"><img src="./csCenter_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
-						<p><a href="https://www.homesool.com/mypage/shipping.php"><img src="./csCenter_files/allmenu_addr.png" alt="">배송지관리</a></p>
-						<p><a href="https://www.homesool.com/service/index.php"><img src="./csCenter_files/allmenu_cscenter.png" alt="">고객센터</a></p>
+						<p><a href="https://www.homesool.com/mypage/index.php"><img src="<%=cp%>/sool/csCenter_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
+						<p><a href="https://www.homesool.com/mypage/shipping.php"><img src="<%=cp%>/sool/csCenter_files/allmenu_addr.png" alt="">배송지관리</a></p>
+						<p><a href="https://www.homesool.com/service/index.php"><img src="<%=cp%>/sool/csCenter_files/allmenu_cscenter.png" alt="">고객센터</a></p>
 					</div>
 					<div class="menu02">
 						<dl>
@@ -210,7 +210,7 @@
 				<!-- 검색 폼 -->
 				<div class="top_search_btn">
                     <span>&nbsp;</span>
-                    <img src="./csCenter_files/btn_top_search.png" alt="">
+                    <img src="<%=cp%>/sool/csCenter_files/btn_top_search.png" alt="">
                 </div>
                 <!-- //top_text_cont -->
 
@@ -222,7 +222,7 @@
 				<div class="top_search_tit">궁금하신 내용을 검색해주세요.</div>
                 <div class="top_text_cont">
                     <input type="text" id="search_form" name="keyword" class="top_srarch_text" title="오늘 드시고 싶은 술은 무엇인가요" placeholder="오늘 드시고 싶은 술은 무엇인가요" autocomplete="off">
-                    <input type="image" src="./csCenter_files/btn_search35.png" id="btnSearchTop" class="btn_top_srarch" title="검색" value="검색" alt="검색">
+                    <input type="image" src="<%=cp%>/sool/csCenter_files/btn_search35.png" id="btnSearchTop" class="btn_top_srarch" title="검색" value="검색" alt="검색">
                 </div>
                 <!-- //top_text_cont -->
                 <div class="search_cont">
@@ -269,7 +269,7 @@
             <!-- //top_search_cont -->
         </fieldset>
     </form>
-	<div class=""><a href="https://www.homesool.com/service/index.php#;" class="close"><img src="./csCenter_files/btn_close38.png" alt="닫기"></a></div>
+	<div class=""><a href="https://www.homesool.com/service/index.php#;" class="close"><img src="<%=cp%>/sool/csCenter_files/btn_close38.png" alt="닫기"></a></div>
 </div>
 <!-- //top_search -->
 				<!-- 검색 폼 -->
@@ -362,7 +362,7 @@
 		$.ajax({
 			method: "POST",
 			cache: false,
-			url: "../share/mesh_ps.php",
+			url: ".<%=cp%>/sool/share/mesh_ps.php",
 			data: params,
 			success: function (data) {
 
@@ -411,6 +411,7 @@
 		<!-- 공지사항 FAQ 링크 삽입 부분 ^^ -->
 		
 <li><a href="">공지사항</a></li>
+<li><a href="<%=cp%>/homesool/one_to_one.com">1:1문의하기</a></li>
 <li><a href="<%=cp%>/sool/faq.jsp">FAQ</a></li>
 		</ul>
 	</div>
@@ -420,7 +421,7 @@
         <div class="board_zone_sec">
             <div class="board_zone_cont">
                 <div class="board_zone_list">
-                    <iframe src="./csCenter_files/faq.html" id="faqIframe" 
+                    <iframe src="<%=cp%>/sool/csCenter_files/faq.html" id="faqIframe" 
                     width="100%" height="1130" marginwidth="0" marginheight="0" frameborder="no" 
                     scrolling="no" onload="gd_resize_frame(this)"></iframe>
                 </div>
@@ -527,8 +528,8 @@
     </div>
     <!-- //foot_cont -->
     <div class="foot_certify">
-        <span><img src="./csCenter_files/logo_comodo.png" alt="보안서버 적용 확인"></span>
-        <span><img src="./csCenter_files/escrow_banner_kcp.png" alt="에스크로 서비스 확인" title="에스크로 서비스 확인" class="hand" onclick="javascript:window.open(&#39;https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=GKPI1&#39;, &#39;escrowBanner&#39;, &#39;scrollbars=no, resizable=no, width=500, height=450&#39;);"></span>
+        <span><img src="<%=cp%>/sool/csCenter_files/logo_comodo.png" alt="보안서버 적용 확인"></span>
+        <span><img src="<%=cp%>/sool/csCenter_files/escrow_banner_kcp.png" alt="에스크로 서비스 확인" title="에스크로 서비스 확인" class="hand" onclick="javascript:window.open(&#39;https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=GKPI1&#39;, &#39;escrowBanner&#39;, &#39;scrollbars=no, resizable=no, width=500, height=450&#39;);"></span>
         <span></span>
     </div>
     <!-- //foot_certify -->
@@ -543,14 +544,14 @@
         <!-- 우측 스크롤 배너 -->
         <div id="scroll_right">
 <div class="right_banner" style="display:none;">
-<a href="https://www.homesool.com/goods/brand.php"><img src="./csCenter_files/scroll-banner-right01.jpg" alt="스크롤 우측 배너" title="스크롤 우측 배너"></a></div>
+<a href="https://www.homesool.com/goods/brand.php"><img src="<%=cp%>/sool/csCenter_files/scroll-banner-right01.jpg" alt="스크롤 우측 배너" title="스크롤 우측 배너"></a></div>
 <div class="scroll_right_cont" style="display: none;">
     <h4>TODAY VIEW</h4>
 
     <div class="scr_paging" style="display: none;">
-        <button type="button" class="bnt_scroll_prev" title="최근본 이전 상품"><img src="./csCenter_files/btn_scroll_prev.png" alt="최근본 이전 상품"></button>
+        <button type="button" class="bnt_scroll_prev" title="최근본 이전 상품"><img src="<%=cp%>/sool/csCenter_files/btn_scroll_prev.png" alt="최근본 이전 상품"></button>
         <span><strong class="js_current">0</strong>/<span class="js_total" style="float:none;width:auto;">0</span></span>
-        <button type="button" class="bnt_scroll_next" title="최근본 다음 상품"><img src="./csCenter_files/btn_scroll_next.png" alt="최근본 다음 상품"></button>
+        <button type="button" class="bnt_scroll_next" title="최근본 다음 상품"><img src="<%=cp%>/sool/csCenter_files/btn_scroll_next.png" alt="최근본 다음 상품"></button>
     </div>
     <!-- //scr_paging -->
 </div>
@@ -594,7 +595,7 @@
 
         // 삭제버튼 클릭
         element.closeButton.click(function(e){
-            $.post('../goods/goods_ps.php', {
+            $.post('.<%=cp%>/sool/goods/goods_ps.php', {
                 'mode': 'delete_today_goods',
                 'goodsNo': $(this).data('goods-no')
             }, function (data, status) {
@@ -650,7 +651,7 @@
 
 <!-- 절대! 지우지마세요 : Start -->
 <div id="layerDim" class="dn">&nbsp;</div>
-<iframe name="ifrmProcess" src="./csCenter_files/blank.html" style="display:none" width="100%" height="0" bgcolor="#000"></iframe>
+<iframe name="ifrmProcess" src="<%=cp%>/sool/csCenter_files/blank.html" style="display:none" width="100%" height="0" bgcolor="#000"></iframe>
 <!-- 절대! 지우지마세요 : End -->
 
 <!-- 외부 스크립트 -->

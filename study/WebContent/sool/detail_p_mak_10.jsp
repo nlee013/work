@@ -473,10 +473,8 @@
               <div class="item_photo_big">
               		 <div class="item_photo_big">
 						<span class="img_photo_big">
-							<img src="./detail_files/p_mak/1000000083_wlist_088.jpg
-
-" width="380" name="img1"
-								alt="하얀까마귀" title="하얀까마귀" class="middle"
+							<img src="./detail_files/p_mak/1000000083_wlist_088.jpg" width="380" name="img1"
+								alt="이화주" title="이화주" class="middle"
 								style="border: 1px; border-radius: 1em;">
 							
 						</span>
@@ -490,21 +488,19 @@
 " 
                 				width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./detail_files/p_mak/1000000083_wlist_088.jpg
-
-')">
+                       			onmouseover="fimg('./detail_files/p_mak/1000000083_wlist_088.jpg')">
                        		
-                       		<img src="./detail_files/하얀까마귀1.png" width="100"
+                       		<img src="./detail_files/p_mak_10_1.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./product_files/하얀까마귀1.png')">
+                       			onmouseover="fimg('./detail_files/p_mak_10_1.png')">
                        				
-							<img src="./detail_files/하얀까마귀2.png" width="100"
+							<img src="./detail_files/p_mak_10_2.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./product_files/하얀까마귀2.png')">
+                       			onmouseover="fimg('./detail_files/p_mak_10_2.png')">
                        			
-                       		<img src="./detail_files/하얀까마귀3.png" width="100"
+                       		<img src="./detail_files/p_mak_10_3.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./product_files/하얀까마귀3.png')">
+                       			onmouseover="fimg('./detail_files/p_mak_10_3.png')">
                     </div>
                     
                 <!-- //item_photo_view -->

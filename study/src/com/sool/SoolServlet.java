@@ -411,271 +411,228 @@ public class SoolServlet extends HttpServlet {
 		
 		}else if(uri.indexOf("p_mak_2.com")!=-1) {	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_2.jsp";
 			forward(req, resp, url);
 		
 		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_3.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+		}else if(uri.indexOf("p_mak_4.com")!=-1) {	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_4.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+		}else if(uri.indexOf("p_mak_5.com")!=-1) {	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_5.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+		}else if(uri.indexOf("p_mak_6.com")!=-1) {	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_6.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_mak_3.com")!=-1) {//검색어(지우지말것)	
+		}else if(uri.indexOf("p_mak_7.com")!=-1) {//검색어(지우지말것)	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_7.jsp";
 			forward(req, resp, url);
 			
-		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+		}else if(uri.indexOf("p_mak_8.com")!=-1) {	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_8.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+		}else if(uri.indexOf("p_mak_9.com")!=-1) {	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_9.jsp";
 			forward(req, resp, url);
 			
-		}else if(uri.indexOf("p_mak_3.com")!=-1) {	
+		}else if(uri.indexOf("p_mak_10.com")!=-1) {	
 
-			url = "/sool/detail_p_mak_1.jsp";
+			url = "/sool/detail_p_mak_10.jsp";
 			forward(req, resp, url);
 			
-	//--------------------------------------------------
-		}else if(uri.indexOf("p_wine_29.com")!=-1) {	
+	//증류주--------------------------------------------------
+		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
 
-			url = "/sool/list_bp.jsp";
+			url = "/sool/detail_p_soju_11.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_12.com")!=-1) {	
+
+			url = "/sool/detail_p_soju_12.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_13.com")!=-1) {	
+
+			url = "/sool/detail_p_soju_13.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_14.com")!=-1) {	
+
+			url = "/sool/detail_p_soju_14.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_soju_15.com")!=-1) {	
+
+			url = "/sool/detail_p_soju_15.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_soju_16.com")!=-1) {	
+
+			url = "/sool/detail_p_soju_16.jsp";
 			forward(req, resp, url);	
 		
+		}else if(uri.indexOf("p_soju_17.com")!=-1) {	
+
+			url = "/sool/detail_p_soju_17.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_18.com")!=-1) {	
+
+			url = "/sool/detail_p_soju_18.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_soju_19.com")!=-1) {	
+
+			url = "/sool/detail_p_soju_19.jsp";
+			forward(req, resp, url);
+			
+	//청주--------------------------------------------------
+		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
+
+			url = "/sool/detail_p_chung_20.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_21.com")!=-1) {	
+
+			url = "/sool/detail_p_chung_20.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_22.com")!=-1) {	
+
+			url = "/sool/detail_p_chung_22.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_23.com")!=-1) {	
+
+			url = "/sool/detail_p_chung_23.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_24.com")!=-1) {	
+
+			url = "/sool/detail_p_chung_24.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_chung_25.com")!=-1) {	
+
+			url = "/sool/detail_p_chung_25.jsp";
+			forward(req, resp, url);
+	
+		}else if(uri.indexOf("p_chung_26.com")!=-1) {	
+
+			url = "/sool/detail_p_chung_26.jsp";
+			forward(req, resp, url);	
+		
+		}else if(uri.indexOf("p_chung_27.com")!=-1) {//검색어(지우지말것)	
+
+			url = "/sool/detail_p_chung_27.jsp";
+			forward(req, resp, url);
+		
+		}else if(uri.indexOf("p_chung_28.com")!=-1) {	
+
+			url = "/sool/detail_p_chung_28.jsp";
+			forward(req, resp, url);
+		//와인--------------------------------------------
+		
 		}else if(uri.indexOf("p_wine_29.com")!=-1) {	
 
-			url = "/sool/new.jsp";
-			forward(req, resp, url);
+			url = "/sool/detail_p_wine_29.jsp";
+			forward(req, resp, url);	
 		
 		}else if(uri.indexOf("p_wine_30.com")!=-1) {	
 
-			url = "/sool/best2.jsp";
+			url = "/sool/detail_p_wine_30.jsp";
 			forward(req, resp, url);
 		
 		}else if(uri.indexOf("p_wine_31.com")!=-1) {	
 
-			url = "/sool/recommend.jsp";
+			url = "/sool/detail_p_wine_31.jsp";
 			forward(req, resp, url);
 		
 		}else if(uri.indexOf("p_wine_32.com")!=-1) {	
 
-			url = "/sool/guide3.jsp";
+			url = "/sool/detail_p_wine_32.jsp";
 			forward(req, resp, url);
 		
 		}else if(uri.indexOf("p_wine_33.com")!=-1) {	
 
-			url = "/sool/delivery_t.jsp";
+			url = "/sool/detail_p_wine_33.jsp";
 			forward(req, resp, url);
 		
 		}else if(uri.indexOf("p_wine_34.com")!=-1) {//검색어(지우지말것)	
 
-			url = "/sool/member.jsp";
+			url = "/sool/detail_p_wine_34.jsp";
 			forward(req, resp, url);
-			
+		
 		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
 
-			url = "/sool/benefit.jsp";
+			url = "/sool/detail_p_wine_35.jsp";
+			forward(req, resp, url);
+			
+		}else if(uri.indexOf("p_wine_36.com")!=-1) {	
+
+			url = "/sool/detail_p_wine_26.jsp";
 			forward(req, resp, url);
 	
-		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
+		}else if(uri.indexOf("p_wine_37.com")!=-1) {	
 
-			url = "/sool/list_bp.jsp";
+			url = "/sool/lidetail_p_wine_37_bp.jsp";
 			forward(req, resp, url);	
 		
-		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
+		}else if(uri.indexOf("p_wine_38.com")!=-1) {	
 
-			url = "/sool/new.jsp";
+			url = "/sool/detail_p_wine_38.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
+		}else if(uri.indexOf("p_wine_39.com")!=-1) {	
 
-			url = "/sool/best2.jsp";
+			url = "/sool/detail_p_wine_39.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_wine_35.com")!=-1) {	
-
-			url = "/sool/recommend.jsp";
-			forward(req, resp, url);
-		//----------------------------------------
+		//홈굿푸드----------------------------------------
 		}else if(uri.indexOf("p_food_40.com")!=-1) {	
 
-			url = "/sool/guide3.jsp";
+			url = "/sool/detail_p_food_40.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+		}else if(uri.indexOf("p_food_41.com")!=-1) {	
 
-			url = "/sool/delivery_t.jsp";
+			url = "/sool/detail_p_food_41.jsp";
 			forward(req, resp, url);
 		
-		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+		}else if(uri.indexOf("p_food_42.com")!=-1) {	
 
-			url = "/sool/member.jsp";
+			url = "/sool/detail_p_food_42.jsp";
 			forward(req, resp, url);
 			
-		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+		}else if(uri.indexOf("p_food_43.com")!=-1) {	
 
-			url = "/sool/benefit.jsp";
+			url = "/sool/detail_p_food_43.jsp";
 			forward(req, resp, url);
 	
-		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+		}else if(uri.indexOf("p_food_44.com")!=-1) {	
 
-			url = "/sool/list_bp.jsp";
+			url = "/sool/detail_p_food_44.jsp";
 			forward(req, resp, url);	
 		
-		}else if(uri.indexOf("p_food_40.com")!=-1) {	
+		}else if(uri.indexOf("p_food_45.com")!=-1) {	
 
-			url = "/sool/new.jsp";
+			url = "/sool/detail_p_food_45.jsp";
 			forward(req, resp, url);
-		//------------------------------------------
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
-
-			url = "/sool/best2.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
-
-			url = "/sool/recommend.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
-
-			url = "/sool/guide3.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
-
-			url = "/sool/delivery_t.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
-
-			url = "/sool/member.jsp";
-			forward(req, resp, url);
-			
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
-
-			url = "/sool/benefit.jsp";
-			forward(req, resp, url);
-	
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
-
-			url = "/sool/list_bp.jsp";
-			forward(req, resp, url);	
-		
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {//검색어(지우지말것)	
-
-			url = "/sool/new.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_chung_20.com")!=-1) {	
-
-			url = "/sool/best2.jsp";
-			forward(req, resp, url);
-		//--------------------------------------------
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/recommend.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/guide3.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/delivery_t.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/member.jsp";
-			forward(req, resp, url);
-			
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/benefit.jsp";
-			forward(req, resp, url);
-			
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/list_bp.jsp";
-			forward(req, resp, url);	
-		
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/new.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/best2.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("p_soju_11.com")!=-1) {	
-
-			url = "/sool/recommend.jsp";
-			forward(req, resp, url);
-			
-	//--------------------------------------------------
-		}else if(uri.indexOf("list_bp.com")!=-1) {	
-
-			url = "/sool/list_bp.jsp";
-			forward(req, resp, url);	
-		
-		}else if(uri.indexOf("new.com")!=-1) {	
-
-			url = "/sool/new.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("best.com")!=-1) {	
-
-			url = "/sool/best2.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("recommend.com")!=-1) {	
-
-			url = "/sool/recommend.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("guide.com")!=-1) {	
-
-			url = "/sool/guide3.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("delivery.com")!=-1) {	
-
-			url = "/sool/delivery_t.jsp";
-			forward(req, resp, url);
-		
-		}else if(uri.indexOf("membership.com")!=-1) {	
-
-			url = "/sool/member.jsp";
-			forward(req, resp, url);
-			
-		}else if(uri.indexOf("benefit.com")!=-1) {	
-
-			url = "/sool/benefit.jsp";
-			forward(req, resp, url);
-			
+				
 	//--------------------------------------------------
 		}else if(uri.indexOf("logout.com")!=-1) {
 
@@ -951,6 +908,7 @@ public class SoolServlet extends HttpServlet {
 		
 		}
 	//--------------------------------------------------
+	
 	}
 }	
 				

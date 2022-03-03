@@ -462,7 +462,7 @@
 
 	<div class="louge01 w860"> 
 		<h4 class="mt80">등급별 혜택</h4>
-		<div class="table_bx mt20">
+		<div style="margin: auto;" align="center">
 			<table>
 				<thead>
 					<tr>   
