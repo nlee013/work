@@ -71,6 +71,8 @@ D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1109345457.i
 \study\src
 D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4203649709.index
 \study\src
+D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1762847959.index
+\struts\src
 D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2494390934.index
 \study\src
 D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\89795628.index
