@@ -10,15 +10,14 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-public class EncodingFilter implements Filter {
-
+public class EncodingFilter implements Filter{
+	
 	private String charset;
+
 	@Override
 	public void destroy() {
-	
-		
 	}
-	
+
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
@@ -28,33 +27,36 @@ public class EncodingFilter implements Filter {
 		if(request instanceof HttpServletRequest) {
 			
 			HttpServletRequest req = (HttpServletRequest)request;
+			
 			uri = req.getRequestURI();
 			
-			if(req.getMethod().equals("POST")) {
-		
-				if(uri.indexOf("abc.do") != -1) {
+			if(req.getMethod().equalsIgnoreCase("POST")) {
 				
+				if(uri.indexOf("abc.do")!=-1) {
 					req.setCharacterEncoding("euc-kr");
-					
 				}else {
-					
-				req.setCharacterEncoding(charset);
-				
+					req.setCharacterEncoding(charset);
 				}
+				
 			}
+			
 		}
 		
 		chain.doFilter(request, response);
+		
 	}
-	
+
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		
 		charset = filterConfig.getInitParameter("charset");
 		
-		if(charset == null) {
-			
+		if(charset==null) {
 			charset = "UTF-8";
 		}
+		
 	}
+	
+	
+
 }

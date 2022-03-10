@@ -83,7 +83,16 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 
 <!-- <update id="updateData" parameterClass="map"></update> -->
 
-<delete id="">
+
+<!-- 수정하기 -->
+<update id="updateData" parameterClass="com.boardTest.BoardForm">
+	update board set name=#name#, subject=#subject#, email=#email#,
+					 content=#content#, pwd=#pwd# where num=#num#
+</update>
+
+
+<delete id="deleteData" parameterClass="int">
+	delete board where num=#num#
 </delete>
 
 

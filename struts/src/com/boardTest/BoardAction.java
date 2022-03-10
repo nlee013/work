@@ -8,6 +8,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -24,6 +26,33 @@ public class BoardAction extends DispatchAction{
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		
+		String mode = request.getParameter("mode");
+		
+		//null값은 created 값이고 그냥은 updated
+		if(mode == null) {
+			request.setAttribute("mode", "insert");
+			//created.jsp의 mode로 넘어간다
+			
+		}else {//mode가 update
+			
+			//수정화면
+			CommonDAO dao = CommonDAOImpl.getInstance();
+			
+			int num = Integer.parseInt(request.getParameter("num"));
+			String pageNum = request.getParameter("pageNum");
+			
+			BoardForm dto = (BoardForm)dao.getReadData("board.readData", num);
+			
+			if(dto == null) {
+				
+				return mapping.findForward("list");
+			}
+			
+			request.setAttribute("dto", dto);
+			request.setAttribute("mode", "updateOK");
+			request.setAttribute("pageNum", pageNum);
+			
+		}
 		return mapping.findForward("created");
 		
 	}
@@ -33,15 +62,34 @@ public class BoardAction extends DispatchAction{
 			throws Exception {
 		
 		CommonDAO dao = CommonDAOImpl.getInstance();
-		
 		BoardForm f = (BoardForm)form;
 		
-		int maxNum = dao.getIntValue("board.maxNum");
+		String mode = request.getParameter("mode");
 		
-		f.setNum(maxNum + 1);
-		f.setIpAddr(request.getRemoteAddr());
+		//mode의 값이 insert일때-------------------------
+		if(mode.equals("insert")) {
+			
+			int maxNum = dao.getIntValue("board.maxNum");
+			
+			f.setNum(maxNum + 1);
+			f.setIpAddr(request.getRemoteAddr());
+			
+			dao.insertData("board.insertData", f);
+			
+		}else if(mode.equals("updateOK")) {
 		
-		dao.insertData("board.insertData", f);
+			//수정하기
+			String pageNum = request.getParameter("pageNum");
+			
+			dao.updateData("board.updateData", f);
+			
+			//pageNum을 보내기 위해 session사용
+			HttpSession session = request.getSession();
+			session.setAttribute("pageNum", pageNum);
+		}
+		
+		//------------------------------------------------
+		dao = null;
 		
 		return mapping.findForward("created_ok");
 		
@@ -62,6 +110,17 @@ public class BoardAction extends DispatchAction{
 
 		int currentPage = 1;
 
+		//수정해서 session에 올려놓은 pageNum 받기-------------------
+		HttpSession session = request.getSession();
+		
+		if(pageNum == null) {
+			
+			pageNum = (String)session.getAttribute("pageNum");
+		}
+		//만약에 받았다면
+		session.removeAttribute("pageNum");
+		//------------------------------------------------------------
+		
 		if (pageNum != null) {
 			currentPage = Integer.parseInt(pageNum);
 		}
@@ -231,7 +290,7 @@ public class BoardAction extends DispatchAction{
 		}
 		
 		//수정과 삭제에서 사용할 인수
-		String paramArticle = "num=" + num + "pageNum=" + pageNum;
+		String paramArticle = "num=" + num + "&pageNum=" + pageNum;
 		
 		request.setAttribute("dto", dto);
 		request.setAttribute("preSubject", preSubject);
@@ -246,4 +305,21 @@ public class BoardAction extends DispatchAction{
 		
 	}
 	//---------------------------------------------------------------------------
+	public ActionForward deleted(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		
+		CommonDAO dao = CommonDAOImpl.getInstance();
+		
+		int num = Integer.parseInt(request.getParameter("num"));
+		String pageNum = request.getParameter("pageNum");
+		
+		dao.deleteData("board.deleteData", num);
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("pageNum", pageNum);
+		
+		//위 method이름과 같지 않아도 되지만 혼동하지 않기위해 똑같이 사용했음
+		return mapping.findForward("deleted");
+	}
 }
