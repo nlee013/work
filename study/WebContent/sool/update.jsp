@@ -222,13 +222,13 @@
 			</div>
 			    
 			<ul class="gnb_new"> 
-				<li><a href="https://www.homesool.com/goods/choice.php">홈술제안</a></li>
-				<li><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001">홈술카테고리</a></li>
-				<li><a href="https://www.homesool.com/goods/special_price.php">홈술특가</a></li>
-				<li><a href="https://www.homesool.com/goods/new.php">New + Best </a></li>				 
+				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
+				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
+				
+							 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
-				<li><a href="https://www.homesool.com/service/membership_lounge.php">홈술가이드</a></li>	
-				<li><a href="https://www.homesool.com/board/list.php?bdId=behindStory">매거진</a></li>
+				<li><a href="<%=cp%>/csCenter.com">고객센터</a></li>	
+		
 			</ul>
 			 
             <div class="hd_right">

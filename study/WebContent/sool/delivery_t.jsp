@@ -204,7 +204,7 @@
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
 				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
-				<li><a href="<%=cp%>/homesool/new.com">Best홈술</a></li>
+			
 				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
 				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
@@ -214,12 +214,16 @@
 				<ul class="top_member_box">
 				
 				<!-- 로그인 회원가입 고객센터 링크 연결 ^^ --> 
-            	        <li><a href="<%=cp%>/homesool/login.com">Login</a></li>
-            	    <li><a href="<%=cp%>/homesool/create1.com">Join</a>
-            	        <!--<span class="accent">
-            	            <span><strong>2,000 P</strong></span>
-            	        </span>-->
-            	    </li>
+            	   		<c:choose>
+	<c:when test="${empty sessionScope.customInfos.user_id }">
+		<li><a href="<%=cp%>/homesool/login.com">Login</a></li>
+        <li><a href="<%=cp%>/homesool/create1.com">Join</a></li>
+	</c:when>
+	<c:otherwise>
+		  
+		<li><a href="<%=cp%>/homesool/logout.com">Logout</a></li>
+	</c:otherwise>
+</c:choose>
             	    
             	    <li><a href="<%=cp%>/homesool/csCenter.com">CS Center</a></li>
             	</ul>
@@ -354,6 +358,56 @@
 	</div>
 </div>
 
+
+<style type="text/css">
+
+.update1{
+padding:35px 0;
+text-align:center;
+background: #fffbf7;
+
+}
+
+.update1 < dt{
+font-size:26px;
+font-weight:700;
+
+}
+
+.deliveryty_area01{padding:90px 0 120px;}
+.deliveryty_area01 .w860 {display:flex;}   
+.deliveryty_area01 .tab_group {width:120px;font-size:17px;}
+.deliveryty_area01 .tab_group li{padding-bottom:15px;}
+.deliveryty_area01 .tab_group a{color:#bbbbbb;}				 
+.deliveryty_area01 .tab_group .active{color:#ff8600;font-weight:700;}
+
+.deliveryty_area01 #tab_panels {width:calc(100% - 120px) ;letter-spacing:-1px; }
+.deliveryty_area01 h4{width:100%;display:flex; align-items: center; padding-bottom:30px; border-bottom:1px solid #e5e5e5;}
+.deliveryty_area01 h4 em{padding:0 15px;font-size:36px;font-weight:700;}
+.deliveryty_area01 h4 span{font-size:18px; font-weight:400;}
+
+.deliveryty_area01 .list_box{display:flex; flex-wrap: wrap; justify-content: space-between;}
+.deliveryty_area01 dl{width:353px;margin-top:40px;}
+.deliveryty_area01 dl dt em{display:block; padding-bottom:10px; color:#ff8600;font-weight:700;}
+.deliveryty_area01 dl dt span{display:block; padding-bottom:5px;font-size:20px;font-weight:500;} 
+.deliveryty_area01 dl dd{color:#999;font-size:14px;line-height:24px;}
+.deliveryty_area01 dl dd a{ padding-left:5px; color:#ff8600;}
+.deliveryty_area01 dl dd a:after{content:'';display:inline-block;vertical-align:middle;width:5px;height:5px;margin-left:3px;border-right:1px solid #ff8600; border-bottom:1px solid #ff8600; -o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg);
+}
+
+.deliveryty_area02{padding:80px 0; background:#f6f6f6;}
+.deliveryty_area02 h4{font-size:24px;font-weight:500;}
+.deliveryty_area02 .table_bx{border-radius:40px;background: #fff; }
+.deliveryty_area02 .table_bx table{width:100%;}						
+.deliveryty_area02 .table_bx table thead th{padding:25px 0;font-weight:500;font-size:20px;border-bottom:1px solid #f6f6f6;}
+.deliveryty_area02 .table_bx table tbody td{padding:15px 0;text-align:center;font-size:17px;opacity:0.8;}
+
+</style>
+
+
+
+
+
 <script>
 	$(document).ready(function () {
 		$('.icon_location').click(function(){
@@ -452,14 +506,14 @@
     <div class="cs_menu_box">
 		<h2>홈술가이드</h2>
 		<ul class="sub_menu">
-			<li><a href="https://www.homesool.com/service/membership_lounge.php">홈술 멤버십</a></li>
-			
-			<li><a href="https://www.homesool.com/service/delivery_type.php" class="active">배송유형별 안내</a></li>
+					<li><a href="<%=cp %>/homesool/guide.com">홈술 멤버십</a></li>
+	
+			<li><a href="<%=cp %>/homesool/delivery.com" class="active">배송유형별 안내</a></li>
 		</ul>
 	</div>
 	<!-- //sub_menu_box -->
-	<div class="guide_tit guide_tit02">
-		<dt>배송유형별 안내</dt>
+	<div class="update1">
+		<dt><h1>배송유형별 안내</h1></dt>
 		<dd>홈술닷컴의 주요 홈술 배송서비스 안내입니다.</dd>
 	</div>
 

@@ -42,6 +42,24 @@
 	<link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/swiper-bundle.min.css">
     <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/custom.css">
 
+	<script type="text/javascript">
+	
+	function detailP() {
+		
+		var f = document.myForm;
+		
+		f.action = "<%=cp%>/homesool/detailP_ok.com";
+		f.submit;
+		
+	}
+	
+	
+	
+	
+	
+	
+	</script>
+
 
     <script src="<%=cp %>/sool/main_files/AceCounter_AW.js.다운로드"></script>
     <script src="<%=cp %>/sool/main_files/1135465033646646" async=""></script><script src="<%=cp %>/sool/main_files/identity.js.다운로드" async=""></script><script async="" src="<%=cp %>/sool/main_files/fbevents.js.다운로드"></script><script type="text/javascript">
@@ -204,7 +222,7 @@
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
 				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
-				<li><a href="<%=cp%>/homesool/new.com">Best홈술</a></li>
+	
 				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
 				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
@@ -232,7 +250,7 @@
                 
 
 				<div class="top_search" style="display:none;">
-    <form name="frmSearchTop" id="frmSearchTop" action="https://www.homesool.com/goods/goods_search.php" method="get" novalidate="novalidate">
+
         <fieldset>
             <legend>검색폼</legend> 
             <div class="top_search_cont">
@@ -300,7 +318,7 @@
             </div>
             <!-- //top_search_cont -->
         </fieldset>
-    </form>
+    
 	<div class=""><a href="<%=cp%>/homesool/main.com" class="close"><img src="<%=cp %>/sool/main_files/btn_close38.png" alt="닫기"></a></div>
 </div>
 <!-- //top_search -->
@@ -479,7 +497,7 @@
         </div>
 
 <center> 
-
+<form action="" method="post" name="myForm">
 <table width="600" border="0" cellspacing="1" cellpadding="3" bgColor="#FFFFFF" align="center">
 
 <c:set var="n" value="0"/>
@@ -493,16 +511,21 @@
 	</c:if>
 	
 	<td width="200" align="center">
-    	<a href="${imagePath}/${dto.prod_sImg}">
+    	<button onclick="detailP();">
 	    	<img src="${imagePath}/${dto.prod_sImg}" width="200" height="330" 
 	    	style="border: 1px; border-radius: 1em;"/>
-	    </a>
+	    </button>
 	    <br/><br/>${dto.prod_name}&nbsp;<br/>
-	    <b>${dto.prod_price }원</b>&nbsp;
+	    <b>${dto.prod_price }원</b>&nbsp;&nbsp;&nbsp;
+	    <input type="hidden" name="prod_no" value="${dto.prod_no }">
+	     <input type="hidden" name="prod_name" value="${dto.prod_name }">
+	      <input type="hidden" name="prod_quan" value="${dto.prod_quan }">
+	        <input type="hidden" name="prod_oImg" value="${dto.prod_oImg }">
+	         <input type="hidden" name="prod_cate" value="${dto.prod_cate }">
 	   
 	    <div style=" width:20x; border: 2px; color:#fff; background-color: #f2a03d;
 	    border-radius: 0.3em;">
-	    <a href="">
+	    <a href="" onclick="buyP();">
 	    구매하기
 	    </a></div>
 	    <br/>
@@ -520,7 +543,7 @@
 </c:if>
 
 <c:if test="${n!=0 }">
-	</tr>
+
 </c:if>
 
 	
@@ -537,6 +560,7 @@
 </c:if>
 	
 </table>
+</form>
 </center>
         <!-- 설문조사 배너 --><!-- 설문조사 배너 -->
 
@@ -567,9 +591,7 @@
                 <!-- 상품 리스트 -->
 
 
-        <div class=" ">
-            <div class="pagination"><ul><li class="on"><span>1</span></li></ul></div>
-        </div>
+      
 
     </div>
     <!-- //goods_list_item -->

@@ -30,36 +30,38 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="https://www.homesool.com/data/commonimg/defaultShopIcon144.png">
 	<link rel="apple-touch-icon" href="https://www.homesool.com/data/commonimg/defaultShopIcon72.png">
 
-    <link type="text/css" rel="stylesheet" href="./one_to_one2_files/reset.css">
-    <link type="text/css" rel="stylesheet" href="./one_to_one2_files/common.css">
-    <link type="text/css" rel="stylesheet" href="./one_to_one2_files/layer.css">
-    <link type="text/css" rel="stylesheet" href="./one_to_one2_files/layout.css">
-    <link type="text/css" rel="stylesheet" href="./one_to_one2_files/list.css">
-	<link type="text/css" rel="stylesheet" href="./one_to_one2_files/button.css">
-    <link type="text/css" rel="stylesheet" href="./one_to_one2_files/mypage.css">
-    <link type="text/css" rel="stylesheet" href="./one_to_one2_files/chosen.css">	
-	<link type="text/css" rel="stylesheet" href="./one_to_one2_files/swiper-bundle.min.css">
-    <link type="text/css" rel="stylesheet" href="./one_to_one2_files/custom.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/reset.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/common.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/layer.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/layout.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/list.css">
+	<link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/button.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/mypage.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/chosen.css">	
+	<link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/swiper-bundle.min.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/one_to_one2_files/custom.css">
 
+	<!-- <link rel="stylesheet" type="text/css" href="<%=cp%>/sool/bbs/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=cp%>/sool/bbs/css/list.css"/> -->
 
-    <script src="./one_to_one2_files/AceCounter_AW.js.다운로드"></script><script src="./one_to_one2_files/1135465033646646" async=""></script><script src="./one_to_one2_files/identity.js.다운로드" async=""></script><script async="" src="./one_to_one2_files/fbevents.js.다운로드"></script><script type="text/javascript">
+    <script src="<%=cp%>/sool/one_to_one2_files/AceCounter_AW.js.다운로드"></script><script src="<%=cp%>/sool/one_to_one2_files/1135465033646646" async=""></script><script src="<%=cp%>/sool/one_to_one2_files/identity.js.다운로드" async=""></script><script async="" src="<%=cp%>/sool/one_to_one2_files/fbevents.js.다운로드"></script><script type="text/javascript">
         var json_locale_data = {"domain":"messages","locale_data":{"messages":{"":{"lang":"ATF","plural-forms":"nplurals=1; plural=0"}}}}
     </script>
-    <script type="text/javascript" src="./one_to_one2_files/gd_gettext.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/jquery.min.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/underscore-min.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/jquery.validate.min.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/additional-methods.min.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/numeral.min.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/accounting.min.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/money.min.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/chosen.jquery.min.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/placeholders.jquery.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/gd_gettext.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/jquery.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/underscore-min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/jquery.validate.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/additional-methods.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/numeral.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/accounting.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/money.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/chosen.jquery.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/placeholders.jquery.min.js.다운로드"></script>
     <!--[if gt IE 8]-->
-    <script type="text/javascript" src="./one_to_one2_files/clipboard.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/clipboard.min.js.다운로드"></script>
     <!--[endif]-->
-    <script type="text/javascript" src="./one_to_one2_files/jquery.vticker.js.다운로드"></script>
-    <script type="text/javascript" src="./one_to_one2_files/gd_ui.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/jquery.vticker.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/gd_ui.js.다운로드"></script>
 
     <script type="text/javascript">
         // 고도몰5 통화정책
@@ -88,7 +90,7 @@
         }
     </script>
 
-    <script type="text/javascript" src="./one_to_one2_files/gd_common.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/gd_common.js.다운로드"></script>
 
 
     
@@ -110,8 +112,8 @@
         }
     </style>
 
-    <script type="text/javascript" src="./one_to_one2_files/wcslog.js.다운로드"></script>
-<script type="text/javascript" src="./one_to_one2_files/naverCommonInflowScript.js.다운로드" id="naver-common-inflow-script"></script>
+    <script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/wcslog.js.다운로드"></script>
+<script type="text/javascript" src="<%=cp%>/sool/one_to_one2_files/naverCommonInflowScript.js.다운로드" id="naver-common-inflow-script"></script>
 <!-- Facebook Pixel Code -->
         <script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -124,7 +126,7 @@
         </script>
         <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1135465033646646&ev=PageView&noscript=1"/></noscript>
         <!-- DO NOT MODIFY -->
-        <!-- End Facebook Pixel Code --><script type="text/javascript" charset="UTF-8" src="./one_to_one2_files/kp.js.다운로드"></script>
+        <!-- End Facebook Pixel Code --><script type="text/javascript" charset="UTF-8" src="<%=cp%>/sool/one_to_one2_files/kp.js.다운로드"></script>
         <script type="text/javascript">
             kakaoPixel('8600996210486851034').pageView();
         </script>
@@ -144,15 +146,11 @@
         <!-- AceCounter Log Gathering Script End -->
 
 
-<!-- 내가 추가한 거 ^^ -->
-<link rel="stylesheet" type="text/css" href="<%=cp%>/bbs/css/style.css"/>
-<link rel="stylesheet" type="text/css" href="<%=cp%>/bbs/css/list.css"/>
-
 <script type="text/javascript">
 	
 	function sendIt() {
 		var f = document.searchForm;
-		f.action = "<%=cp%>/homesool/one_to_one.com";
+		f.action = "<%=cp%>/homesool/one_to_one2.com";
 		f.submit();
 	}
 
@@ -171,14 +169,14 @@
     <div class="header_top">
         <div class="header_top_cont">
 			
-			<div class="h1_logo"><!--——--><a href="https://www.homesool.com/main/index.php"><img src="./one_to_one2_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
+			<div class="h1_logo"><!--——--><a href="https://www.homesool.com/main/index.php"><img src="<%=cp%>/sool/one_to_one2_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
 			<a href="https://www.homesool.com/mypage/mypage_qa.php#;" class="n_btn_all_menu_open">전체카테고리</a>
 			<div class="n_gnb_allmenu_wrap dn">
 				<div class="menu_wrap">
 					<div class="menu01">
-						<p><a href="https://www.homesool.com/mypage/index.php"><img src="./one_to_one2_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
-						<p><a href="https://www.homesool.com/mypage/shipping.php"><img src="./one_to_one2_files/allmenu_addr.png" alt="">배송지관리</a></p>
-						<p><a href="https://www.homesool.com/service/index.php"><img src="./one_to_one2_files/allmenu_cscenter.png" alt="">고객센터</a></p>
+						<p><a href="https://www.homesool.com/mypage/index.php"><img src="<%=cp%>/sool/one_to_one2_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
+						<p><a href="https://www.homesool.com/mypage/shipping.php"><img src="<%=cp%>/sool/one_to_one2_files/allmenu_addr.png" alt="">배송지관리</a></p>
+						<p><a href="https://www.homesool.com/service/index.php"><img src="<%=cp%>/sool/one_to_one2_files/allmenu_cscenter.png" alt="">고객센터</a></p>
 					</div>
 					<div class="menu02">
 						<dl>
@@ -256,7 +254,7 @@
 				<!-- 검색 폼 -->
 				<div class="top_search_btn">
                     <span>&nbsp;</span>
-                    <img src="./one_to_one2_files/btn_top_search.png" alt="">
+                    <img src="<%=cp%>/sool/one_to_one2_files/btn_top_search.png" alt="">
                 </div>
                 <!-- //top_text_cont -->
 
@@ -268,7 +266,7 @@
 				<div class="top_search_tit">궁금하신 내용을 검색해주세요.</div>
                 <div class="top_text_cont">
                     <input type="text" id="search_form" name="keyword" class="top_srarch_text" title="오늘 드시고 싶은 술은 무엇인가요" placeholder="오늘 드시고 싶은 술은 무엇인가요" autocomplete="off">
-                    <input type="image" src="./one_to_one2_files/btn_search35.png" id="btnSearchTop" class="btn_top_srarch" title="검색" value="검색" alt="검색">
+                    <input type="image" src="<%=cp%>/sool/one_to_one2_files/btn_search35.png" id="btnSearchTop" class="btn_top_srarch" title="검색" value="검색" alt="검색">
                 </div>
                 <!-- //top_text_cont -->
                 <div class="search_cont">
@@ -315,7 +313,7 @@
             <!-- //top_search_cont -->
         </fieldset>
     </form>
-	<div class=""><a href="https://www.homesool.com/mypage/mypage_qa.php#;" class="close"><img src="./one_to_one2_files/btn_close38.png" alt="닫기"></a></div>
+	<div class=""><a href="https://www.homesool.com/mypage/mypage_qa.php#;" class="close"><img src="<%=cp%>/sool/one_to_one2_files/btn_close38.png" alt="닫기"></a></div>
 </div>
 <!-- //top_search -->
 				<!-- 검색 폼 -->
@@ -408,7 +406,7 @@
 		$.ajax({
 			method: "POST",
 			cache: false,
-			url: "../share/mesh_ps.php",
+			url: ".<%=cp%>/sool/share/mesh_ps.php",
 			data: params,
 			success: function (data) {
 
@@ -451,20 +449,22 @@
                 <div class="side_cont">
 <div class="sub_menu_box">
     <ul class="sub_menu_mypage">
+        <li>나의 정보
+            <ul class="sub_depth1">
+            <!-- 회원 정보 변경 및 탈퇴 링크 ^^ -->
+                <li><a href="<%=cp%>/homesool/update.com">회원정보 변경</a></li>
+                <li><a href="<%=cp%>/homesool/delete_ok.com">회원 탈퇴</a></li>
+                <!-- <li><a href="https://www.homesool.com/mypage/shipping.php">배송지 관리</a></li> -->
+            </ul>
+        </li>
+
         <li>나의 쇼핑
             <ul class="sub_depth1">
                 <li><a href="https://www.homesool.com/mypage/order_list.php">주문목록/배송조회</a></li>
                 <li><a href="https://www.homesool.com/mypage/cancel_list.php">취소/반품/교환 내역</a></li>
-                <li><a href="https://www.homesool.com/mypage/refund_list.php">환불 / 입금 내역</a></li>
+                <!-- <li><a href="https://www.homesool.com/mypage/refund_list.php">환불 / 입금 내역</a></li> -->
                 <li><a href="https://www.homesool.com/mypage/buy_list.php">구매한 상품</a></li>					 
                 <li><a href="https://www.homesool.com/mypage/wish_list.php">관심상품</a></li>
-            </ul>
-        </li>
-
-		<!--{ //튜닝 추가 2021-08-04 }-->
-		<li>구독홈술 관리
-            <ul class="sub_depth1">
-                <li><a href="https://www.homesool.com/mypage/order_subscribe_list.php">구독내역/관리</a></li>                
             </ul>
         </li>
 
@@ -477,7 +477,7 @@
         
         <li>나의 활동
             <ul class="sub_depth1">
-                <li><a href="https://www.homesool.com/mypage/mypage_qa.php" class="active">나의 1:1 문의</a></li>
+                <li><a href="https://www.homesool.com/mypage/mypage_qa.php">나의 1:1 문의</a></li>
 	  
 				<li><a href="https://www.homesool.com/mypage/mypage_goods_qa.php">나의 상품문의</a></li>
  
@@ -485,13 +485,6 @@
             </ul>
         </li>
         
-        <li>나의 정보
-            <ul class="sub_depth1">
-                <li><a href="https://www.homesool.com/mypage/my_page_password.php">회원정보 변경</a></li>
-                <li><a href="https://www.homesool.com/mypage/hack_out.php">회원 탈퇴</a></li>
-                <li><a href="https://www.homesool.com/mypage/shipping.php">배송지 관리</a></li>
-            </ul>
-        </li>
         
 
       
@@ -505,14 +498,14 @@
                 </div>
                 <!-- //side_cont -->
 <div class="content">
-<!--     <div class="mypage_cont">
-		마이페이지 회원 요약정보
-        <div class="mypage_top_info">
+    <div class="mypage_cont">
+		<!-- 마이페이지 회원 요약정보 -->
+        <!-- <div class="mypage_top_info">
     <div class="mypage_top_txt">
         
         <div class="grade_txt">
             <div class="txt_usergroup">
-			<span class="grade_img"><img src="./one_to_one2_files/ico_member_upload1.png" alt="브론즈"></span>
+			<span class="grade_img"><img src="<%=cp%>/sool/one_to_one2_files/ico_member_upload1.png" alt="브론즈"></span>
  
 			<strong>남승은</strong> 님은   <span>브론즈등급</span> 입니다.
 			</div>
@@ -541,7 +534,7 @@
                             </div>
                         </div>
                         //ly_cont
-                        <a href="https://www.homesool.com/mypage/mypage_qa.php#lyGrade" class="ly_close"><img src="./one_to_one2_files/btn_layer_close.png" alt="닫기"></a>
+                        <a href="https://www.homesool.com/mypage/mypage_qa.php#lyGrade" class="ly_close"><img src="<%=cp%>/sool/one_to_one2_files/btn_layer_close.png" alt="닫기"></a>
                     </div>
                     //ly_wrap
                 </div>
@@ -572,77 +565,109 @@
 
 	
 
-</div>
-//mypage_top_info
+</div> -->
+<!-- //mypage_top_info -->
 
 
 
-        마이페이지 회원 요약정보
-		<iframe name="ifrmMyPage" src="./one_to_one2_files/list.html" width="100%" height="500" marginwidth="0" marginheight="0" frameborder="no" scrolling="no" onload="gd_resize_frame(this)" class="mt80"></iframe>
-    </div> -->
-    <!-- //mypage_cont -->
+        <!-- 마이페이지 회원 요약정보 -->
+		<!-- <iframe name="ifrmMyPage" src="<%=cp%>/sool/one_to_one2_files/list.html" 
+		width="100%" height="500" marginwidth="0" marginheight="0" 
+		frameborder="no" scrolling="no" onload="gd_resize_frame(this)" class="mt80"></iframe> -->
     
-    <div id="bbsList">
-
-	<div id="bbsList_title">
-		1:1 문의 내역 
-	</div>
-	<div id="bbsList_header">
-		<div id="leftHeader">
-		<form action="" method="post" name="searchForm">
+    	
+    	<div align="left"><h1>1:1문의 내역</h1></div>
+    	<br/><br/>
+    	<div>
+    		<form action="" method="post" name="searchForm">
 			<select name="searchKey" class="selectField">
 				<option value="bor_subject">제목</option>
-				<option value="bor_id">작성자</option>
+				<option value="user_id">작성자</option>
 				<option value="bor_content">내용</option>
 			</select>
 			<input type="text" name="searchValue" class="textField"/>
 			<input type="button" value=" 검 색 " class="" 
 				onclick="sendIt();"/>		
-		</form>				
-		</div>
-		<div id="rightHeader">
-			<input type="button" value=" 1:1문의하기 " class="" 
+		</form>
+    	
+    	</div>
+    	<div align="center">
+    		<table>
+    			<thead style="margin: auto;">
+    				<tr>
+    					<th width="120" height="74">문의날짜</th>
+    					<th width="637" height="74">제목</th>
+    					<th width="98" height="74">아이디</th>
+    				</tr>
+    			</thead>
+    			
+    			<tbody style="background-color: #f4f3f1;">
+    				<tr>
+    					<td colspan="5" align="center" height="74">
+    						<c:forEach var="dto" items="${lists }">
+								<dl>
+									<dd>${dto.user_id }</dd>
+									<dd>
+									<a href="${articleUrl }&num=${dto.bor_no}">
+									${dto.subject }</a>
+									</dd>
+									<dd >${dto.user_id }</dd>
+									<dd >${dto.bor_date }</dd>
+								</dl>
+							</c:forEach>
+    						<div>
+								<c:if test="${dataCount!=0 }">
+									${pageIndexList }
+								</c:if>
+								<c:if test="${dataCount==0 }">
+									등록된 게시물이 없습니다.
+								</c:if>
+							</div>
+					    					
+    					
+    					
+    					</td>
+    				</tr>
+    			</tbody>
+    			
+    			
+    			
+    		</table>
+    		<div align="right"  >
+				<input style="height: 74px; margin-right: 50px;" type="button" value=" 1:1문의하기 " 
 				onclick="javascript:location.href='<%=cp%>/homesool/one_to_one.com';"/>			
-		</div>	
-	</div>
-	<div id="bbsList_list">
-		<div id="title">
-			<dl>
-				<dt class="num">번호</dt>
-				<dt class="subject">제목</dt>
-				<dt class="name">아이디</dt>
-				<dt class="">작성일</dt>
-			</dl>
-		</div>
-		<div id="lists">
-		<c:forEach var="dto" items="${lists }">
-			<dl>
-				<dd class="num">${dto.bor_no }</dd>
-				<dd class="subject">
-				<a href="${articleUrl }&bor_no=${dto.bor_no}">
-				${dto.bor_content }</a>
-					
-				</dd>
-				<dd class="name">${dto.bor_id }</dd>
-				<dd class="created">${dto.bor_date }</dd>
-			</dl>
-		</c:forEach>	
-		</div>
-		<div id="footer">
-			<c:if test="${dataCount!=0 }">
-				${pageIndexList }
-			</c:if>
-			<c:if test="${dataCount==0 }">
-				등록된 게시물이 없습니다.
-			</c:if>
-		</div>
-		
-	</div>
-	
-</div>
-    
+			</div>	
+    	</div>
+    	
+    	
+    	
+    	
+    	
+    	<br/><br/>
+    	
 
+    	
+    	
+    	
+    	
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    <!-- //mypage_cont -->
 </div>
 <!-- //content -->
             </div>
@@ -741,8 +766,8 @@
     </div>
     <!-- //foot_cont -->
     <div class="foot_certify">
-        <span><img src="./one_to_one2_files/logo_comodo.png" alt="보안서버 적용 확인"></span>
-        <span><img src="./one_to_one2_files/escrow_banner_kcp.png" alt="에스크로 서비스 확인" title="에스크로 서비스 확인" class="hand" onclick="javascript:window.open(&#39;https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=GKPI1&#39;, &#39;escrowBanner&#39;, &#39;scrollbars=no, resizable=no, width=500, height=450&#39;);"></span>
+        <span><img src="<%=cp%>/sool/one_to_one2_files/logo_comodo.png" alt="보안서버 적용 확인"></span>
+        <span><img src="<%=cp%>/sool/one_to_one2_files/escrow_banner_kcp.png" alt="에스크로 서비스 확인" title="에스크로 서비스 확인" class="hand" onclick="javascript:window.open(&#39;https://admin.kcp.co.kr/Modules/escrow/kcp_pop.jsp?site_cd=GKPI1&#39;, &#39;escrowBanner&#39;, &#39;scrollbars=no, resizable=no, width=500, height=450&#39;);"></span>
         <span></span>
     </div>
     <!-- //foot_certify -->
@@ -757,18 +782,18 @@
         <!-- 우측 스크롤 배너 -->
         <div id="scroll_right" class="">
 <div class="right_banner" style="display:none;">
-<a href="https://www.homesool.com/goods/brand.php"><img src="./one_to_one2_files/scroll-banner-right01.jpg" alt="스크롤 우측 배너" title="스크롤 우측 배너"></a></div>
+<a href="https://www.homesool.com/goods/brand.php"><img src="<%=cp%>/sool/one_to_one2_files/scroll-banner-right01.jpg" alt="스크롤 우측 배너" title="스크롤 우측 배너"></a></div>
 <div class="scroll_right_cont" style="display: none;">
     <h4>TODAY VIEW</h4>
 
     <div class="scr_paging" style="display: none;">
-        <button type="button" class="bnt_scroll_prev" title="최근본 이전 상품"><img src="./one_to_one2_files/btn_scroll_prev.png" alt="최근본 이전 상품"></button>
+        <button type="button" class="bnt_scroll_prev" title="최근본 이전 상품"><img src="<%=cp%>/sool/one_to_one2_files/btn_scroll_prev.png" alt="최근본 이전 상품"></button>
         <span><strong class="js_current">0</strong>/<span class="js_total" style="float:none;width:auto;">0</span></span>
-        <button type="button" class="bnt_scroll_next" title="최근본 다음 상품"><img src="./one_to_one2_files/btn_scroll_next.png" alt="최근본 다음 상품"></button>
+        <button type="button" class="bnt_scroll_next" title="최근본 다음 상품"><img src="<%=cp%>/sool/one_to_one2_files/btn_scroll_next.png" alt="최근본 다음 상품"></button>
     </div>
     <!-- //scr_paging -->
 </div>
-<span class="btn_scroll_top"><a href="https://www.homesool.com/mypage/mypage_qa.php#TOP"><img src="./one_to_one2_files/btn_scroll_top.png" alt="상단으로 이동"></a></span>
+<span class="btn_scroll_top"><a href="https://www.homesool.com/mypage/mypage_qa.php#TOP"><img src="<%=cp%>/sool/one_to_one2_files/btn_scroll_top.png" alt="상단으로 이동"></a></span>
 
 <script type="text/javascript">
     // DOM 로드
@@ -809,7 +834,7 @@
 
         // 삭제버튼 클릭
         element.closeButton.click(function(e){
-            $.post('../goods/goods_ps.php', {
+            $.post('.<%=cp%>/sool/goods/goods_ps.php', {
                 'mode': 'delete_today_goods',
                 'goodsNo': $(this).data('goods-no')
             }, function (data, status) {
@@ -865,7 +890,7 @@
 
 <!-- 절대! 지우지마세요 : Start -->
 <div id="layerDim" class="dn">&nbsp;</div>
-<iframe name="ifrmProcess" src="./one_to_one2_files/blank.html" style="display:none" width="100%" height="0" bgcolor="#000"></iframe>
+<iframe name="ifrmProcess" src="<%=cp%>/sool/one_to_one2_files/blank.html" style="display:none" width="100%" height="0" bgcolor="#000"></iframe>
 <!-- 절대! 지우지마세요 : End -->
 
 <!-- 외부 스크립트 -->

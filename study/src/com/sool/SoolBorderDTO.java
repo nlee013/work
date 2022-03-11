@@ -9,7 +9,6 @@ public class SoolBorderDTO {
 	private String bor_content;
 	private String bor_cate;
 	
-	
 	public int getBor_no() {
 		return bor_no;
 	}

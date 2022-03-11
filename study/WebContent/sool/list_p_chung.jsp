@@ -204,7 +204,7 @@
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
 				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
-				<li><a href="<%=cp%>/homesool/new.com">Best홈술</a></li>
+		
 				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
 				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
@@ -499,6 +499,7 @@
 	    </a>
 	    <br/><br/>${dto.prod_name}&nbsp;<br/>
 	    <b>${dto.prod_price }원</b>&nbsp;
+	      <input type="hidden" name="${prod_no }">
 	   
 	    <div style=" width:20x; border: 2px; color:#fff; background-color: #f2a03d;
 	    border-radius: 0.3em;">
@@ -567,9 +568,7 @@
                 <!-- 상품 리스트 -->
 
 
-        <div class=" ">
-            <div class="pagination"><ul><li class="on"><span>1</span></li></ul></div>
-        </div>
+      
 
     </div>
     <!-- //goods_list_item -->

@@ -62,6 +62,20 @@
     <script type="text/javascript" src="<%=cp%>/sool/deleted_files/gd_ui.js.다운로드"></script>
     <script type="text/javascript" src="<%=cp%>/sool/deleted_files/gd_common.js.다운로드"></script>
 
+	<script type="text/javascript">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+
+
     <style type="text/css">
         body {
         }
@@ -202,9 +216,9 @@
 			 
             <div class="hd_right">
 				<ul class="top_member_box">
-            	    <li><a href="https://homesool.com/member/logout.php?returnUrl=">Logout</a></li>
+            	    <li><a href="<%=cp %>/homesool/logout.com">Logout</a></li>
             	    
-            	    <li><a href="https://homesool.com/service/index.php">CS Center</a></li>
+            	    <li><a href="<%=cp %>/homesool/csCenter.com">CS Center</a></li>
             	</ul>
 				<!-- 검색 폼 -->
 				<div class="top_search_btn">
@@ -455,8 +469,15 @@
                             <tbody>
                             <tr>
                                 <th scope="row">비밀번호</th>
-                                <td><input type="password" name="pwd"></td>
+                                <td><input type="password" name="user_pwd"></td>
+                                <td>${errorMessage }</td>
+                                
                             </tr>
+                            
+                            	
+                            	
+                            
+                            
                             
                             <tr>
                                 <th scope="row">남기실 말씀</th>
@@ -474,6 +495,9 @@
             <div class="btn_center_box">
                 <!-- <a href="#;" class="btn_claim_cancel btn_prev"><em>이전으로</em></a> -->
                 <button type="" class="btn_hackout_ok" onclick="<%=cp%>/homesool/delete_ok2.com"><em>탈퇴</em></button>
+                
+                
+               
             </div>
         </form>
     </div>

@@ -489,19 +489,19 @@
 " 
                 				width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('<%=cp%>/detail_files/p_soju/1000000213_wlist_08.png')">
+                       			onmouseover="fimg('./detail_files/p_soju/1000000213_wlist_08.png')">
                        		
                        		<img src="./detail_files/seoungeun_1.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('<%=cp%>/detail_files/seoungeun_1.png')">
+                       			onmouseover="fimg('./detail_files/seoungeun_1.png')">
                        				
 							<img src="./detail_files/seoungeun_2.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('<%=cp%>/detail_files/seoungeun_2.png')">
+                       			onmouseover="fimg('./detail_files/seoungeun_2.png')">
                        			
                        		<img src="./detail_files/seoungeun_3.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('<%=cp%>/detail_files/seoungeun_3.png')">
+                       			onmouseover="fimg('./detail_files/seoungeun_3.png')">
                     </div>
                     
                 <!-- //item_photo_view -->

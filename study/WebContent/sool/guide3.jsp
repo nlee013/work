@@ -141,6 +141,49 @@
 	        var _AceCounter=(function(){var G=_AceGID;var _sc=document.createElement('script');var _sm=document.getElementsByTagName('script')[0];if(G.o!=0){var _A=G.val[G.o-1];var _G=(_A[0]).substr(0,_A[0].indexOf('.'));var _C=(_A[7]!='0')?(_A[2]):_A[3];var _U=(_A[5]).replace(/\,/g,'_');_sc.src='https:'+'//cr.acecounter.com/Web/AceCounter_'+_C+'.js?gc='+_A[2]+'&py='+_A[4]+'&gd='+_G+'&gp='+_A[1]+'&up='+_U+'&rd='+(new Date().getTime());_sm.parentNode.insertBefore(_sc,_sm);return _sc.src;}})();
         </script>
         <!-- AceCounter Log Gathering Script End -->
+    
+    <style type="text/css">
+
+    .sub_content .content{width:100%; min-height:500px; padding:0;}
+   
+    .w860{width:860px;margin-left:auto;margin-right:auto;}
+   
+    .cs_menu_box h2{padding-bottom:40px;font-size:38px;font-weight:500;}
+    .cs_menu_box .sub_menu li a{display:inline-block;position:relative;color:#888888;line-height:40px;}	
+    
+    .guide_tit{padding:35px 0;text-align:center;background: #fffbf7;}
+	.guide_tit dt{font-size:26px; font-weight:700;}									
+	.guide_tit dd{font-size:16px; opacity:0.6;} 
+
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+	fieldset,img {border:0 none;vertical-align:top;}
+	.louge01 .table_bx thead th i{display:block;margin-bottom:10px;}
+	body,th,td,input,select,textarea,button {font-size:15px;line-height:1.5;font-family:'Roboto','Noto Sans KR',Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;color:#222}
+	
+
+.louge01 h4{font-size:24px;font-weight:500;}
+.louge01 .table_bx{border-top:2px solid #e5e5e5;border-bottom:1px solid #e5e5e5;}
+.louge01 .table_bx table{width:100%;}
+.louge01 .table_bx thead th{padding:20px 0;border-bottom:1px solid #e5e5e5;font-size:16px;font-weight:500;}	  
+.louge01 .table_bx thead th i{display:block;margin-bottom:10px;}
+.louge01 .table_bx tbody th{padding:20px 0 20px 10px; font-size:19px;font-weight:500;text-align:left;} 
+.louge01 .table_bx tbody th span{font-weight:400; font-size:16px;}
+.louge01 .table_bx tbody td{padding:20px 0;text-align:center;font-size:18px;}
+.louge01 p{font-size:18px;}
+.louge01 ul > li{position:relative;padding-left:13px;font-size:18px;line-height:33px;}		
+.louge01 ul > li:before{ content: '·'; position: absolute; top: 0; left: 0;}
+.louge01 ul > li em{font-weight:500;}
+    
+    </style>
+	
+
+
+
+
+
+
+
+
 
 </head>
 
@@ -204,7 +247,7 @@
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
 				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
-				<li><a href="<%=cp%>/homesool/new.com">Best홈술</a></li>
+			
 				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
 				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
@@ -214,12 +257,16 @@
 				<ul class="top_member_box">
 				
 				<!-- 로그인 회원가입 고객센터 링크 연결 ^^ --> 
-            	        <li><a href="<%=cp%>/homesool/login.com">Login</a></li>
-            	    <li><a href="<%=cp%>/homesool/create1.com">Join</a>
-            	        <!--<span class="accent">
-            	            <span><strong>2,000 P</strong></span>
-            	        </span>-->
-            	    </li>
+            	       		<c:choose>
+	<c:when test="${empty sessionScope.customInfos.user_id }">
+		<li><a href="<%=cp%>/homesool/login.com">Login</a></li>
+        <li><a href="<%=cp%>/homesool/create1.com">Join</a></li>
+	</c:when>
+	<c:otherwise>
+		  
+		<li><a href="<%=cp%>/homesool/logout.com">Logout</a></li>
+	</c:otherwise>
+</c:choose>
             	    
             	    <li><a href="<%=cp%>/homesool/csCenter.com">CS Center</a></li>
             	</ul>
@@ -417,6 +464,9 @@
 		
 
 	}
+	
+
+	
 </script>
     </div>
     <!-- //header_warp -->
@@ -433,6 +483,7 @@
             <!-- //location_wrap -->
 
 	
+	
 	 
   	 
     	 
@@ -441,17 +492,52 @@
             <div class="sub_content">
 
                 <!-- //side_cont -->
-<style>
+<style type="text/css">
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+
 	.sub_content{width:100%;} 
 	#contents{padding:0;}
+	
+	    .element.style {
+}
+.louge01 .table_bx tbody td {
+    padding: 20px ;
+    text-align: center;
+    font-size: 18px;
+}
+.body, th, td, input, select, textarea, button {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Roboto','Noto Sans KR',Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;
+    color: #222;
+}
+.body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+.user agent stylesheet
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+    
 </style>
+
+
+
+
 <div class="content">
     <div class="cs_menu_box">
 		<h2>홈술가이드</h2>
 		<ul class="sub_menu">
-			<li><a href="https://www.homesool.com/service/membership_lounge.php" class="active">홈술 멤버십</a></li>
-			<li><a href="https://www.homesool.com/service/subscribe_guide.php">구독 홈술 가이드</a></li>
-			<li><a href="https://www.homesool.com/service/delivery_type.php">배송유형별 안내</a></li>
+			<li><a href="<%=cp %>/homesool/guide.com" class="active">홈술 멤버십</a></li>
+	
+			<li><a href="<%=cp %>/homesool/delivery.com">배송유형별 안내</a></li>
 		</ul>
 	</div>
 	<!-- //sub_menu_box -->
@@ -467,37 +553,37 @@
 				<thead>
 					<tr>   
 						<th></th>	
-						<th><i><img src="<%=cp%>/sool/main_files/membership_icn01.png" alt=""></i>다이아몬드</th> 
-						<th><i><img src="<%=cp%>/sool/main_files/membership_icn02.png" alt=""></i>플래티넘</th>
-						<th><i><img src="<%=cp%>/sool/main_files/membership_icn03.png" alt=""></i>골드</th> 
-						<th><i><img src="<%=cp%>/sool/main_files/membership_icn04.png" alt=""></i>실버</th> 
-						<th><i><img src="<%=cp%>/sool/main_files/membership_icn05.png" alt=""></i>브론즈</th> 
+						<th><i><img src="<%=cp%>/sool/main_files/membership_icn01.png" alt=""></i><br/> 다이아몬드 </th> 
+						<th><i><img src="<%=cp%>/sool/main_files/membership_icn02.png" alt=""></i><br/> 플래티넘 </th>
+						<th><i><img src="<%=cp%>/sool/main_files/membership_icn03.png" alt=""></i><br/> 골드 </th> 
+						<th><i><img src="<%=cp%>/sool/main_files/membership_icn04.png" alt=""></i><br/> 실버 </th> 
+						<th><i><img src="<%=cp%>/sool/main_files/membership_icn05.png" alt=""></i><br/> 브론즈 </th> 
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th>최근 3개월<br> 구매액</th> 
-						<td>50만원 이상</td>
-						<td>30만원 이상</td>	
-						<td>10만원 이상</td>	
-						<td>5만원 이상</td>
-						<td>5만원 미만</td>	 
+					<tr align="center" >
+						<th style=" padding: 20px 0 20px 10px; font-size: 19px; font-weight: 500; text-align: left; "> 최근 3개월 <br> 구매액</th> 
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> 50만원 이상 </td>
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> >30만원 이상 </td>	
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> >10만원 이상 </td>	
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> 5만원 이상 </td>
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> 5만원 미만 </td>	 
 					</tr> 
-					<tr>
-						<th>적립혜택<br><span>(1개월 단위)</span></th>
-						<td>7%</td>		 							  
-						<td>7%</td>
-						<td>5%</td>	
-						<td>2%</td>
-						<td>0.5%</td>
+					<tr align="center" >
+						<th style=" padding: 20px 0 20px 10px; font-size: 19px; font-weight: 500; text-align: left; "> 적립혜택 <br><span>(1개월 단위)</span></th>
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> 7% </td>		 							  
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> >7% </td>
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> >5% </td>	
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> 2% </td>
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:17px; color: #222;"> 0.5% </td>
 					</tr>
-					<tr>
-						<th>쿠폰<br><span>(1개월 단위)</span></th>
-						<td>10%할인 2장<br>7천원 할인<br>무료배송 2장</td>	
-						<td>7%할인 2장<br>5천원 할인<br>무료배송 </td> 
-						<td>5천원 할인<br>무료배송 </td>
-						<td>3천원 할인<br>5% 할인</td>
-						<td>1천원 할인<br>-</td>
+					<tr align="center" >
+						<th style=" padding: 20px 0 20px 10px; font-size: 19px; font-weight: 500; text-align: left; ">쿠폰 <br><span> (1개월 단위) </span></th>
+						<td style=" line-height: 1.5; font-family: sans-serif; color: #222;"> 10%할인 2장 <br> 7천원 할인 <br> 무료배송 2장 </td>	
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:13px; color: #222;"> 7%할인 2장 <br> 5천원 할인 <br> 무료배송 </td> 
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:13px; color: #222;"> 5천원 할인 <br> 무료배송 </td>
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:13px; color: #222;"> 3천원 할인 <br> 5% 할인 </td>
+						<td style=" line-height: 1.5; font-family: sans-serif; font-size:13px; color: #222;"> 1천원 할인 <br> - </td>
 					</tr> 
 				</tbody>
 			</table>

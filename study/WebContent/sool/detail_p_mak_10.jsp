@@ -42,6 +42,31 @@
 	<link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/swiper-bundle.min.css">
     <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/custom.css">
 
+	<script type="text/javascript">
+	 	
+		function goBasket() {
+			
+			var f = document.myForm;
+			
+			f.action = "<%=cp %>/homesool/basket.com";
+			f.submit;
+			
+		}
+		
+		function goBuying() {
+			
+			var f = document.myForm;
+			
+			f.action = "<%=cp %>/homesool/payment.com";
+			f.submit;
+			
+			
+		}
+	
+	
+	</script>
+	
+
 
     <script src="<%=cp %>/sool/main_files/AceCounter_AW.js.다운로드"></script>
     <script src="<%=cp %>/sool/main_files/1135465033646646" async=""></script><script src="<%=cp %>/sool/main_files/identity.js.다운로드" async=""></script><script async="" src="<%=cp %>/sool/main_files/fbevents.js.다운로드"></script><script type="text/javascript">
@@ -164,7 +189,7 @@
     <div class="header_top">
         <div class="header_top_cont">
 			
-			<div class="h1_logo"><!--——--><a href="https://www.homesool.com/main/index.php"><img src="<%=cp %>/sool/main_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
+			<div class="h1_logo"><!--——--><a href="<%=cp %>/homesool/main.com"><img src="<%=cp %>/sool/main_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
 			
 			<!-- 햄버거 넣는 부분 ^^ -->
 			<a href="#;" class="n_btn_all_menu_open">
@@ -214,10 +239,10 @@
 			    
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
-				<li><a href="">홈술고르기</a></li>
-				<li><a href="">Best홈술</a></li>
-				<li><a href="">홈술가이드</a></li>
-				<li><a href="">고객센터 </a></li>				 
+				<li><a href="<%=cp %>/homesool/list_p.com">홈술고르기</a></li>
+				
+				<li><a href="<%=cp %>/homesool/guide.com">홈술가이드</a></li>
+				<li><a href="<%=cp %>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
 			</ul>
 			 
@@ -225,12 +250,16 @@
 				<ul class="top_member_box">
 				
 				<!-- 로그인 회원가입 고객센터 링크 연결 ^^ --> 
-            	        <li><a href="<%=cp%>/sool/login.jsp">Login</a></li>
-            	    <li><a href="<%=cp%>/sool/join.jsp">Join</a>
-            	        <!--<span class="accent">
-            	            <span><strong>2,000 P</strong></span>
-            	        </span>-->
-            	    </li>
+            	  <c:choose>
+	<c:when test="${empty sessionScope.customInfos.user_id }">
+		<li><a href="<%=cp%>/homesool/login.com">Login</a></li>
+        <li><a href="<%=cp%>/homesool/create1.com">Join</a></li>
+	</c:when>
+	<c:otherwise>
+		  
+		<li><a href="<%=cp%>/homesool/logout.com">Logout</a></li>
+	</c:otherwise>
+</c:choose>
             	    
             	    <li><a href="<%=cp%>/sool/csCenter.jsp">CS Center</a></li>
             	</ul>
@@ -473,7 +502,7 @@
               <div class="item_photo_big">
               		 <div class="item_photo_big">
 						<span class="img_photo_big">
-							<img src="./detail_files/p_mak/1000000083_wlist_088.jpg" width="380" name="img1"
+							<img src="<%=cp %>/sool/detail_files/p_mak/1000000083_wlist_088.jpg" width="380" name="img1"
 								alt="이화주" title="이화주" class="middle"
 								style="border: 1px; border-radius: 1em;">
 							
@@ -483,24 +512,22 @@
                 	<br/><br/>
                 	<div>
                 	
-                	<img src="./detail_files/p_mak/1000000083_wlist_088.jpg
-
-" 
+                	<img src="<%=cp %>/sool/detail_files/p_mak/1000000083_wlist_088.jpg" 
                 				width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./detail_files/p_mak/1000000083_wlist_088.jpg')">
+                       			onmouseover="fimg('<%=cp %>/sool/detail_files/p_mak/1000000083_wlist_088.jpg')">
                        		
-                       		<img src="./detail_files/p_mak_10_1.png" width="100"
+                       		<img src="<%=cp %>/sool/detail_files/p_mak_10_1.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./detail_files/p_mak_10_1.png')">
+                       			onmouseover="fimg('<%=cp %>/sool/detail_files/p_mak_10_1.png')">
                        				
-							<img src="./detail_files/p_mak_10_2.png" width="100"
+							<img src="<%=cp %>/sool/detail_files/p_mak_10_2.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./detail_files/p_mak_10_2.png')">
+                       			onmouseover="fimg('<%=cp %>/sool/detail_files/p_mak_10_2.png')">
                        			
-                       		<img src="./detail_files/p_mak_10_3.png" width="100"
+                       		<img src="<%=cp %>/sool/detail_files/p_mak_10_3.png" width="100"
                        			style="border: 1px; border-radius: 0.5em;"
-                       			onmouseover="fimg('./detail_files/p_mak_10_3.png')">
+                       			onmouseover="fimg('<%=cp %>/sool/detail_files/p_mak_10_3.png')">
                     </div>
                     
                 <!-- //item_photo_view -->
@@ -520,17 +547,17 @@
 원</b>
 </div>
 <br/><br/>
-
+<form action="" method="post" name="myForm">
 <!-- 찜하기 장바구니 바로 구매 버튼~.~ -->
 <div class="btn_choice_box">
     <div class="cart "><!-- N:재입고 알림이 있을 때는 restock 클래스를 div에 같이 넣어주세요 -->
 		<button id="wishBtn" type="button" class="btn_add_wish ">찜하기</button>
-		<button id="cartBtn" type="button" class="btn_add_cart">장바구니</button> 
-		<button type="button" class="btn_add_order">바로 구매</button>
+		<button id="cartBtn" type="button" class="btn_add_cart" onclick="goBasket();">장바구니</button> 
+		<button type="button" class="btn_add_order" onclick="goBuying();">바로 구매</button>
 	</div>
 						
 </div>
-
+</form>
 </center>
 
 

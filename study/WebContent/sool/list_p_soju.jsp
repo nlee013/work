@@ -204,7 +204,7 @@
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
 				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
-				<li><a href="<%=cp%>/homesool/new.com">Best홈술</a></li>
+	
 				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
 				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
@@ -567,9 +567,7 @@
                 <!-- 상품 리스트 -->
 
 
-        <div class=" ">
-            <div class="pagination"><ul><li class="on"><span>1</span></li></ul></div>
-        </div>
+      
 
     </div>
     <!-- //goods_list_item -->

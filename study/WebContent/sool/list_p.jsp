@@ -8,7 +8,7 @@
 
 <!-- saved from url=(0059)https://www.homesool.com/goods/goods_list.php?cateCd=001006 -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>홈술 고르기</title>
+    <title>막걸리</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="author" content="">
@@ -41,6 +41,24 @@
     <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/chosen.css">	
 	<link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/swiper-bundle.min.css">
     <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/custom.css">
+
+	<script type="text/javascript">
+	
+	function detailP() {
+		
+		var f = document.myForm;
+		
+		f.action = "<%=cp%>/homesool/detailP_ok.com";
+		f.submit;
+		
+	}
+	
+	
+	
+	
+	
+	
+	</script>
 
 
     <script src="<%=cp %>/sool/main_files/AceCounter_AW.js.다운로드"></script>
@@ -204,7 +222,7 @@
 			    <!-- 메인 메뉴들 ^^ -->
 			<ul class="gnb_new"> 
 				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
-				<li><a href="<%=cp%>/homesool/new.com">Best홈술</a></li>
+		
 				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
 				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
@@ -214,13 +232,16 @@
 				<ul class="top_member_box">
 				
 				<!-- 로그인 회원가입 고객센터 링크 연결 ^^ --> 
-            	        <li><a href="<%=cp%>/homesool/login.com">Login</a></li>
-            	    <li><a href="<%=cp%>/homesool/create1.com">Join</a>
-            	        <!--<span class="accent">
-            	            <span><strong>2,000 P</strong></span>
-            	        </span>-->
-            	    </li>
-            	    
+            	     		<c:choose>
+	<c:when test="${empty sessionScope.customInfos.user_id }">
+		<li><a href="<%=cp%>/homesool/login.com">Login</a></li>
+        <li><a href="<%=cp%>/homesool/create1.com">Join</a></li>
+	</c:when>
+	<c:otherwise>
+		  
+		<li><a href="<%=cp%>/homesool/logout.com">Logout</a></li>
+	</c:otherwise>
+</c:choose>
             	    <li><a href="<%=cp%>/homesool/csCenter.com">CS Center</a></li>
             	</ul>
 				<!-- 검색 폼 -->
@@ -232,7 +253,7 @@
                 
 
 				<div class="top_search" style="display:none;">
-    <form name="frmSearchTop" id="frmSearchTop" action="https://www.homesool.com/goods/goods_search.php" method="get" novalidate="novalidate">
+
         <fieldset>
             <legend>검색폼</legend> 
             <div class="top_search_cont">
@@ -300,7 +321,7 @@
             </div>
             <!-- //top_search_cont -->
         </fieldset>
-    </form>
+    
 	<div class=""><a href="<%=cp%>/homesool/main.com" class="close"><img src="<%=cp %>/sool/main_files/btn_close38.png" alt="닫기"></a></div>
 </div>
 <!-- //top_search -->
@@ -443,7 +464,7 @@
 				<a href="<%=cp%>/homesool/main.com" class="local_home">HOME</a> 
   
 				&gt; 홈술카테고리
-				&gt; 전체 상품
+				&gt; 막걸리
   
 			
 			</em>
@@ -478,20 +499,7 @@
             </ul>
         </div>
 
-<center>    
-
-<script type="text/javascript">
-	
-	function goMak(){
-	
-		var f = document.myForm;
-	
-	 	f.action ="<%=cp%>/homesool/mak.com";
-	  	f.submit();
-	  	
-	}
-
-</script>
+<center> 
 <form action="" method="post" name="myForm">
 <table width="600" border="0" cellspacing="1" cellpadding="3" bgColor="#FFFFFF" align="center">
 
@@ -506,18 +514,24 @@
 	</c:if>
 	
 	<td width="200" align="center">
-    	<button onclick="${prod_cate}">
+    	<button onclick="detailP();">
 	    	<img src="${imagePath}/${dto.prod_sImg}" width="200" height="330" 
 	    	style="border: 1px; border-radius: 1em;"/>
 	    </button>
 	    <br/><br/>${dto.prod_name}&nbsp;<br/>
-	    <b>${dto.prod_price }원</b><br/>
-	    
+	    <b>${dto.prod_price }원</b>&nbsp;&nbsp;&nbsp;
+	    <input type="hidden" name="prod_no" value="${dto.prod_no }">
+	     <input type="hidden" name="prod_name" value="${dto.prod_name }">
+	      <input type="hidden" name="prod_quan" value="${dto.prod_quan }">
+	        <input type="hidden" name="prod_oImg" value="${dto.prod_oImg }">
+	         <input type="hidden" name="prod_cate" value="${dto.prod_cate }">
+	   
 	    <div style=" width:20x; border: 2px; color:#fff; background-color: #f2a03d;
 	    border-radius: 0.3em;">
-	    <a href="<%=cp%>/homesool/">
+	    <a href="" onclick="buyP();">
 	    구매하기
 	    </a></div>
+	    <br/>
 	    <%--  <a href="<%=cp%>/homesool/delete.com?prod_no=${dto.prod_no }">삭제</a> --%>
 	     <br/>
 	</td>
@@ -532,7 +546,7 @@
 </c:if>
 
 <c:if test="${n!=0 }">
-	</tr>
+
 </c:if>
 
 	
@@ -580,9 +594,7 @@
                 <!-- 상품 리스트 -->
 
 
-        <div class=" ">
-            <div class="pagination"><ul><li class="on"><span>1</span></li></ul></div>
-        </div>
+      
 
     </div>
     <!-- //goods_list_item -->
@@ -619,30 +631,6 @@
     </div>
     <!-- //container -->
 
-	
-<c:if test="${n>0||n%3!=0 }">
-	<c:forEach var="i" begin="${n%3+1}" end="3" step="1">
-			<td>&nbsp;</td>
-	</c:forEach>
-</c:if>
-
-<c:if test="${n!=0 }">
-	</tr>
-</c:if>
-	
-<c:if test="${dataCount != 0}">
-	<tr bgcolor="#FFFFFF">
-	   <td align="center" height="30" colspan="3">${pageIndexList}</td>
-    </tr>
-</c:if>
-	
-<c:if test="${dataCount == 0}">
-	<tr bgcolor="#FFFFFF">
-       <td align="center" colspan="3" height="30">등록된 자료가 없습니다.</td>
-    </tr>
-</c:if>
-	
-</table>
 
     <div id="footer_wrap">
 <div class="ft_notice">

@@ -52,16 +52,16 @@ public class SoolBorderDAO {
 			
 			try {
 				
-				sql = "insert into border (bor_no, bor_subject, user_id, bor_date, bor_content, bor_cate "
-						+ "values (?,?,?,sysdate,?,?)"; // hitCount 0으로 초기화 
+				sql = "insert into border (bor_no, bor_subject, user_id, bor_date, bor_content, bor_cate) "
+						+ "values (seq_bor.nextval,?,?,sysdate,?,?)"; 
 				
 				pstmt = conn.prepareStatement(sql);
 				
-				pstmt.setInt(1, dto.getBor_no());
-				pstmt.setString(2, dto.getBor_subject());
-				pstmt.setString(3, dto.getUser_id());
-				pstmt.setString(4, dto.getBor_content());
-				pstmt.setString(5, dto.getBor_cate());
+				/*pstmt.setInt(1, dto.getBor_no());*/
+				pstmt.setString(1, dto.getBor_subject());
+				pstmt.setString(2, dto.getUser_id());
+				pstmt.setString(3, dto.getBor_content());
+				pstmt.setString(4, dto.getBor_cate());
 				
 				result = pstmt.executeUpdate();
 				
@@ -209,9 +209,9 @@ public class SoolBorderDAO {
 					
 					try {
 						
-						// 제목, 내용만 수정해 
+						
 						sql = "update boder set bor_subject=?,bor_content=? "
-								+ " where bor_no=?";
+								+ "where bor_no=?";
 						
 						pstmt = conn.prepareStatement(sql);
 						

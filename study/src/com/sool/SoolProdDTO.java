@@ -9,7 +9,6 @@ public class SoolProdDTO {
 	public String prod_oImg;
 	public String prod_sImg;
 	public String prod_cate;
-	
 	public int getProd_no() {
 		return prod_no;
 	}

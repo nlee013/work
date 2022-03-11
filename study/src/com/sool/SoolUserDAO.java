@@ -6,7 +6,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sool.SoolUserDTO;
+import com.board.BoardDTO;
+import com.join.MemberDTO;
 
 public class SoolUserDAO {
 	
@@ -293,7 +294,70 @@ public class SoolUserDAO {
 					}
 					return user_name;
 				}
+				
+				//수정 
+				
+				public int updateData(SoolUserDTO dto) {
+					
+					int result = 0;
+					
+					PreparedStatement pstmt = null;
+					String sql;
+					
+					try {
+						
+						// user_name, user_gender,user_bir1, user_bir2, user_bir3, user_rid, user_date
+						sql = "update users set user_pwd=?, user_tel=?, user_email=?, user_addr1=?,";
+						sql += "user_addr2=? where user_id=?";
+						
+						pstmt = conn.prepareStatement(sql);
+						
+						
+						pstmt.setString(1, dto.getUser_pwd());
+						pstmt.setString(2, dto.getUser_tel());
+						pstmt.setString(3, dto.getUser_email());
+						pstmt.setString(4, dto.getUser_addr1());
+						pstmt.setString(5, dto.getUser_addr2());
+						pstmt.setString(6, dto.getUser_id());
+						
+						
+					
+						result = pstmt.executeUpdate();
+						
+						pstmt.close();
+						
+						
+					 
+						
+					} catch (Exception e) {
+						System.out.println(e.toString());
+					}
+					return result;
+				}
 	
+				//입력번호로 데이터 지우기
+				public int deleteData(String user_id) {
+
+					int result = 0;
+					PreparedStatement pstmt = null;
+					String sql;
+
+					try {
+						sql = "delete users where user_id=?";
+
+						pstmt = conn.prepareStatement(sql);
+						pstmt.setString(1, user_id);
+
+						result = pstmt.executeUpdate();
+
+						pstmt.close();
+
+					} catch (Exception e) {
+						System.out.println(e.toString());
+					}
+
+					return result;
+				}
 	
 	
 	

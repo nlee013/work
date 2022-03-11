@@ -1,24 +1,36 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
-	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0039)https://www.homesool.com/main/index.php -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>짭술닷컴</title>
+    <title>홈술닷컴</title>
+    
+    	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    	
+		<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+		
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		
+
+
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="csrf-token" content="MTY0NjAyMzI2NzQ4NTY1MzE5MjQ5ODE2MTA2ODQ4ODAxOTQyMDQ5NDI4">
+    <meta name="csrf-token" content="MTY0NjAyMDQ3Mzg2NDI0MDg5NjI4MTEwNjgzODg0NTM1NzE2NDc2MDk1">
 
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="홈술닷컴">
-    <meta property="og:url" content="https://www.homesool.com/service/index.php">
+    <meta property="og:url" content="https://www.homesool.com/main/index.php">
     <meta property="og:description" content="홈술닷컴">
     <meta property="og:locale" content="ko_KR">
     <meta name="twitter:card" content="summary">
@@ -30,39 +42,47 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="https://www.homesool.com/data/commonimg/defaultShopIcon144.png">
 	<link rel="apple-touch-icon" href="https://www.homesool.com/data/commonimg/defaultShopIcon72.png">
 
-    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/reset.css">
-    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/common.css">
-    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/layer.css">
-    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/layout.css">
-    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/list.css">
-	<link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/button.css">
-    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/service.css">
-    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/chosen.css">	
-	<link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/swiper-bundle.min.css">
-    <link type="text/css" rel="stylesheet" href="<%=cp%>/sool/csCenter_files/custom.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/reset.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/common.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/layer.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/layout.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/list.css">
+	<link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/button.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/main.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/chosen.css">	
+	<link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/swiper-bundle.min.css">
+    <link type="text/css" rel="stylesheet" href="<%=cp %>/sool/main_files/custom.css">
+    
 
 
-    <script src="<%=cp%>/sool/csCenter_files/AceCounter_AW.js.다운로드"></script><script src="<%=cp%>/sool/csCenter_files/1135465033646646" async=""></script><script src="<%=cp%>/sool/csCenter_files/identity.js.다운로드" async=""></script><script async="" src="<%=cp%>/sool/csCenter_files/fbevents.js.다운로드"></script><script type="text/javascript">
+    <script src="<%=cp %>/sool/main_files/AceCounter_AW.js.다운로드"></script>
+    <script src="<%=cp %>/sool/main_files/1135465033646646" async=""></script><script src="<%=cp %>/sool/main_files/identity.js.다운로드" async=""></script><script async="" src="<%=cp %>/sool/main_files/fbevents.js.다운로드"></script><script type="text/javascript">
         var json_locale_data = {"domain":"messages","locale_data":{"messages":{"":{"lang":"ATF","plural-forms":"nplurals=1; plural=0"}}}}
     </script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/gd_gettext.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/jquery.min.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/underscore-min.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/jquery.validate.min.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/additional-methods.min.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/numeral.min.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/accounting.min.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/money.min.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/chosen.jquery.min.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/placeholders.jquery.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/gd_gettext.js.다운로드"></script>
+<%--     <script type="text/javascript" src="<%=cp %>/sool/main_files/jquery.min.js.다운로드"></script> --%>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/underscore-min.js.다운로드"></script>
+   <%--  <script type="text/javascript" src="<%=cp %>/sool/main_files/jquery.validate.min.js.다운로드"></script> --%>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/additional-methods.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/numeral.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/accounting.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/money.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/chosen.jquery.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/placeholders.jquery.min.js.다운로드"></script>
     <!--[if gt IE 8]-->
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/clipboard.min.js.다운로드"></script>
+    <script type="text/javascript" src="<%=cp %>/sool//main_files/clipboard.min.js.다운로드"></script>
     <!--[endif]-->
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/jquery.vticker.js.다운로드"></script>
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/gd_ui.js.다운로드"></script>
+ <%--    <script type="text/javascript" src="<%=cp %>/sool//main_files/jquery.vticker.js.다운로드"></script> --%>
+    <script type="text/javascript" src=".<%=cp %>/sool/main_files/gd_ui.js.다운로드"></script>
 
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/gd_common.js.다운로드"></script>
+    
 
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/gd_common.js.다운로드"></script>
+
+    <!-- Add script : start -->
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/jquery.cookie.js.다운로드"></script>
+<%--     <script type="text/javascript" src="<%=cp %>/sool/main_files/gd_popup.js.다운로드"></script> --%>
+    <!-- Add script : end -->
 
     
 
@@ -83,8 +103,9 @@
         }
     </style>
 
-    <script type="text/javascript" src="<%=cp%>/sool/csCenter_files/wcslog.js.다운로드"></script>
-<script type="text/javascript" src="<%=cp%>/sool/csCenter_files/naverCommonInflowScript.js.다운로드" id="naver-common-inflow-script"></script>
+    <script type="text/javascript" src="<%=cp %>/sool/main_files/wcslog.js.다운로드"></script>
+<script type="text/javascript" src="<%=cp %>/sool/main_files/naverCommonInflowScript.js.다운로드" id="naver-common-inflow-script"></script>
+
 <!-- Facebook Pixel Code -->
         <script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -97,7 +118,7 @@
         </script>
         <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1135465033646646&ev=PageView&noscript=1"/></noscript>
         <!-- DO NOT MODIFY -->
-        <!-- End Facebook Pixel Code --><script type="text/javascript" charset="UTF-8" src="<%=cp%>/sool/csCenter_files/kp.js.다운로드"></script>
+        <!-- End Facebook Pixel Code --><script type="text/javascript" charset="UTF-8" src="<%=cp %>/sool/main_files/kp.js.다운로드"></script>
         <script type="text/javascript">
             kakaoPixel('8600996210486851034').pageView();
         </script>
@@ -111,7 +132,7 @@
 
 </head>
 
-<body class="body-service body-index pc">
+<body class="body-main body-index pc">
 <div class="top_area"></div>
 <div id="wrap">
 
@@ -121,99 +142,96 @@
     <div class="header_top">
         <div class="header_top_cont">
 			
-			<div class="h1_logo"><!--——--><a href="https://www.homesool.com/main/index.php"><img src="<%=cp%>/sool/csCenter_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
-			<a href="https://www.homesool.com/service/index.php#;" class="n_btn_all_menu_open">전체카테고리</a>
+			<div class="h1_logo"><!--——--><a href="<%=cp %>/homesool/main.com"><img src="<%=cp %>/sool/main_files/701de34a823ef71ad6950510de136ece_23946.png" alt="상단 로고" title="상단 로고"></a><!--——--></div>
+			
+			<!-- 햄버거 넣는 부분 ^^ -->
+			<a href="#;" class="n_btn_all_menu_open">
+			<img alt="전체메뉴" src="<%=cp%>/sool/main_files/hamburger.png"></a>
+			
+			<!-- 열리는 햄버거 -->
+<!-- 		<a href="https://www.homesool.com/main/index.php#;" class="n_btn_all_menu_open">전체카테고리</a> -->
 			<div class="n_gnb_allmenu_wrap dn">
 				<div class="menu_wrap">
 					<div class="menu01">
-						<p><a href="https://www.homesool.com/mypage/index.php"><img src="<%=cp%>/sool/csCenter_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
-						<p><a href="https://www.homesool.com/mypage/shipping.php"><img src="<%=cp%>/sool/csCenter_files/allmenu_addr.png" alt="">배송지관리</a></p>
-						<p><a href="https://www.homesool.com/service/index.php"><img src="<%=cp%>/sool/csCenter_files/allmenu_cscenter.png" alt="">고객센터</a></p>
+						<p><a href="https://www.homesool.com/mypage/index.php"><img src="<%=cp %>/sool/main_files/allmenu_mypage.png" alt="">마이페이지</a></p> 
+						<p><a href="https://www.homesool.com/mypage/shipping.php"><img src="<%=cp %>/sool/main_files/allmenu_addr.png" alt="">배송지관리</a></p>
+						<p><a href="https://www.homesool.com/service/index.php"><img src="<%=cp %>/sool/main_files/allmenu_cscenter.png" alt="">고객센터</a></p>
 					</div>
-					<div class="menu02">
+						<div class="menu02">
 						<dl>
-							<dt><a href="https://www.homesool.com/goods/choice.php">홈술제안</a></dt>
-							<dd><a href="https://www.homesool.com/goods/choice.php">홈술골라담기</a></dd>  
-							<dd><a href="https://www.homesool.com/goods/collection.php">홈술컬렉션</a></dd> 
-							<dd><a href="https://www.homesool.com/board/list.php?bdId=event">이벤트</a></dd> 
-							<dd><a href="https://www.homesool.com/goods/promotion_list.php">추천 홈술</a></dd>
-							<dd><a href="https://www.homesool.com/service/benefit.php">이달의 혜택</a></dd>
-							<dd><a href="https://www.homesool.com/goods/secret_main.php">비밀의 홈술</a></dd>
+							<dt><a href="">홈술고르기</a></dt>
+							<dd><a href="">막걸리</a></dd>  
+							<dd><a href="">증류주/소주/리큐르</a></dd> 
+							<dd><a href="">약주/청주</a></dd> 
+							<dd><a href="">와인/과실주</a></dd>
+							<dd><a href="">홈닷푸드</a></dd>
 						</dl>
 							<dl>
-
-									<dt><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001">홈술카테고리</a></dt>
-
-									<dd><a href="https://www.homesool.com/goods/hs_today.php">오늘홈술</a></dd>
-									<dd><a href="https://www.homesool.com/goods/hs_subscribe.php">구독홈술</a></dd>
-
-										<dd><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001004">막걸리</a></dd>
-										<dd><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001010">증류주/소주/리큐르</a></dd>
-										<dd><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001006">약주/청주</a></dd>
-										<dd><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001007">와인/과실주</a></dd>
-										<dd><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001008">홈닷푸드</a></dd>
-										<dd><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001009">홈닷굿즈</a></dd>
-
+								<dt><a href="">Best홈술</a></dt>
+								<dd><a href="">신제품</a></dd>
+								<dd><a href="">베스트</a></dd>
+								<dd><a href="">추천홈술</a></dd>
+								<dd><a href="">이달의 혜택</a></dd>
 							</dl> 
 						<dl>
-							<dt><a href="https://www.homesool.com/goods/special_price.php">홈술특가</a></dt>
-							<dd><a href="https://www.homesool.com/goods/special_price.php?type=time">시간한정특가</a></dd>
-							<dd><a href="https://www.homesool.com/goods/special_price.php?type=stock">수량한정특가</a></dd>
+							<dt><a href="">홈술가이드</a></dt>
+							<dd><a href="">홈술 멤버십</a></dd>
+							<dd><a href="">구독 홈술 가이드</a></dd>
+							<dd><a href="">배송유형별 안내</a></dd>
 						</dl> 
 						<dl>
-							<dt><a href="https://www.homesool.com/goods/new.php">신제품 + 베스트</a></dt>
-							<dd><a href="https://www.homesool.com/goods/new.php">신제품</a></dd>
-							<dd><a href="https://www.homesool.com/goods/best.php">베스트</a></dd>
+							<dt><a href="">고객센터</a></dt>
+							<dd><a href="">공지사항</a></dd>
+							<dd><a href="">1:1문의하기</a></dd>
+							<dd><a href="">FAQ</a></dd>
 						</dl>  
-						<dl>
-							<dt><a href="https://www.homesool.com/service/membership_lounge.php">홈술가이드</a></dt>
-							<dd><a href="https://www.homesool.com/service/membership_lounge.php">홈술 멤버십</a></dd>
-							<dd><a href="https://www.homesool.com/service/subscribe_guide.php">구독 홈술 가이드	</a></dd>
-							<dd><a href="https://www.homesool.com/service/delivery_type.php">배송유형별 안내</a></dd>
-						</dl>   
-						<dl>
-							<dt><a href="https://www.homesool.com/board/list.php?bdId=behindStory">매거진</a></dt>
-							<dd><a href="https://www.homesool.com/board/list.php?bdId=behindStory">MD 비하인드스토리</a></dd>
-							<dd><a href="https://www.homesool.com/board/list.php?bdId=breweryStory">양조장 스토리</a></dd>
-							<dd><a href="https://www.homesool.com/board/list.php?bdId=hsLife">홈술 라이프</a></dd>
-						</dl>	  
-						<dl>
-							<dt><a href="https://www.homesool.com/service/index.php">고객센터</a></dt>
-							<dd><a href="https://www.homesool.com/board/list.php?&amp;bdId=notice">공지사항</a></dd>
-							<dd><a href="https://www.homesool.com/service/faq.php">FAQ</a></dd>
-						</dl>
 					</div>
+				</div>
 				</div>
 			</div>
 			    
-			<ul class="gnb_new"> 
-				<li><a href="https://www.homesool.com/goods/choice.php">홈술제안</a></li>
-				<li><a href="https://www.homesool.com/goods/goods_list.php?cateCd=001">홈술카테고리</a></li>
-				<li><a href="https://www.homesool.com/goods/special_price.php">홈술특가</a></li>
-				<li><a href="https://www.homesool.com/goods/new.php">New + Best </a></li>				 
+			    <!-- 메인 메뉴들 ^^ -->
+		<ul class="gnb_new"> 
+				<li><a href="<%=cp%>/homesool/list_p.com">홈술고르기</a></li>
+		
+				<li><a href="<%=cp%>/homesool/guide.com">홈술가이드</a></li>
+				<li><a href="<%=cp%>/homesool/csCenter.com">고객센터 </a></li>				 
 				<!-- <li><a href="#">라이브 홈술</a></li> -->
-				<li><a href="https://www.homesool.com/service/membership_lounge.php">홈술가이드</a></li>	
-				<li><a href="https://www.homesool.com/board/list.php?bdId=behindStory">매거진</a></li>
 			</ul>
 			 
             <div class="hd_right">
 				<ul class="top_member_box">
-            	        <li><a href="https://www.homesool.com/member/login.php">Login</a></li>
-            	    <li><a href="https://www.homesool.com/member/join_method.php">Join</a>
+				
+				<!-- 로그인 회원가입 고객센터 링크 연결 ^^ --> 
+				
+				<c:choose>
+	<c:when test="${empty sessionScope.customInfos.user_id }">
+		<li><a href="<%=cp%>/homesool/login.com">Login</a></li>
+        <li><a href="<%=cp%>/homesool/create1.com">Join</a></li>
+	</c:when>
+	<c:otherwise>
+		  
+		<li><a href="<%=cp%>/homesool/logout.com">Logout</a></li>
+	</c:otherwise>
+</c:choose>
+				
+				
+            	     
             	        <!--<span class="accent">
             	            <span><strong>2,000 P</strong></span>
             	        </span>-->
             	    </li>
             	    
-            	    <li><a href="https://www.homesool.com/service/index.php">CS Center</a></li>
+            	    <li><a href="<%=cp%>/homesool/csCenter.com">CS Center</a></li>
             	</ul>
 				<!-- 검색 폼 -->
 				<div class="top_search_btn">
                     <span>&nbsp;</span>
-                    <img src="<%=cp%>/sool/csCenter_files/btn_top_search.png" alt="">
+                    <img src="<%=cp %>/sool/main_files/btn_top_search.png" alt="">
                 </div>
                 <!-- //top_text_cont -->
-
+                
+<!-- 애매 -->
 				<div class="top_search" style="display:none;">
     <form name="frmSearchTop" id="frmSearchTop" action="https://www.homesool.com/goods/goods_search.php" method="get" novalidate="novalidate">
         <fieldset>
@@ -222,7 +240,7 @@
 				<div class="top_search_tit">궁금하신 내용을 검색해주세요.</div>
                 <div class="top_text_cont">
                     <input type="text" id="search_form" name="keyword" class="top_srarch_text" title="오늘 드시고 싶은 술은 무엇인가요" placeholder="오늘 드시고 싶은 술은 무엇인가요" autocomplete="off">
-                    <input type="image" src="<%=cp%>/sool/csCenter_files/btn_search35.png" id="btnSearchTop" class="btn_top_srarch" title="검색" value="검색" alt="검색">
+                    <input type="image" src="<%=cp %>/sool/main_files/btn_search35.png" id="btnSearchTop" class="btn_top_srarch" title="검색" value="검색" alt="검색">
                 </div>
                 <!-- //top_text_cont -->
                 <div class="search_cont">
@@ -234,12 +252,27 @@
                     	<div class="recent_box">
                     	    <dl class="js_recent_area">
                     	        <dt>최근검색어</dt>
-                    	        <dd>최근 검색어가 없습니다.</dd>
+                    	        <dd>
+                    	            <ul class="js_recent_list">
+                    	                <li>
+                    	                    <a href="https://www.homesool.com/goods/goods_search.php?keyword=%EB%8A%90%EB%A6%B0%EB%A7%88%EC%9D%84%EB%A7%89%EA%B1%B8%EB%A6%AC">느린마을막걸리</a>
+                    	                    <span><button type="button" class="btn_top_search_del" data-recent-keyword="느린마을막걸리">
+                    	                        <img src="<%=cp %>/sool/main_files/btn_top_search_del.png" alt="삭제"></button>
+                    	                    </span>
+                    	                </li>
+                    	                <li>
+                    	                    <a href="https://www.homesool.com/goods/goods_search.php?keyword=%EC%A6%9D%EB%A5%98%EC%A3%BC">증류주</a>
+                    	                    <span><button type="button" class="btn_top_search_del" data-recent-keyword="증류주">
+                    	                        <img src="<%=cp %>/sool/main_files/btn_top_search_del.png" alt="삭제"></button>
+                    	                    </span>
+                    	                </li>
+                    	            </ul>
+                    	        </dd>
                     	    </dl>
                     	</div>
                     	<!-- //recent_box -->
                     	<div class="seach_top_all">
-                    	    <!-- <button type="button" class="btn_top_search_close"><strong>닫기</strong></button> -->
+						<button type="button" class="btn_top_search_all_del"><strong>전체삭제</strong></button>                    	    <!-- <button type="button" class="btn_top_search_close"><strong>닫기</strong></button> -->
                     	</div>
                     	<!-- //seach_top_all -->
 					</div>
@@ -269,16 +302,24 @@
             <!-- //top_search_cont -->
         </fieldset>
     </form>
-	<div class=""><a href="https://www.homesool.com/service/index.php#;" class="close"><img src="<%=cp%>/sool/csCenter_files/btn_close38.png" alt="닫기"></a></div>
+	<div class=""><a href="https://www.homesool.com/main/index.php#;" class="close"><img src="<%=cp %>/sool/main_files/btn_close38.png" alt="닫기"></a></div>
 </div>
 <!-- //top_search -->
+<!-- 마이페이지 장바구니 부분 ^^ -->
+
 				<!-- 검색 폼 -->
             	<ul class="icon_util">	   
-					<li><a href="https://www.homesool.com/service/index.php#;" class="icon_location">배송지역가능조회</a></li>
             		<li>
-            	        <a href="https://www.homesool.com/mypage/index.php" class="icon_mypage">MYPAGE</a>
+            	        <a href="<%=cp %>/homesool/mypage.com" class="icon_mypage">
+            	        	<img src="<%=cp%>/sool/main_files/btn_top_mypage.png">
+            	        </a>
             	    </li>
-            	    <li><a href="https://www.homesool.com/order/cart.php" class="icon_cart">장바구니 <strong>0</strong> </a> </li>	
+            	    <li>
+            	    <a href="<%=cp %>/homesool/basket.com" class="icon_cart">
+            	    	<img src="<%=cp%>/sool/main_files/btn_top_cart.png">
+            	        
+            	     <strong>0</strong> </a> 
+            	    </li>	
             	</ul>
 				<div class="right_coupon">
 					<a href="https://www.homesool.com/mypage/coupon.php"><em>00</em><span>홈술쿠폰</span></a>
@@ -289,7 +330,6 @@
     </div>
     <!-- //header_top --> 
 </div>
-<!-- //header -->
 
 
 <!-- 튜닝 : 당일 배송 지역 검색 2021-08-11 -->
@@ -362,7 +402,7 @@
 		$.ajax({
 			method: "POST",
 			cache: false,
-			url: ".<%=cp%>/sool/share/mesh_ps.php",
+			url: "../share/mesh_ps.php",
 			data: params,
 			success: function (data) {
 
@@ -386,13 +426,7 @@
         <div id="contents">
         <!-- 본문 시작 -->
 
-            <div class="location_wrap">
-                <div class="location_cont">
-                    <em><a href="https://www.homesool.com/service/index.php#" class="local_home">HOME</a> &gt; 고객센터</em>
-                </div>
-            </div>
             <!-- //location_wrap -->
-
 	
 	 
   	 
@@ -412,7 +446,7 @@
 		
 <li><a href="">공지사항</a></li>
 <li><a href="<%=cp%>/homesool/one_to_one.com">1:1문의하기</a></li>
-<li><a href="<%=cp%>/sool/faq.jsp">FAQ</a></li>
+<li><a href="<%=cp%>/homesool/faq.com">FAQ</a></li>
 		</ul>
 	</div>
 	<!-- //sub_menu_box -->
