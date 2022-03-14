@@ -72,4 +72,21 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 ]]>
 </select>
 
+<update id="orderNoUpdate" parameterClass="map">
+	update bbs set orderNo = orderNo + 1
+	where groupNum = #groupNum# and orderNo>#orderNo#
+</update>
+
+<update id="updateData" parameterClass="boardDTO">
+	update bbs set name=#name#, subject=#subject#, email=#email#, 
+	content=#content#, pwd=#pwd# where boardNum=#boardNum#
+</update>
+
+<delete id="deleteData" parameterClass="int">
+	delete bbs 
+	where boardNum in
+	(select boardNum from bbs start with boardNum=#boardNum# 
+	connect by prior boardNum=parent)
+</delete>
+
 </sqlMap>

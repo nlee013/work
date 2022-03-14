@@ -15,6 +15,36 @@
 <link rel="stylesheet" type="text/css" href="<%=cp %>/board/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="<%=cp %>/board/css/article.css"/>
 
+<script type="text/javascript">
+	
+	function sendData(value) {
+		
+		var boardNum = "${dto.boardNum}";
+		var boardPageNum = "${pageNum }";
+		
+		var url = "<%=cp%>/bbs/";
+		
+		if(value=="delete"){
+			
+			url += "deleted.action";
+			
+		}else if(value=="update"){
+			
+			url += "updated.action";
+			
+		}else if(value=="reply"){
+			
+			url += "reply.action";
+		}
+		
+		url += "?boardNum=" + boardNum;
+		url += "&${params}";
+		
+		location.replace(url);
+	}
+	
+</script>
+
 </head>
 <body>
 
@@ -75,8 +105,9 @@
 
 	<div id="bbsArticle_footer">
 		<div id="leftFooter">
-			<input type="button" value=" 수정 " class="btn2" onclick=""/>
-			<input type="button" value=" 삭제 " class="btn2" onclick=""/>
+			<input type="button" value=" 답변 " class="btn2" onclick="sendData('reply')"/>
+			<input type="button" value=" 수정 " class="btn2" onclick="sendData('update')"/>
+			<input type="button" value=" 삭제 " class="btn2" onclick="sendData('delete')"/>
 		</div>
 		<div id="rightFooter">
 			<input type="button" value=" 리스트 " class="btn2" 

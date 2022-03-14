@@ -84,7 +84,7 @@ public class BoardAction extends ActionSupport
 		
 		String cp = request.getContextPath();
 		
-		int numPerPage = 5;
+		int numPerPage = 10;
 		int totalPage = 0;
 		int totalDataCount = 0;
 		
@@ -248,6 +248,100 @@ public class BoardAction extends ActionSupport
 		request.setAttribute("lineSu", lineSu);
 		request.setAttribute("pageNum", pageNum);
 		
+		
+		return SUCCESS;
+	}
+	
+	public String updated() throws Exception{
+		
+		//게시물 수정화면
+		HttpServletRequest request = ServletActionContext.getRequest();
+		
+		CommonDAO dao = CommonDAOImpl.getInstance();
+		
+		if(dto.getMode() == null || dto.getMode().equals("")) {
+			
+			dto = (BoardDTO)dao.getReadData("bbs.readData", dto.getBoardNum());
+			
+			if(dto == null) {
+				
+				return "read-error";
+			}
+			
+			request.setAttribute("mode", "update");
+			request.setAttribute("pageNum", dto.getPageNum());
+			
+			return INPUT;
+		}
+		
+		//게시글 수정
+		dao.updateData("bbs.updateData", dto);
+		
+		return SUCCESS;
+		
+	}
+	
+	public String reply() throws Exception{
+		
+		//답변화면
+		HttpServletRequest request = ServletActionContext.getRequest();
+		
+		CommonDAO dao = CommonDAOImpl.getInstance();
+		
+		if(dto == null || dto.getMode() == null || dto.getMode().equals("")) {
+			
+			//부모의 데이터 읽어오기
+			dto = (BoardDTO)dao.getReadData("bbs.readData", dto.getBoardNum());
+			
+			if(dto == null) {
+				
+				return "read-error";
+			}
+			
+			String temp = "\r\n\r\n-------------------------------------------\r\n\r\n";
+			
+			temp += "[답변]\r\n";
+			
+			//부모 데이터를 변경해서 내 데이터로 created.jsp에 출력
+			dto.setSubject("[답변]" + dto.getSubject());
+			dto.setContent(dto.getContent() + temp);
+			dto.setName("");
+			dto.setEmail("");
+			dto.setPwd("");
+			
+			request.setAttribute("mode", "reply");
+			request.setAttribute("pageNum", dto.getPageNum());
+			
+			return INPUT;
+		}
+		
+		//답변입력
+		//orderNo 수정
+		Map<String, Object> hMap = new HashMap<>();
+		hMap.put("groupNum", dto.getGroupNum());//부모의 groupNum
+		hMap.put("orderNo", dto.getOrderNo());//부모의 orderNo
+		
+		//위에 있는 orderNo보다 큰 data들을 다 업데이트 시켜줌
+		dao.updateData("bbs.orderNoUpdate", hMap);
+		
+		//입력
+		int maxBoardNum = dao.getIntValue("bbs.maxBoardNum");
+		
+		dto.setBoardNum(maxBoardNum + 1);
+		dto.setIpAddr(request.getRemoteAddr());//안쓰면 부모의 ip가 client에 들어감
+		dto.setDepth(dto.getDepth() + 1); //들여쓰기
+		dto.setOrderNo(dto.getOrderNo() + 1); //현재 입력되는 데이터의 orderNo
+		
+		dao.insertData("bbs.insertData", dto);
+		
+		return SUCCESS;
+	}
+	
+	public String deleted() throws Exception{
+		
+		CommonDAO dao = CommonDAOImpl.getInstance();
+		
+		dao.deleteData("bbs.deleteData", dto.getBoardNum());
 		
 		return SUCCESS;
 	}

@@ -66,6 +66,14 @@
 			<dl>
 				<dd class="num">${dto.listNum }</dd>
 				<dd class="subject">
+				<!-- 이미지 -->
+				<c:if test="${dto.depth != 0 }">
+					<c:forEach var="i" begin="1" end="${dto.depth }" step="1">
+						&nbsp;
+					</c:forEach>
+					<img src="<%=cp%>/board/image/re.gif"/>
+				</c:if>
+				
 				<a href="${urlArticle }&boardNum=${dto.boardNum}">
 				${dto.subject }</a>
 				</dd>
