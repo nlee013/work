@@ -96,6 +96,60 @@ public class MyUtil {
 		
 	}
 	
+	//listUrl을 받을 필요 없음. redirect를 안해서 필요없음
+	//js로 페이징 처리
+	public String pageIndexList(int currentPage, int totalPage) {
+		
+		int numPerBlock = 5;
+		int currentPageSetUp;
+		
+		int page;
+		String  strList = "";
+		
+		if(currentPage == 0) {
+			
+			return "";
+		}
+		
+		//표시할 첫 페이지
+		currentPageSetUp = (currentPage/numPerBlock)*numPerBlock;
+		
+		if(currentPage % numPerBlock == 0) {
+			
+			currentPageSetUp = currentPageSetUp - numPerBlock;
+			
+		}
+		//◀이전
+		if(totalPage > numPerBlock && currentPageSetUp > 0) {
+			
+			strList = "<a onclick='listPage("
+					+ currentPageSetUp + ");'>◀이전</a>&nbsp;";
+		}
+		
+		//페이지 
+		page = currentPageSetUp + 1;
+		
+		while((page <= totalPage) && (page <= currentPageSetUp + numPerBlock)) {
+			
+			if(page == currentPage) {
+				
+				strList += "<font color='Fuchsia'>" + page + "</font>&nbsp;";
+				
+			}else {
+				strList += "<a onclick='listPage(" + page + ");'>" + page + "</a>&nbsp;";
+			}
+			page++;
+			
+		}
+		//다음▶
+		if(totalPage - currentPageSetUp >  numPerBlock ) {
+					
+			strList = "<a onclick='listPage(" + page + ");'>다음▶</a>&nbsp;";
+		}
+				
+		return strList;
+	}
+	
 	
 	
 	

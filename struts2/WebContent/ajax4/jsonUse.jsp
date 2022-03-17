@@ -15,7 +15,7 @@
 	#result{
 		/* #은 아이디로 받는다 */
 		
-		border: 1px dotted #f6e8fc;
+		border: 3px dotted #eddcf5;
 	
 	}
 	
@@ -51,22 +51,14 @@
 				userId:"inna",
 				name:"유인나",
 				age:40,
-				phone:[
-					
-					{home:["02-111-111", "031-222-222"]},
-					{office:["02-333-333", "031-777-777"]}
-				]
+				phone:[{},{}]
 			},//배열[1]
 			
 			{
 				userId:"insun",
 				name:"정인선",
 				age:45,
-				phone:[
-					
-					{home:["02-111-111", "031-222-222"]},
-					{office:["02-333-333", "031-777-777"]}
-				]
+				phone:[{},{}]
 				
 			}//배열[2]
 			
@@ -81,15 +73,27 @@
 		var homePhone1 = userArray[0].phone[0].home[0];
 		var homePhone2 = userArray[0].phone[0].home[1];
 		
-		var officePhone1 = userArray[0].phone[0].office[0];
-		var officePhone2 = userArray[0].phone[0].office[1];
+		var officePhone1 = userArray[0].phone[1].office[0];
+		var officePhone2 = userArray[0].phone[1].office[1];
 		
-		var printData = id + "," + name + "," + age + "<br/>";
+		var printData = id + ", " + name + ", " + age + "<br/>";
 		
 		printData += homePhone1 + "<br/>";
 		printData += homePhone2 + "<br/>";
 		printData += officePhone1 + "<br/>";
-		printData += officePhone2 + "<br/>";
+		printData += officePhone2 + "<br/>---------------<br/>";
+		
+		//전체 data 읽어오기
+		for(var i = 0; i < userArray.length; i++){
+			
+			var userId = userArray[i].userId;
+			var userName = userArray[i].name;
+			var userAge = userArray[i].age;
+			
+			printData += userId + "," + userName + "," + userAge + "<br/>";
+		}
+		var resultDiv = document.getElementById("result");
+		resultDiv.innerHTML = printData;
 		
 	}
 	

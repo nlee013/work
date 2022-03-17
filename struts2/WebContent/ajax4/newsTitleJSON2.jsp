@@ -3,6 +3,9 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
+	
+	//ajax는 특정 구간만 바뀐다?
+	//ajax를 json으로~
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -39,7 +42,7 @@
 <script type="text/javascript">
 
 function newsTitle(){
-	sendRequest("newsTitleJSON_ok.jsp",null,displayNewsTitle,"GET");
+	sendRequest("newsTitleJSON2_ok.jsp",null,displayNewsTitle,"GET");
 }
 
 function displayNewsTitle(){
