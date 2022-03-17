@@ -12021,3 +12021,6 @@ java.lang.IllegalArgumentException: Index out of bounds
 
 !ENTRY org.eclipse.jface.text 2 0 2022-03-16 13:59:47.958
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2022-03-17 10:12:10.102
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'

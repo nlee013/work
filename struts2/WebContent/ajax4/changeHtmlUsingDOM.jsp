@@ -25,7 +25,8 @@
 		//</div>이런 형식으로 만들겠다는 의미
 		
 		var html = "새로 추가된 아이템[" + count + "]&nbsp;";
-		html += "<input type="\button\" value="\삭제\" onclick="\removeItem('item_'"+ count + "');\"/>";
+		html += "<input type=\"button\" value=\"삭제\" " + 
+				"onclick=\"removeItem('item_" + count + "');\"/>";
 		
 		newItemE.innerHTML = html;
 		
