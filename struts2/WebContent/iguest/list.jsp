@@ -7,15 +7,14 @@
 
 <c:if test="${totalDataCount!=0 }">
 
-<table width="700" border="0" cellpadding="0" cellspacing="0"
-style="margin: auto;">
+<table width="700" border="0" cellpadding="0" cellspacing="0" style="margin: auto;">
 
 <c:forEach var="dto" items="${lists }">
 <tr>
-	<td colspan="2" bgcolor="#999999" height="1"></td>
+	<td colspan="2" bgcolor="#e1cafc" height="1"></td>
 </tr>
 
-<tr height="30" bgcolor="#dbdbdb">
+<tr height="30" bgcolor="#f3ebfc">
 	<td width="300" style="padding-left: 10px;">
 		<b>No ${dto.listNum }.&nbsp;&nbsp;${dto.name }
 		(<a href="mailto:${dto.email }">${dto.email }</a>)</b>
@@ -33,7 +32,7 @@ style="margin: auto;">
 </c:forEach>
 
 <tr>
-	<td colspan="2" bgcolor="#dbdbdb" height="2"></td>
+	<td colspan="2" bgcolor="#e1cafc" height="2"></td>
 </tr>
 <tr height="30">
 	<td align="center" colspan="2">${pageIndexList }</td>

@@ -14,4 +14,5 @@ PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 	<include file="struts-board.xml"/>
 	<include file="struts-fileTest.xml"/>
 	<include file="struts-iguest.xml"/>
+	<include file="struts-ibbs.xml"/>
 </struts>

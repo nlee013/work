@@ -18,5 +18,5 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
 
 	<sqlMap resource="com/util/sqlMap/board_sqlMap.xml"/>
 	<sqlMap resource="com/util/sqlMap/iguest_sqlMap.xml"/>
-	
+	<sqlMap resource="com/util/sqlMap/ibbs_sqlMap.xml"/>
 </sqlMapConfig>

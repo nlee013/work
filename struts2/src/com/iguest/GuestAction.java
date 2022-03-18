@@ -38,23 +38,6 @@ public class GuestAction extends ActionSupport
 		dto = new GuestDTO();
 	}
 	
-	public String created() throws Exception{
-		
-		HttpServletRequest request = ServletActionContext.getRequest();
-		
-		CommonDAO dao = CommonDAOImpl.getInstance();
-		
-		int numMax = dao.getIntValue("iguest.numMax");
-		
-		dto.setNum(numMax + 1);
-		dto.setIpAddr(request.getRemoteAddr());
-		
-		dao.insertData("iguest.insertData", dto);
-		
-		return list();
-		
-	}
-	
 	public String list() throws Exception{
 		
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -124,6 +107,25 @@ public class GuestAction extends ActionSupport
 		
 	}
 	
+	
+	public String created() throws Exception{
+		
+		HttpServletRequest request = ServletActionContext.getRequest();
+		
+		CommonDAO dao = CommonDAOImpl.getInstance();
+		
+		int numMax = dao.getIntValue("iguest.numMax");
+		
+		dto.setNum(numMax + 1);
+		dto.setIpAddr(request.getRemoteAddr());
+		
+		dao.insertData("iguest.insertData", dto);
+		
+		return list();
+		
+	}
+	
+
 	public String deleted() throws Exception{
 		
 		HttpServletRequest request = ServletActionContext.getRequest();

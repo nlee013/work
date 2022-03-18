@@ -107,6 +107,7 @@
 		var url = "<%=cp%>/guest/deleted.action";
 		
 		$.post(url,{num:num,pageNum:page},function(args){
+			
 			$("#listData").html(args);
 		});
 		
@@ -137,26 +138,26 @@ bordercolor="#e6d4a6" style="margin: auto;">
 <table width="700" border="0" cellpadding="0" cellspacing="0" style="margin: auto;">
 
 <tr>
-	<td width="600" colspan="4" height="3" bgcolor="#e6d4a6"></td>
+	<td width="600" colspan="4" height="3" bgcolor="#e1cafc"></td>
 </tr>
 
 <tr>
-	<td width="60" height="30" bgcolor="#eeeeee" align="center">작성자</td>
+	<td width="60" height="30" bgcolor="#f3ebfc" align="center">작성자</td>
 	<td width="240" height="30" style="padding-left: 10px;">
 		<input type="text" id="name" size="35" maxlength="20" class="boxTF"/>
 	</td>
-	<td width="60" height="30" bgcolor="#eeeeee" align="center">이메일</td>
+	<td width="60" height="30" bgcolor="#f3ebfc" align="center">이메일</td>
 	<td width="240" height="30" style="padding-left: 10px;">
 		<input type="text" id="email" size="35" maxlength="50" class="boxTF"/>
 	</td>
 </tr>
 
 <tr>
-	<td width="600" colspan="4" height="1" bgcolor="#e6d4a6"></td>
+	<td width="600" colspan="4" height="1" bgcolor="#e1cafc"></td>
 </tr>
 
 <tr>
-	<td width="60" height="30" bgcolor="#eeeeee" align="center">내용</td>
+	<td width="60" height="30" bgcolor="#f3ebfc" align="center">내용</td>
 	<td width="540" colspan="3" style="padding-left: 10px;">
 		<textarea rows="3" cols="85" class="boxTA" 
 		style="height: 50px;" id="content"></textarea>
@@ -164,7 +165,7 @@ bordercolor="#e6d4a6" style="margin: auto;">
 </tr>
 
 <tr>
-	<td width="600" colspan="4" height="1" bgcolor="#e6d4a6"></td>
+	<td width="600" colspan="4" height="1" bgcolor="#e1cafc"></td>
 </tr>
 
 <tr>
