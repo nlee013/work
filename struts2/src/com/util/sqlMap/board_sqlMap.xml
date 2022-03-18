@@ -5,7 +5,6 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 
 <sqlMap namespace="bbs">
 
-<!-- struts에서도 사용가능했음, 별칭 -->
 <typeAlias alias="boardDTO" type="com.board.BoardDTO"/>
 
 <select id="maxBoardNum" resultClass="int">
@@ -45,7 +44,6 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 	depth, orderNo, parent, hitCount, created from bbs where boardNum=#boardNum#
 </select>
 
-<!-- 이전글 -->
 <select id="preReadData" parameterClass="map" resultClass="boardDTO">
 	select data.* from (
 	select boardNum,subject from bbs
@@ -57,8 +55,6 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 	where rownum=1
 ]]>
 </select>
-
-<!-- 다음글 -->
 
 <select id="nextReadData" parameterClass="map" resultClass="boardDTO">
 	select data.* from (

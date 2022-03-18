@@ -1,18 +1,17 @@
 package com.iguest;
 
 public class GuestDTO {
-
-	private int listNum;//추가적
 	
-	//DB
+	private int listNum;
+	
 	private int num;
 	private String name;
 	private String email;
 	private String content;
-	private String ipAddr;//db에 저장해두고 출력은 따로 안함
+	private String ipAddr;
 	private String created;
 	
-	private String pageNum;//추가적
+	private String pageNum;
 
 	public int getListNum() {
 		return listNum;
@@ -77,7 +76,5 @@ public class GuestDTO {
 	public void setPageNum(String pageNum) {
 		this.pageNum = pageNum;
 	}
-	
-	
-	
+
 }
