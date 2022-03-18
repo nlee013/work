@@ -39,6 +39,8 @@ D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2229493765.i
 \study\src
 D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\604311430.index
 \study\src
+D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3360930361.index
+\struts2\src
 D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1624987009.index
 \study\src
 D:\java_\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4135025532.index

@@ -3,9 +3,34 @@
 PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 
-<sqlMap namespace="">
+<sqlMap namespace="ibbs">
 
+<select id="numMax" resultClass="int">
+	select nvl(max(num),0) from ibbs
+</select>
 
+<insert id="insertData" parameterClass="com.ibbs.BoardDTO">
+	insert into ibbs (boardNum,name,email,content,ipAddr,hitCount,created)
+	values (#boardNum#,#num#,#name#,#email#,#content#,#ipAddr#,#hitCount#,sysdate)
+</insert>
 
+<select id="dataCount" resultClass="int">
+	select nvl(count(*),0) from ibbs
+</select>
+
+<select id="listData" resultClass="com.ibbs.BoardDTO"
+parameterClass="map" >
+	select * from (
+	select rownum rnum, data.* from (
+	select boardNum,name,email,content,ipAddr,hitCount,created
+	from ibbs order by num desc) data)
+<![CDATA[
+	where rnum>=#start# and rnum<=#end#
+]]>
+</select>
+
+<delete id="deleteData" parameterClass="int">
+	delete ibbs where boardNum=#boardNum#
+</delete>
 
 </sqlMap>

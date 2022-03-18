@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
@@ -8,9 +8,262 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>게시판</title>
+
+<link rel="stylesheet" type="text/css" href="<%=cp%>/data/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="<%=cp %>/ibbs/css/article.css"/>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+		
+		listPage(1);
+		
+	});
+	
+	$(document).ready(function(){
+		
+		$("#sendButton").click(function(){
+			
+			var params = "name=" + $("#name").val() 
+						+ "&email=" + $("#email").val()
+						+ "&content=" + $("#content").val();
+			
+			$.ajax({
+				
+				type:"POST",
+				url:"<%=cp%>/ibbs/list.action",
+				data:params,
+				success:function(args){
+					
+					$("#listData").html(args);
+					
+					//Ajax는 새로고침이 안되기때문에
+					//코딩으로 삭제
+					$("#name").val("");
+					$("#email").val("");
+					$("#content").val("");
+					$("#name").focus();
+				},
+				beforeSend:showRequest,
+				error:function(e){
+					alert(e.responseText);
+				}
+				
+			});
+			
+		});
+		
+	});
+	
+	function showRequest(){
+		
+		var name = $.trim($("#name").val());
+		var email = $.trim($("#email").val());
+		var content = $.trim($("#content").val());
+		
+		if(!name){
+			alert("\n이름을 입력하세요.");
+			$("#name").focus();
+			return false;
+		}
+		
+		if(!content){
+			alert("\n내용을 입력하세요.");
+			$("#content").focus();
+			return false;
+		}
+		
+		if(content.length>=200){
+			alert("\n내용은 200자 까지만 가능합니다.");
+			$("#content").focus();
+			return false;
+		}
+		
+		return true;		
+		
+	}
+
+	function listPage(page){
+		
+		var url = "<%=cp%>/ibbs/list.action";
+		
+		$.post(url,{pageNum:page},function(args){
+			$("#listData").html(args);
+		});
+		
+		//$("#listData").show();
+		
+	}
+	
+	function deleteData(num,page){
+		
+		var url = "<%=cp%>/ibbs/deleted.action";
+		
+		$.post(url,{num:num,pageNum:page},function(args){
+			
+			$("#listData").html(args);
+		});
+		
+	}
+
+	//-----------------------------------------------------------
+	
+	function sendData(value) {
+		
+		var boardNum = "${dto.boardNum}";
+		var boardPageNum = "${pageNum }";
+		
+		var url = "<%=cp%>/ibbs/";
+		
+		if(value=="delete"){
+			
+			url += "deleted.action";
+			
+		}else if(value=="update"){
+			
+			url += "updated.action";
+			
+		}else if(value=="reply"){
+			
+			url += "reply.action";
+		}
+		
+		url += "?boardNum=" + boardNum;
+		url += "&${params}";
+		
+		location.replace(url);
+	}
+</script>
+
 </head>
 <body>
 
+<div id="bbs">
+	<div id="bbs_title" style="font-style: #f3ebfc">
+		게 시 판
+	</div>
+	<div id="bbsArticle">
+		<div id="bbsArticle_header">
+			${dto.subject }
+		</div>
+		<div class="bbsArticle_bottomLine">
+			<dl>
+				<dt>작성자</dt>
+				<dd>${dto.name }</dd>
+				<dt>줄수</dt>
+				<dd>${lineSu }</dd>
+			</dl>		
+		</div>
+		<div class="bbsArticle_bottomLine">
+			<dl>
+				<dt>등록일</dt>
+				<dd>${dto.created }</dd>
+				<dt>조회수</dt>
+				<dd>${dto.hitCount }</dd>
+			</dl>
+		</div>
+		
+		<div id="bbsArticle_content">
+			<table width="600" border="0">
+			<tr>
+				<td style="padding-left: 20px 80px 20px 62px;"
+				valign="top" height="200">${dto.content }</td>
+			</tr>
+			</table>
+		</div>
+		<div class="bbsArticle_bottomLine">
+		이전글:
+		<c:if test="${!empty preSubject }">
+		<a href="<%=cp%>/bbs/article.action?${params}&boardNum=${preBoardNum}">
+		${preSubject }</a>
+		</c:if>
+		</div>
+		
+		<div class="bbsArticle_bottomLine">
+		다음글:
+		<c:if test="${!empty nextSubject }">
+		<a href="<%=cp%>/bbs/article.action?${params}&boardNum=${nextBoardNum}">
+		${nextSubject }</a>
+		</c:if>
+		</div>
+		
+	</div>
+
+	<div class="bbsArticle_noline" style="text-align: right">
+	From : ${dto.ipAddr }
+	</div>
+
+	<div id="bbsArticle_footer">
+		<div id="leftFooter">
+			<input type="button" value=" 수정 " class="btn2" onclick="sendData('update')"/>
+			<input type="button" value=" 삭제 " class="btn2" onclick="sendData('delete')"/>
+		</div>
+		<div id="rightFooter">
+			<input type="button" value=" 리스트 " class="btn2" 
+			onclick="javascript:location.href='<%=cp%>/ibbs/list.action?${params }'"/>
+		</div>
+	</div>
+</div>
+
+<br/><br/>
+
+<br/>
+
+<span id="listData" style="display: block;"></span>
+
+
+<!-- <table width="700" border="2" cellpadding="0" cellspacing="0" 
+bordercolor="#e6d4a6" style="margin: auto;">
+	<tr height="40">
+		<td style="padding-left: 20px;"><b>방 명 록</b></td>
+	</tr>
+</table>
+
+<br/><br/> -->
+
+
+<table width="700" border="0" cellpadding="0" cellspacing="0" style="margin: auto;">
+
+<tr>
+	<td width="600" colspan="4" height="3" bgcolor="#e1cafc"></td>
+</tr>
+
+<tr>
+	<td width="60" height="30" bgcolor="#f3ebfc" align="center">작성자</td>
+	<td width="240" height="30" style="padding-left: 10px;">
+		<input type="text" id="name" size="35" maxlength="20" class="boxTF"/>
+	</td>
+</tr>
+
+<tr>
+	<td width="600" colspan="4" height="1" bgcolor="#e1cafc"></td>
+</tr>
+
+<tr>
+	<td width="60" height="30" bgcolor="#f3ebfc" align="center">내용</td>
+	<td width="540" colspan="3" style="padding-left: 10px;">
+		<textarea rows="3" cols="85" class="boxTA" 
+		style="height: 50px;" id="content"></textarea>
+	</td>
+</tr>
+
+<tr>
+	<td width="600" colspan="4" height="1" bgcolor="#e1cafc"></td>
+</tr>
+
+<tr>
+	<td width="600" colspan="4" height="30" align="right"
+	style="padding-right: 15px;">
+		<input type="button" value="댓글등록" class="btn2" id="sendButton"/>
+	</td>
+</tr>
+
+</table>
+
+
 </body>
 </html>
+
+

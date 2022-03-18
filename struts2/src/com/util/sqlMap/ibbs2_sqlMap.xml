@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="ibbsComment">
+
+<select id="numMax" resultClass="int">
+	select nvl(max(commentNum),0) from ibbsComment
+</select>
+
+<insert id="insertData" parameterClass="com.iguest.GuestDTO">
+	insert into ibbsComment (commentNum, boardNum,name,content,ipAddr,created)
+	values (#commentNum#,#boardNum#,#num#,#name#,#content#,#ipAddr#,sysdate)
+</insert>
+
+<select id="dataCount" resultClass="int">
+	select nvl(count(*),0) from ibbsComment
+</select>
+
+<select id="listData" resultClass="com.iguest.GuestDTO"
+parameterClass="map" >
+	select * from (
+	select rownum rnum, data.* from (
+	select commentNum,boardNum,name,content,ipAddr,created
+	from ibbsComment order by num desc) data)
+<![CDATA[
+	where rnum>=#start# and rnum<=#end#
+]]>
+</select>
+
+<delete id="deleteData" parameterClass="int">
+	delete ibbsComment where commentNum=#commentNum#
+</delete>
+
+</sqlMap>
