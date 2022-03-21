@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="member">
+
+	<!-- 너무 기니까 memberDTO로 변경 -->
+	<typeAlias alias="memberDTO" type="com.member.MemberDTO"/>
+	
+	<insert id="insertData" parameterClass="memberDTO">
+		insert into member (userId,userPwd,userName,userBirth,userTel)
+		values (#userId#,#userPwd#,#userName#,#userBirth#,#userTel#)
+	</insert>
+	
+	<!-- ID 중복확인 -->
+	<select id="getId" parameterClass="String" resultClass="memberDTO">
+		select userId,userPwd,userName,to_char(userBirth,'yyyy-mm-dd') userBirth,userTel from member where userId=#userId#
+	</select>
+
+	<!-- 로그인 -->
+	<select id="readData" parameterClass="map" resultClass="memberDTO">
+		select userId,userPwd,userName,to_char(userBirth,'yyyy-mm-dd') userBirth,userTel from member where userId=#userId# and userPwd=#userPwd#
+	</select>
+
+</sqlMap>

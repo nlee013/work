@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.sool.SoolDAO"/>
-<fullyQualifiedTypeName name="com.sool.SoolDTO"/>
 <fullyQualifiedTypeName name="com.sool.CustomInfos"/>
 <fullyQualifiedTypeName name="com.sool.SoolUserDTO"/>
 <fullyQualifiedTypeName name="com.sool.SoolProdDAO"/>
@@ -43,9 +41,6 @@
 <fullyQualifiedTypeName name="java.net.URLDecoder"/>
 <fullyQualifiedTypeName name="com.board.BoardDTO"/>
 <fullyQualifiedTypeName name="java.net.URLEncoder"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.Preparable"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ModelDriven"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="com.iguest.GuestDTO"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.Preparable"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ModelDriven"/>
+<fullyQualifiedTypeName name="com.ibbs.CommentAction"/>
+<fullyQualifiedTypeName name="com.ibbs.CommentDTO"/>
 </qualifiedTypeNameHistroy>

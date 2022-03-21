@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="img">
+
+	<typeAlias alias="imageDTO" type="com.image.ImageDTO"/>
+	
+	<select id="maxNum" resultClass="int">
+		select nvl(max(num),0) from img
+	</select>
+	
+	<insert id="insertData" parameterClass="imageDTO">
+		insert into img (num,subject,saveFileName,originalFileName,userId)
+		values (#num#,#subject#,#saveFileName#,#originalFileName#,#userId#)
+	</insert>
+	
+	<select id="dataCount" resultClass="int">
+		select nvl(count(*),0) from img
+	</select>
+
+	<select id="listData" resultClass="imageDTO" parameterClass="map">
+		<![CDATA[
+		select * from (
+		select rownum rnum, data.* from (
+		select num,subject,saveFileName,originalFileName,userId from img
+		order by num desc) data)
+		where rnum>=#start# and rnum<=#end#
+		]]>
+	</select>
+	
+	<select id="readDeleteData" parameterClass="map" resultClass="imageDTO">
+		select num,subject,saveFileName,originalFileName,userId from img
+		where num=#num# and userId=#userId#
+	</select>
+
+	<delete id="deleteData" parameterClass="map">
+		delete img where num=#num# and userId=#userId#
+	</delete>
+
+
+</sqlMap>
