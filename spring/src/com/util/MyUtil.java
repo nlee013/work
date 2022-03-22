@@ -1,5 +1,10 @@
 package com.util;
 
+import org.springframework.stereotype.Service;
+
+//일반 Class에서 사용
+@Service("myUtil")//myUtil이라는 이름으로 객체 생성
+//method만 가져다가 사용(Spring 3.0에서 사용안함)
 public class MyUtil {
 	
 	//전체페이지

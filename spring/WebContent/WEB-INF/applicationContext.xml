@@ -40,5 +40,7 @@ p:configLocation="WEB-INF/sqlMapConfig/sqlMapConfig.xml"/>
 	</property>
 </bean> -->
 
+<!-- <bean id="myUtil" class="com.util.MyUtil"/> -->
+<!-- <bean id="fileManager" class="com.util.FileManager"/> -->
 
 </beans>  

@@ -6,23 +6,24 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Calendar;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.stereotype.Service;
+import org.springframework.util.FileCopyUtils;
+
+@Service("fileManager")
 public class FileManager {
 	
 	//파일 업로드-2022.03.14
-	public static String doFileUpload(File file, String originalFileName, String path) throws IOException {
+	public static String doFileUpload(InputStream is, String originalFileName, String path) throws IOException {
 		
 		//반환값이 있는 이유는 a.txt에서 txt를 빼내고 새로운 이름을 만든다
 		String newFileName = null;
 		
-		if(file == null) {
-			
-			return null;
-		}
 		//client가 업로도한 파일 이름
 		
 		if(originalFileName.equals("")) {
@@ -58,24 +59,8 @@ public class FileManager {
 		//경로
 		String fullFilePath = path + File.separator + newFileName;
 		
-		//파일 업로드----------------------------------------------------
-		FileInputStream fis = new FileInputStream(file);
-		
-		//파일 내보내기
-		FileOutputStream fos = new FileOutputStream(fullFilePath);
-		
-		int data = 0;
-		
-		byte[] buffer = new byte[1024];
-		
-		while((data = fis.read(buffer, 0, 1024)) != -1) {
-			
-			fos.write(buffer, 0, data);
-			
-		}
-		//----------------------------------------------------------------
-		fos.close();
-		fis.close();		
+		//Spring의 Class. 파일업로드 여기 한 줄
+		FileCopyUtils.copy(is, new FileOutputStream(fullFilePath));
 		
 		return newFileName;//이걸 반환해야지 originalFileName과 같이 넣어준다
 	}

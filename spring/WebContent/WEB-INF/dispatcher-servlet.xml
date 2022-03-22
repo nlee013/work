@@ -17,23 +17,72 @@ class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="suffix" value=".jsp"/>
 </bean>
 
-<!-- NameMapping 관리 -->
+<!-- anotation 쓰고 싶은 package 이름만 쓰기 -->
+<context:component-scan base-package="*"/>
+
+<!-- Anotation을 이용한 Controller 등록 -->
+<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"
+	p:alwaysUseFullPath="true">
+	<property name="order" value="1"/> <!-- 우선순위 1번 -->
+</bean>
+
+<bean name="/test/msg.action" class="com.test.TestController"/>
+
+<!-- NameUrl 방식 -->
 <bean id="beanNameUrlMapping"
 class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
 
-<bean name="/test/msg.action" class="com.test.TestController"/>
+<!-- <bean name="/test/msg.action" class="com.test.TestController"/> -->
 
 <!-- SimpleUrl 방식 -->
 <bean id="simpleUrlMapping"
 class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-	<property name="order" value="1"/><!--  주소 1번으로 찾아라/annotaion 후순위 -->
+	<property name="order" value="1"/><!--  주소 1번으로 찾아라/annotation 후순위 -->
 	<property name="alwaysUseFullPath" value="true"/>
 	<property name="mappings">
 		<props>
 			<prop key="/test/write.action">listFormController</prop>
 			<prop key="/test/write_ok.action">listController</prop>
+			<prop key="/test1/login.action">loginController</prop>
+			<prop key="/test2/mem.action">memController</prop>
+			<prop key="/multi/*.action">multiTestController</prop>
 		</props>
 	</property>
+</bean>
+
+<bean name="multiTestController" class="com.test3.MultiTestController">
+	<property name="methodNameResolver" ref="propsResolver"/>
+</bean>
+
+<bean id="propsResolver"
+class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+	<property name="mappings">
+		<props>
+			<prop key="/multi/list.action">list</prop>
+			<prop key="/multi.view.action">view</prop>
+		</props>
+	</property>
+</bean>
+
+<bean name="memController" class="com.test2.MemController">
+	<property name="pages">
+		<list>
+			<value>test2/mem1</value>
+			<value>test2/mem2</value>
+			<value>test2/mem3</value>
+		</list>
+	</property>
+</bean>
+
+<!-- 객체생성 한 후 DI하기 -->
+<bean name="authenticator" class="com.test1.LoginAuthenticatorImpl"/>
+<bean name="loginController" class="com.test1.LoginController">
+	<!-- 의존성 주입 -->
+	<property name="authenticator" ref="authenticator"/>
+	<!-- dto로 객체생성 -->
+	<property name="commandClass" value="com.test1.LoginCommand"/>
+	<property name="commandName" value="loginCommand"/>
+	<property name="formView" value="test1/login"/>
 </bean>
 
 <bean name="listFormController" class="com.test.ListFormController"/>

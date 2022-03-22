@@ -5,13 +5,18 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.ibatis.SqlMapClientTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
 
 //interface 구현
+//db관리.저장소
+@Repository("dao")//dao라는 이름으로 객체생성
 public class CommonDAOImpl implements CommonDAO{
 	
-	@Autowired
+	@Autowired//의존성 주입 자동화.applicationContext에서 알아서 가져옴
+	//@Qualifier("com.sqlMap)이런식으로 객체 이름 바꾸기 가능
+	//이름 같을 때 충돌방지를 위한 이름 지정
 	private SqlMapClientTemplate sqlMapClientTemplate;
 	
 	public void setSqlMapClientTemplate(SqlMapClientTemplate sqlMapClientTemplate) {
