@@ -7,5 +7,5 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
 
 	<settings cacheModelsEnabled="false" useStatementNamespaces="true"/>
 	<sqlMap resource="com/util/sqlMap/bbs_sqlMap.xml"/>
-	
+	<sqlMap resource="com/util/sqlMap/fileTest_sqlMap.xml"/>
 </sqlMapConfig>

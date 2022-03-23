@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
@@ -46,7 +47,7 @@
 		</div>
 		<div id="rightHeader">
 			<input type="button" value=" 글올리기 " class="btn2"
-			onclick="javascript:location.href='<%=cp%>/bbs/list.action';"/>			
+			onclick="javascript:location.href='<%=cp%>/bbs/created.action';"/>			
 		</div>	
 	</div>
 	<div id="bbsList_list">
@@ -60,16 +61,29 @@
 			</dl>
 		</div>
 		<div id="lists">
+		<c:forEach var="dto" items="${lists }">
 			<dl>
-				<dd class="num">1</dd>
-				<dd class="subject">게시판 리스트 만들기</dd>
-				<dd class="name">배수지</dd>
-				<dd class="created">2022-02-15</dd>
-				<dd class="hitCount">10</dd>
+				<dd class="num">${dto.listNum }</dd>
+				<dd class="subject">
+					<a href="${urlArticle}&boardNum=${dto.boardNum}">
+					${dto.subject}
+					</a>
+				</dd>
+				<dd class="name">${dto.name}</dd>
+				<dd class="created">${dto.created}</dd>
+				<dd class="hitCount">${dto.hitCount}</dd>
 			</dl>
+		</c:forEach>
 		</div>
 		<div id="footer">
-			1 2 3
+			<p>
+				<c:if test="${totalDataCount != 0}">
+					${pageIndexList}
+				</c:if>
+				<c:if test="${totalDataCount == 0}">
+					등록된 게시물이 없습니다.
+				</c:if>
+			</p>
 		</div>
 		
 	</div>
